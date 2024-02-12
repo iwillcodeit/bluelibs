@@ -1,6 +1,6 @@
 {
   "name": "@redlibs/logger-bundle",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "description": "Logging solution perfecly designed for BlueLibs Framework.",
   "main": "dist/index.js",
   "repository": {
@@ -25,7 +25,7 @@
     "@redlibs/core": "^1.0.0"
   },
   "devDependencies": {
-    "@redlibs/core": "^1.3.0",
+    "@redlibs/core": "^2.0.0",
     "@types/chai": "^4.2.3",
     "@types/chai-as-promised": "^7.1.2",
     "@types/graphql": "^0.11.3",
