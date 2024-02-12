@@ -1,6 +1,6 @@
 {
   "name": "@bluelibs/mikro-orm-bundle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "BlueLibs Mikro-ORM-bundle",
   "main": "dist/index.js",
   "repository": {

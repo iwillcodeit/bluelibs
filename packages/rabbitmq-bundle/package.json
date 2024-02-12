@@ -1,6 +1,6 @@
 {
   "name": "@bluelibs/rabbitmq-bundle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "BlueLibs rabbitmq-bundle",
   "main": "dist/index.js",
   "repository": {
