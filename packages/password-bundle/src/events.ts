@@ -1,5 +1,5 @@
-import { Event } from "@bluelibs/core";
-import { UserId } from "@bluelibs/security-bundle";
+import { Event } from "@redlibs/core";
+import { UserId } from "@redlibs/security-bundle";
 
 /**
  * This happens after we attached "password" strategy to the user

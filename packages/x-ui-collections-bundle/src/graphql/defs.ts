@@ -1,4 +1,4 @@
-import { IEventsMap } from "@bluelibs/ui-apollo-bundle";
+import { IEventsMap } from "@redlibs/ui-apollo-bundle";
 
 type Filter<T = any> = {
   [key: string]: any;

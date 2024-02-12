@@ -9,7 +9,7 @@ import {
   GuardianUserType,
   GuardianUserRegistrationType,
   useSmart,
-} from "@bluelibs/x-ui";
+} from "@redlibs/x-ui";
 import { gql } from "@apollo/client";
 
 type AppUserType = GuardianUserType & {

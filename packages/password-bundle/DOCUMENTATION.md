@@ -1,12 +1,12 @@
 ## Install
 
 ```bash
-npm i -S @bluelibs/security-bundle @bluelibs/password-bundle
+npm i -S @redlibs/security-bundle @redlibs/password-bundle
 ```
 
 ```ts
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { PasswordBundle } from "@bluelibs/password-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { PasswordBundle } from "@redlibs/password-bundle";
 const kernel = new Kernel({
   bundles: [new SecurityBundle(), new PasswordBundle()],
 });
@@ -17,7 +17,7 @@ const kernel = new Kernel({
 This is an authentication strategy implemented for the `SecurityBundle`. It does not expose any routes, nor does it send any emails and it doesn't care about your persistence layer (it is database-agnostic). It just focuses on the low-level handling of passwords for a user.
 
 ```typescript
-import { PasswordBundle } from "@bluelibs/password-bundle";
+import { PasswordBundle } from "@redlibs/password-bundle";
 
 new PasswordBundle({
   // All of these are optional, these are the defaults
@@ -35,8 +35,8 @@ new PasswordBundle({
 It all starts with a user:
 
 ```typescript
-import { SecurityService } from "@bluelibs/security-bundle";
-import { PasswordService } from "@bluelibs/password-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
 
 const securityService = container.get(SecurityService);
 const passwordService = container.get(PasswordService);
@@ -156,7 +156,7 @@ export interface IPasswordAuthenticationStrategy {
 You can update things such as `username` and `email`:
 
 ```ts
-import { PasswordService } from "@bluelibs/password-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
 
 const passwordService = container.get(PasswordService);
 

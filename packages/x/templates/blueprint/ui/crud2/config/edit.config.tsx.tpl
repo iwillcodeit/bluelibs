@@ -1,6 +1,6 @@
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 import { {{ entityName }}EditForm as Base{{ entityName }}EditForm } from "./{{ entityName }}EditForm.base";
-import { QueryBodyType } from '@bluelibs/x-ui';
+import { QueryBodyType } from '@redlibs/x-ui';
 import {
   {{ entityName }}
 } from "@bundles/{{ bundleName }}/collections";

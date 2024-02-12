@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import { Inquirer } from "./models/Inquirer";
 import {
   IPrompt,
@@ -37,9 +37,7 @@ export interface IBlueprintWriteEventData {
   writerSession: IBlueprintWriterSession;
 }
 
-export class BeforeBlueprintWriteEvent extends Event<
-  IBlueprintWriteEventData
-> {}
+export class BeforeBlueprintWriteEvent extends Event<IBlueprintWriteEventData> {}
 export class AfterBlueprintWriteEvent extends Event<IBlueprintWriteEventData> {}
 
 export interface IExecutionEventData {

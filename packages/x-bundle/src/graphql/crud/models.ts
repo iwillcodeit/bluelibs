@@ -1,4 +1,4 @@
-import { QueryBodyType } from "@bluelibs/nova";
+import { QueryBodyType } from "@redlibs/nova";
 
 export class QueryInput {
   filters: {

@@ -4,8 +4,8 @@ import {
   IPermissionSearchFilters,
   UserId,
   IUser,
-} from "@bluelibs/security-bundle";
-import { Collection } from "@bluelibs/mongo-bundle";
+} from "@redlibs/security-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 
 import * as links from "./Permissions.links";
 
@@ -80,7 +80,8 @@ export class PermissionsCollection<T extends IPermission>
    */
   protected createMongoFilters(filters: IPermissionSearchFilters) {
     let mongoFilters: any = {};
-    const { userId, domain, domainIdentifier, permission, createdById } = filters;
+    const { userId, domain, domainIdentifier, permission, createdById } =
+      filters;
 
     if (userId) {
       Object.assign(mongoFilters, { userId: { $in: userId } });
@@ -98,8 +99,8 @@ export class PermissionsCollection<T extends IPermission>
 
     if (createdById) {
       Object.assign(mongoFilters, {
-        createdById: { $in: createdById }
-      })
+        createdById: { $in: createdById },
+      });
     }
 
     if (permission) {

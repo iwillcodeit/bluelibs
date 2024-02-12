@@ -61,7 +61,7 @@ export const shortcuts = {
             name: "IPasswordAuthenticationStrategy",
             storage: "outside",
             local: false,
-            absoluteImport: "@bluelibs/password-bundle",
+            absoluteImport: "@redlibs/password-bundle",
             isInterface: true,
           },
           ui: false,

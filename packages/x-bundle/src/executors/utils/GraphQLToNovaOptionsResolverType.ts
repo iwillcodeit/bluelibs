@@ -1,4 +1,4 @@
-import { IAstToQueryOptions } from "@bluelibs/nova";
+import { IAstToQueryOptions } from "@redlibs/nova";
 
 export type GraphQLToNovaOptionsResolverType<T> = (
   _,

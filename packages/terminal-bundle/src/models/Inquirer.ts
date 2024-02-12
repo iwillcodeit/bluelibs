@@ -1,5 +1,5 @@
 import { IInquirer, IPrompt, IInquiryPromptOptions } from "../defs";
-import { Inject, Service, EventManager } from "@bluelibs/core";
+import { Inject, Service, EventManager } from "@redlibs/core";
 import { PrompterService } from "../services/PrompterService";
 import { BeforePromptEvent, AfterPromptEvent } from "../events";
 

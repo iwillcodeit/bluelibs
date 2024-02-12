@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 export class SessionNotFound extends Exception {
   static code = "SESSION_NOTFOUND_EXPIRED";

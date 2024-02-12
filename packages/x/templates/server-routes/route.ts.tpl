@@ -1,5 +1,5 @@
-import { ContainerInstance } from "@bluelibs/core";
-import { IRouteType, express } from "@bluelibs/apollo-bundle";
+import { ContainerInstance } from "@redlibs/core";
+import { IRouteType, express } from "@redlibs/apollo-bundle";
 
 export const {{ name }}Route: IRouteType = {
   path: "{{ path }}",

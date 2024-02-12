@@ -1,4 +1,4 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { GenericModelInquirer } from "./GenericModelInquirer";
 import * as _ from "lodash";
 import { InquiryUtils } from "../utils/InquiryUtils";
@@ -30,11 +30,8 @@ export class ExceptionInquirer extends Inquirer<ExceptionModel> {
       )
     );
 
-    const {
-      hasInterfaceDefined,
-      interfaceDefinition,
-      exceptionClass,
-    } = this.model;
+    const { hasInterfaceDefined, interfaceDefinition, exceptionClass } =
+      this.model;
 
     if (hasInterfaceDefined) {
       interfaceDefinition.name = `I${exceptionClass}Data`;

@@ -7,14 +7,14 @@ It also handles fetching the user data using the `me` standard query, but this b
 ## Install
 
 ```bash
-npm i -S @bluelibs/x-ui-guardian-bundle @bluelibs/ui-apollo-bundle @bluelibs/x-ui-react-bundle
+npm i -S @redlibs/x-ui-guardian-bundle @redlibs/ui-apollo-bundle @redlibs/x-ui-react-bundle
 ```
 
 ```tsx
-import { Kernel } from "@bluelibs/core";
-import { UIApolloBundle } from "@bluelibs/ui-apollo-bundle";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
-import { XUIGuardianBundle } from "@bluelibs/x-ui-guardian-bundle";
+import { Kernel } from "@redlibs/core";
+import { UIApolloBundle } from "@redlibs/ui-apollo-bundle";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
+import { XUIGuardianBundle } from "@redlibs/x-ui-guardian-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -28,7 +28,7 @@ const kernel = new Kernel({
 ## Usage
 
 ```tsx
-import { useGuardian } from "@bluelibs/x-ui-guardian-bundle";
+import { useGuardian } from "@redlibs/x-ui-guardian-bundle";
 
 function Component() {
   const guardian = useGuardian();
@@ -109,7 +109,7 @@ import {
   GuardianSmart,
   GuardianUserType,
   GuardianUserRegistrationType,
-} from "@bluelibs/x-ui-guardian-bundle";
+} from "@redlibs/x-ui-guardian-bundle";
 
 // configure your types, optionally extend the default guardian user types we imported
 type AppUserType = GuardianUserType & {

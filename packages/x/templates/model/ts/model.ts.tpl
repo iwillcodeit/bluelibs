@@ -1,9 +1,9 @@
 {{# if isBaseExtendMode }}
 /** @overridable */
 {{/ if }}
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 {{# if yupValidation }}
-  import { Schema, Is, a, an } from "@bluelibs/validator-bundle";
+  import { Schema, Is, a, an } from "@redlibs/validator-bundle";
 {{/ if }}
 {{# each remoteModels }}
   {{# if referenceBundle }}

@@ -14,12 +14,12 @@ In this bundle we're overriding the persistence layers from SecurityBundle to ma
 ## Installation
 
 ```bash
-npm i -S @bluelibs/security-bundle @bluelibs/security-mongo-bundle
+npm i -S @redlibs/security-bundle @redlibs/security-mongo-bundle
 ```
 
 ```js
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { SecurityMongoBundle } from "@bluelibs/security-mongo-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { SecurityMongoBundle } from "@redlibs/security-mongo-bundle";
 
 kernel.addBundle(
   new SecurityBundle({
@@ -38,8 +38,8 @@ You have the option to make changes to your collections, for example if you user
 import {
   UsersCollection,
   PermissionsCollection,
-} from "@bluelibs/security-mongo-bundle";
-import { IUser } from "@bluelibs/security-bundle";
+} from "@redlibs/security-mongo-bundle";
+import { IUser } from "@redlibs/security-bundle";
 
 // We make the type behave with all of our needs
 interface IAppUser extends IUser {

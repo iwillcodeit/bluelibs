@@ -1,5 +1,5 @@
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { Constructor, Service, ContainerInstance } from "@bluelibs/core";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { Constructor, Service, ContainerInstance } from "@redlibs/core";
 import * as passport from "passport";
 import { PassportAuthenticator } from "../models/PassportAuthenticator";
 

@@ -17,7 +17,7 @@ ApolloBundle quickly bootstraps an Apollo Server within BlueLibs's framework. It
 ## Install
 
 ```bash
-npm install --save @bluelibs/apollo-bundle
+npm install --save @redlibs/apollo-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

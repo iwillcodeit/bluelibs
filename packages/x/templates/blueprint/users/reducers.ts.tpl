@@ -1,5 +1,5 @@
-import { IReducerOption } from "@bluelibs/nova";
-import { PermissionService, PERMISSION_DEFAULT_DOMAIN } from "@bluelibs/security-bundle";
+import { IReducerOption } from "@redlibs/nova";
+import { PermissionService, PERMISSION_DEFAULT_DOMAIN } from "@redlibs/security-bundle";
 
 // Export link names as constants with type of: BundleLinkCollectionOption, sample:
 // export const myCustomLink: IReducerOption = { ... }

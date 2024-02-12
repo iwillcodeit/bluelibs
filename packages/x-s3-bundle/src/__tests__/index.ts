@@ -1,4 +1,4 @@
-import { ContainerInstance, Kernel } from "@bluelibs/core";
+import { ContainerInstance, Kernel } from "@redlibs/core";
 import { S3UploadService } from "../services/S3UploadService";
 import { createKernel } from "./ecosystem";
 

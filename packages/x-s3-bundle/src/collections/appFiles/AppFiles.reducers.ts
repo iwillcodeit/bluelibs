@@ -1,5 +1,5 @@
-import { ContainerInstance } from "@bluelibs/core";
-import { IReducerOption } from "@bluelibs/nova";
+import { ContainerInstance } from "@redlibs/core";
+import { IReducerOption } from "@redlibs/nova";
 import { S3UploadService } from "../../services/S3UploadService";
 
 // Export link names as constants with type of: BundleLinkCollectionOption, sample:

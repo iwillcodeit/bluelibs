@@ -1,4 +1,4 @@
-import { Token } from "@bluelibs/core";
+import { Token } from "@redlibs/core";
 
 export const NODEMAILER_INSTANCE = new Token();
 export const NODEMAILER_TEST_MODE = new Token();

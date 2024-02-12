@@ -3,11 +3,11 @@ import {
   IRouteGenerationProps,
   IRouteParams,
   XCoreRouter,
-} from "@bluelibs/x-ui-router";
+} from "@redlibs/x-ui-router";
 
 import BaseNextRouter from "next/router";
 
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 
 @Service()
 export class XNextRouter extends XCoreRouter<IRoute> {

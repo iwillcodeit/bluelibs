@@ -1,8 +1,8 @@
-import { MongoBundle, DatabaseService } from "@bluelibs/mongo-bundle";
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { ContainerInstance, Kernel, Bundle } from "@bluelibs/core";
+import { MongoBundle, DatabaseService } from "@redlibs/mongo-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { ContainerInstance, Kernel, Bundle } from "@redlibs/core";
 import { SecurityMongoBundle } from "../SecurityMongoBundle";
-import { Mocks } from "@bluelibs/security-bundle/dist/__tests__/reusable";
+import { Mocks } from "@redlibs/security-bundle/dist/__tests__/reusable";
 import { UsersCollection } from "../collections/Users.collection";
 import { PermissionsCollection } from "../collections/Permissions.collection";
 import { SessionsCollection } from "../collections/Sessions.collection";

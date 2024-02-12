@@ -1,4 +1,4 @@
-import { IRoute } from "@bluelibs/x-ui";
+import { IRoute } from "@redlibs/x-ui";
 import "./i18n";
 
 import {

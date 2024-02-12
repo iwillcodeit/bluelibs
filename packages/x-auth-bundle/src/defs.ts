@@ -1,13 +1,13 @@
-import { IReactEmailTemplate } from "@bluelibs/email-bundle";
+import { IReactEmailTemplate } from "@redlibs/email-bundle";
 import { IXAuthService } from "./services/IXAuthService";
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import { IForgotPasswordEmailProps } from "./emails/ForgotPasswordEmail";
 import { IWelcomeEmailProps } from "./emails/WelcomeEmail";
 import { IResetPasswordConfirmationEmailProps } from "./emails";
 import { IVerifyEmailProps } from "./emails/VerifyEmail";
-import "@bluelibs/security-bundle";
-import "@bluelibs/password-bundle";
-import { IPasswordAuthenticationStrategy } from "@bluelibs/password-bundle";
+import "@redlibs/security-bundle";
+import "@redlibs/password-bundle";
+import { IPasswordAuthenticationStrategy } from "@redlibs/password-bundle";
 import { IRequestMagicLinkProps } from "./emails/RequestMagicLink";
 import {
   socialArrayPropsTypes as SocialArrayPropsTypes,
@@ -17,11 +17,11 @@ import {
   SOCIAL_LOGIN_TYPE,
 } from "./social-passport/defs";
 import { SocialLoginService } from "./social-passport/SocialLoginService";
-import { UserId } from "@bluelibs/security-bundle";
+import { UserId } from "@redlibs/security-bundle";
 import { MultipleFactorService } from "./multipleAuthFactor/MultipleFactorService";
 import { IMultipleFactorService } from "./multipleAuthFactor/IMultipleFactorService";
 
-declare module "@bluelibs/security-bundle" {
+declare module "@redlibs/security-bundle" {
   export interface IUser {
     password: IPasswordAuthenticationStrategy;
     profile: IUserProfile;

@@ -1,4 +1,4 @@
-import { IInquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { IInquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { FSUtils } from "./FSUtils";
 import { XElementType, XElements } from "./XElements";
 

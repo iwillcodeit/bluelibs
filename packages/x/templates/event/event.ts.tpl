@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 
 {{# if hasInterfaceDefined }}
 export interface {{ interfaceDefinition.name }} {

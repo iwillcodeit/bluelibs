@@ -1,4 +1,4 @@
-import { Service, Inject, ContainerInstance } from "@bluelibs/core";
+import { Service, Inject, ContainerInstance } from "@redlibs/core";
 {{ importCollectionLine }}
 
 const COUNT = 20;

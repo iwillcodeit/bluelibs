@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm install --save @bluelibs/x-ui
+npm install --save @redlibs/x-ui
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

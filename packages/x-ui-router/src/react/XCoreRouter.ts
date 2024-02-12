@@ -1,5 +1,5 @@
 import { IRoute, IRouteGenerationProps, IRouteParams } from "../defs";
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 import * as queryString from "query-string";
 
 export type AddRoutingArguments<T> = {

@@ -6,7 +6,7 @@ import {
   BeforeDeleteEvent,
   AfterDeleteEvent,
   BehaviorType,
-} from "@bluelibs/mongo-bundle";
+} from "@redlibs/mongo-bundle";
 import { DocumentMutationType, MESSENGER } from "../constants";
 import { IMessenger } from "../defs";
 import { getFields } from "../utils/getFields";

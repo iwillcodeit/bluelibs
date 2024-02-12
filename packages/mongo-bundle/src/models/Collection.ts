@@ -9,7 +9,7 @@ import {
   Constructor,
   EventHandlerType,
   DeepPartial,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 import { DatabaseService } from "../services/DatabaseService";
 import {
   BeforeInsertEvent,
@@ -26,7 +26,7 @@ import {
   IBundleLinkOptions,
   IExecutionContext,
 } from "../defs";
-import { ObjectId, toModel } from "@bluelibs/ejson";
+import { ObjectId, toModel } from "@redlibs/ejson";
 import {
   DeepSyncDocumentNode,
   DeepSyncOptionsType,
@@ -46,7 +46,7 @@ import {
   LINK_STORAGE,
   Linker,
   IQueryContext,
-} from "@bluelibs/nova";
+} from "@redlibs/nova";
 import {
   DocumentWithID,
   ID,
@@ -71,7 +71,7 @@ export abstract class Collection<T extends MongoDB.Document = any> {
   static indexes: MongoDB.IndexDescription[] = [];
   static behaviors: BehaviorType[] = [];
   /**
-   * This schema can be created by using { t } from @bluelibs/nova package t.schema({})
+   * This schema can be created by using { t } from @redlibs/nova package t.schema({})
    */
   static jitSchema: any;
 

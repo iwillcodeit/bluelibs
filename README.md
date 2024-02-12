@@ -33,7 +33,7 @@ Our rapid prototyping solution (Blueprint for X-Framework) is tightly coupled to
 
 ```bash
 # Install MongoDB & Node 14+
-npm i -g @bluelibs/x
+npm i -g @redlibs/x
 x # pick project and complete it there
 cd project
 npm run blueprint:generate
@@ -50,7 +50,7 @@ We have designed a custom [documentation](https://www.bluelibs.com/docs) experie
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within BlueLibs packages, please send an e-mail to Theodor Diaconu via [theodor@bluelibs.com](mailto:theodor@bluelibs.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within BlueLibs packages, please send an e-mail to Theodor Diaconu via [theodor@redlibs.com](mailto:theodor@redlibs.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 

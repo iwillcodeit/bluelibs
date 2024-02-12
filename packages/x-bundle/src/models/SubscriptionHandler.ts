@@ -1,4 +1,4 @@
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 import {
   IDocumentBase,
   ISubscriptionHandler,
@@ -11,7 +11,8 @@ import { SubscriptionProcessor } from "./SubscriptionProcessor";
 import { SubscriptionStore } from "../services/SubscriptionStore";
 
 export class SubscriptionHandler<T extends IDocumentBase>
-  implements ISubscriptionHandler<T> {
+  implements ISubscriptionHandler<T>
+{
   protected _ready = false;
   protected _readyPromise: Promise<boolean>;
   protected _readyPromiseResolve: Function;

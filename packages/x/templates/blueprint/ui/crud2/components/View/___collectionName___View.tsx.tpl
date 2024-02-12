@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import * as Ant from "antd";
 import { Routes } from "@bundles/UIAppBundle";
-import { useUIComponents, useRouter, useDataOne, use, XRouter, useTranslate } from "@bluelibs/x-ui";
-import { ObjectId } from "@bluelibs/ejson";
+import { useUIComponents, useRouter, useDataOne, use, XRouter, useTranslate } from "@redlibs/x-ui";
+import { ObjectId } from "@redlibs/ejson";
 import { {{ entityName }}, {{ collectionClass }} } from "@bundles/{{ bundleName }}/collections";
 import { {{ entityName }}Viewer } from "../../config/{{ entityName }}Viewer";
 import { features } from "../../config/features";

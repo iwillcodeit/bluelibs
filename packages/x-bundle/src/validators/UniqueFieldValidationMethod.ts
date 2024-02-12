@@ -1,6 +1,6 @@
-import { yup, IValidationMethod } from "@bluelibs/validator-bundle";
-import { Collection } from "@bluelibs/mongo-bundle";
-import { ContainerInstance, Constructor, Service } from "@bluelibs/core";
+import { yup, IValidationMethod } from "@redlibs/validator-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
+import { ContainerInstance, Constructor, Service } from "@redlibs/core";
 
 export interface IUniqueFieldValidationConfig {
   message?: string;
@@ -10,7 +10,8 @@ export interface IUniqueFieldValidationConfig {
 
 @Service()
 export class UniqueFieldValidationMethod
-  implements IValidationMethod<IUniqueFieldValidationConfig> {
+  implements IValidationMethod<IUniqueFieldValidationConfig>
+{
   parent = yup.mixed; // optional, defaults to yup.mixed, so to all
   name = "uniqueField";
 

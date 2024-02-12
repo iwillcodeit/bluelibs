@@ -1,6 +1,6 @@
 import "./declarations";
 import "./graphql-upload/processRequest";
-import { Loader } from "@bluelibs/graphql-bundle";
+import { Loader } from "@redlibs/graphql-bundle";
 import * as express from "express";
 export { createServerlessHandler } from "./createServerlessHandler";
 export { ApolloBundle } from "./ApolloBundle";

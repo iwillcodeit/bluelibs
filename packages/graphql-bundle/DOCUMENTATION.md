@@ -1,11 +1,11 @@
 ## Install
 
 ```
-npm install --save @bluelibs/graphql-bundle graphql
+npm install --save @redlibs/graphql-bundle graphql
 ```
 
 ```ts
-import { GraphQLBundle } from "@bluelibs/graphql-bundle";
+import { GraphQLBundle } from "@redlibs/graphql-bundle";
 
 const kernel = new Kernel({
   bundles: [new GraphQLBundle()],
@@ -27,7 +27,7 @@ Besides this loading strategy this bundle comes with:
 We load our type definitions from all the bundles via the `Loader` service:
 
 ```typescript
-import { Loader } from "@bluelibs/graphql-bundle";
+import { Loader } from "@redlibs/graphql-bundle";
 
 class AppBundle extends Bundle {
   async init() {
@@ -81,7 +81,7 @@ const { typeDefs, resolvers, schemaDirectives, contextReducers } =
 Given that you store your resolvers in: `resolvers.ts` or in `*.resolvers.ts`, and your types in `*.graphql.ts`, you are able to extract the loading module like this:
 
 ```typescript title="graphql/index.ts"
-import { extract } from "@bluelibs/graphql-bundle";
+import { extract } from "@redlibs/graphql-bundle";
 
 // This exports a GraphQL Module, directly laodable via loader.load()
 export default extract(__dirname);
@@ -126,7 +126,7 @@ The function `postAdd` gets transformed to an array of functions:
 A more concrete example:
 
 ```typescript
-import { execute } from "@bluelibs/graphql-bundle";
+import { execute } from "@redlibs/graphql-bundle";
 
 load({
   typeDefs,
@@ -162,7 +162,7 @@ export default /* GraphQL */ `
 ```
 
 ```typescript title="graphql/User.resolvers.ts"
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 
 export default {
   User: {
@@ -176,7 +176,7 @@ export default {
 You also have the ability to store both resolvers and types or things such as context reducers and schema directives. You should use the `*.graphql-module.ts` files:
 
 ```typescript title="graphql/User.graphql-module.ts"
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 
 export default {
   typeDefs: /* GraphQL */ `
@@ -253,7 +253,7 @@ load({
 ```
 
 ```typescript
-import { getResult } from "@bluelibs/graphql-bundle";
+import { getResult } from "@redlibs/graphql-bundle";
 
 const ManipulateEndResponse = () => {
   return async function ManipulateEndResponse(_, args, ctx) {
@@ -310,9 +310,9 @@ When we are dealing with a GraphQL resolver, there are 2 things we need types fo
 You can have additional context reducers which extend your context, to type them, use the following strategy:
 
 ```ts title="defs.ts"
-import "@bluelibs/graphql-bundle";
+import "@redlibs/graphql-bundle";
 
-declare module "@bluelibs/graphql-bundle" {
+declare module "@redlibs/graphql-bundle" {
   export interface IGraphQLContext {
     myValue: string;
   }
@@ -322,7 +322,7 @@ declare module "@bluelibs/graphql-bundle" {
 For arguments, you either use a generator to transform your GraphQL types into TypeScript. Which can be good but that's an extra process you have to take care of. Usually you would use models that can be validated and the arguments should look like `register(input: RegisterInput!): String`. This is why you can do, in most cases, something like:
 
 ```ts title="a sample resolver"
-import { InputType } from "@bluelibs/graphql-bundle";
+import { InputType } from "@redlibs/graphql-bundle";
 
 type RegisterInput = {
   myValue: string;

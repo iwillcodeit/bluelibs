@@ -17,7 +17,7 @@ The X-Framework generator is a command-line utility which enables you to write c
 ## Install
 
 ```bash
-npm install -g @bluelibs/x-generator-bundle
+npm install -g @redlibs/x-generator-bundle
 ```
 
 Just type `x` and start coding with the X-Framework:

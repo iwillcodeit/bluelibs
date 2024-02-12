@@ -1,4 +1,4 @@
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 import * as Studio from "..";
 import * as faker from "faker";
 import { FieldValueKind } from "../models/FieldValueKind";

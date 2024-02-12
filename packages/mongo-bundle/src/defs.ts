@@ -3,14 +3,14 @@ import {
   IAstToQueryOptions,
   ILinkCollectionOptions,
   QueryBodyType,
-} from "@bluelibs/nova";
-import { IValidateOptions } from "@bluelibs/validator-bundle";
-import { ContainerInstance, Constructor } from "@bluelibs/core";
+} from "@redlibs/nova";
+import { IValidateOptions } from "@redlibs/validator-bundle";
+import { ContainerInstance, Constructor } from "@redlibs/core";
 import { ClientSession } from "mongodb";
 
 export type BehaviorType = (collectionEventManager: Collection<any>) => void;
 
-declare module "@bluelibs/nova" {
+declare module "@redlibs/nova" {
   export interface IQueryContext {
     container?: ContainerInstance;
     locale?: string;

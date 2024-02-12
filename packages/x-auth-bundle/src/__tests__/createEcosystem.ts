@@ -1,14 +1,14 @@
-import { Bundle, Kernel } from "@bluelibs/core";
-import { GraphQLBundle, Loader } from "@bluelibs/graphql-bundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
-import { XBundle } from "@bluelibs/x-bundle";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { PasswordBundle } from "@bluelibs/password-bundle";
-import { HTTPBundle } from "@bluelibs/http-bundle";
-import { SecurityMongoBundle } from "@bluelibs/security-mongo-bundle";
+import { Bundle, Kernel } from "@redlibs/core";
+import { GraphQLBundle, Loader } from "@redlibs/graphql-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
+import { XBundle } from "@redlibs/x-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { PasswordBundle } from "@redlibs/password-bundle";
+import { HTTPBundle } from "@redlibs/http-bundle";
+import { SecurityMongoBundle } from "@redlibs/security-mongo-bundle";
 import { XAuthBundle } from "..";
-import { EmailBundle } from "@bluelibs/email-bundle";
+import { EmailBundle } from "@redlibs/email-bundle";
 
 export const PORT = 64022;
 export async function createEcosystem(configXAuthBundle = {}) {

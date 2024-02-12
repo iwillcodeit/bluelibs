@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import { IXUISessionStore } from "..";
 import { IUISessionOptions } from "../react/services/UISession.service";
 

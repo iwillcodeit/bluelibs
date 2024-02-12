@@ -4,8 +4,8 @@ import {
   IUser,
   FindAuthenticationStrategyResponse,
   UserId,
-} from "@bluelibs/security-bundle";
-import { Collection, Behaviors, ObjectId } from "@bluelibs/mongo-bundle";
+} from "@redlibs/security-bundle";
+import { Collection, Behaviors, ObjectId } from "@redlibs/mongo-bundle";
 import { Filter } from "mongodb";
 
 export class UsersCollection<K extends IUser>

@@ -1,4 +1,4 @@
-import { Token } from "@bluelibs/core";
+import { Token } from "@redlibs/core";
 import { IMessenger, IXBundleConfig } from "./defs";
 import * as chalk from "chalk";
 import { Router } from "./services/Router";

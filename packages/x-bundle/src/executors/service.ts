@@ -1,4 +1,4 @@
-import { Constructor, Token } from "@bluelibs/core";
+import { Constructor, Token } from "@redlibs/core";
 
 export function ToService<T>(
   serviceClass: Constructor<T> | any,

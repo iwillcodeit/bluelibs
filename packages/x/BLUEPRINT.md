@@ -5,7 +5,7 @@ Because Blueprint outputs an X-Framework compatible project, it's important that
 To get directly into try-ing it:
 
 ```bash
-npm i -g @bluelibs/x
+npm i -g @redlibs/x
 x
 ```
 
@@ -50,7 +50,7 @@ You can use the `x` command to generate collections and shared models inside Blu
 Let's start from scratch with a simple blueprint to walk you through the main concepts
 
 ```ts title="blueprint/index.ts"
-import { Studio } from "@bluelibs/x";
+import { Studio } from "@redlibs/x";
 import * as faker from "faker";
 
 const { generateProject, app, collection, field, relation, sharedModel } =
@@ -669,7 +669,7 @@ For `create` and `edit` operations we call `{Collection}InsertOne` and respectiv
 These inputs are stored in `api` under `bundles/AppBundle/services/inputs`. As you already know, the `.base` files get overriden but you can customise your validation logic and what not inside the regular ones:
 
 ```tsx
-import { Schema, Is, a, an } from "@bluelibs/validator-bundle";
+import { Schema, Is, a, an } from "@redlibs/validator-bundle";
 import { ContactUpdateInput as BaseContactUpdateInput } from "./ContactUpdate.input.base";
 
 @Schema()

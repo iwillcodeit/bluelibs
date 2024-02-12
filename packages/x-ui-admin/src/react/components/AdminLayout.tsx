@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Layout, PageHeader } from "antd";
 import { useState } from "react";
-import { useUIComponents } from "@bluelibs/x-ui";
+import { useUIComponents } from "@redlibs/x-ui";
 
 const { Header, Content, Footer, Sider } = Layout;
 

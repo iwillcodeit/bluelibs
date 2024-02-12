@@ -1,4 +1,4 @@
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 import { ICronEntry } from "../defs";
 
 export class CronsCollection extends Collection<ICronEntry> {

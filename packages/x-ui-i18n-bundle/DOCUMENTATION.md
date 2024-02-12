@@ -1,13 +1,13 @@
 We are leveraging the [Polyglot](https://airbnb.io/polyglot.js/) in order to integrate within our way of doing things:
 
 ```bash
-npm i -S @bluelibs/x-ui-react-bundle @bluelibs/x-ui-i18n-bundle
+npm i -S @redlibs/x-ui-react-bundle @redlibs/x-ui-i18n-bundle
 ```
 
 ```ts
-import { Kernel } from "@bluelibs/core";
-import { XUII18NBundle } from "@bluelibs/x-ui-i18n-bundle";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+import { Kernel } from "@redlibs/core";
+import { XUII18NBundle } from "@redlibs/x-ui-i18n-bundle";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -25,7 +25,7 @@ const kernel = new Kernel({
 ```
 
 ```ts
-import { useTranslate } from "@bluelibs/x-ui-i18n-bundle";
+import { useTranslate } from "@redlibs/x-ui-i18n-bundle";
 
 function Component() {
   const t = useTranslate();
@@ -38,7 +38,7 @@ function Component() {
 Changing the language of the default:
 
 ```ts
-import { I18NService } from "@bluelibs/x-ui";
+import { I18NService } from "@redlibs/x-ui";
 
 class UIAppBundle extends Bundle {
   async init() {

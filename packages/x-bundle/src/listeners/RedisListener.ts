@@ -1,4 +1,4 @@
-import { On, Listener, Inject, Service } from "@bluelibs/core";
+import { On, Listener, Inject, Service } from "@redlibs/core";
 import { RedisConnectionResumedEvent } from "../events/RedisConnectionResumedEvent";
 import { SubscriptionStore } from "../services/SubscriptionStore";
 

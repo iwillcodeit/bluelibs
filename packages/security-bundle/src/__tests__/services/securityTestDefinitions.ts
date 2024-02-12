@@ -1,6 +1,6 @@
 import { SecurityService } from "../..";
 import { UserPersistanceService } from "./mocks/UserPersistanceService.mock";
-import { EventManager } from "@bluelibs/core";
+import { EventManager } from "@redlibs/core";
 import { SessionPersistanceService } from "./mocks/SessionPersistanceService.mock";
 import { ISessionData } from "../../defs";
 

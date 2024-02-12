@@ -2,8 +2,8 @@ import {
   TerminalBundle,
   CommanderService,
   chalk,
-} from "@bluelibs/terminal-bundle";
-import { Bundle } from "@bluelibs/core";
+} from "@redlibs/terminal-bundle";
+import { Bundle } from "@redlibs/core";
 import commands from "./commands";
 import { execSync, exec } from "child_process";
 import { GENERATOR_QUOTES } from "./constants";
@@ -36,7 +36,7 @@ export class XGeneratorBundle extends Bundle<IXGeneratorBundleConfig> {
   public async checkAndDisplayNewVersion() {
     let showUpdateInstructions = false;
     try {
-      const result = execSync("npm view @bluelibs/x version", {
+      const result = execSync("npm view @redlibs/x version", {
         timeout: 2000,
       });
       latestVersion = result.toString().split("\n")[0];
@@ -48,7 +48,7 @@ export class XGeneratorBundle extends Bundle<IXGeneratorBundleConfig> {
 
     if (showUpdateInstructions) {
       console.log(`Newer version available (${latestVersion})`);
-      console.log(`npm i -g @bluelibs/x`);
+      console.log(`npm i -g @redlibs/x`);
       console.log("");
     }
   }
@@ -65,7 +65,7 @@ let latestVersion;
 let showUpdateInstructions = false;
 
 try {
-  const result = execSync("npm view @bluelibs/x version", {
+  const result = execSync("npm view @redlibs/x version", {
     timeout: 1000,
   });
   latestVersion = result.toString().split("\n")[0];

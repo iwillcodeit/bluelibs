@@ -1,9 +1,9 @@
-import { DeepPartial } from "@bluelibs/core";
+import { DeepPartial } from "@redlibs/core";
 import * as MongoDB from "mongodb";
-import { Linker, LINK_STORAGE } from "@bluelibs/nova";
+import { Linker, LINK_STORAGE } from "@redlibs/nova";
 import { Collection, MONGO_BUNDLE_COLLECTION } from "../../models/Collection";
 import { Collection as MongoCollection, ClientSession } from "mongodb";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 
 /**
  * This represents the fact that the current object has been processed, and on flushing, it should be ignored

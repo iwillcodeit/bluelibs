@@ -1,14 +1,14 @@
 import { MULTIPLE_FACTOR_STRATEGY, X_AUTH_SETTINGS } from "../constants";
 import { IXAuthBundleConfig } from "../defs";
-import { Inject, Service, ContainerInstance } from "@bluelibs/core";
-import { PasswordService } from "@bluelibs/password-bundle";
+import { Inject, Service, ContainerInstance } from "@redlibs/core";
+import { PasswordService } from "@redlibs/password-bundle";
 import {
   SecurityService,
   UserId,
   ISession,
   ICreateSessionOptions,
   SessionExpiredException,
-} from "@bluelibs/security-bundle";
+} from "@redlibs/security-bundle";
 import {
   SessionNotFound,
   UnValidFactorStrategy,

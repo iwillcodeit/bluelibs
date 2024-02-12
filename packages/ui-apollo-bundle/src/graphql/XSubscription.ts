@@ -1,5 +1,5 @@
 import Observable from "zen-observable";
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 import {
   IEventsMap,
   ISubscriptionEventMessage,

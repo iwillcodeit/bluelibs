@@ -1,8 +1,8 @@
-import { Service } from "@bluelibs/core";
-import { IUser, SecurityService } from "@bluelibs/security-bundle";
+import { Service } from "@redlibs/core";
+import { IUser, SecurityService } from "@redlibs/security-bundle";
 import * as passport from "passport";
 import * as express from "express";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 
 export type FindOrCreateResponse = {
   isNew: boolean;

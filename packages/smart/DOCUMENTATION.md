@@ -4,7 +4,7 @@ Let us a imagine a counter model:
 
 ```ts
 import * as React from "react";
-import { Smart } from "@bluelibs/smart";
+import { Smart } from "@redlibs/smart";
 
 interface IState {
   count: number;
@@ -73,7 +73,7 @@ This would be helpful when you want to have multiple `hooks` in the same compone
 The model can be configured and act differently based on a configuration it receives:
 
 ```ts
-import { Smart } from "@bluelibs/smart";
+import { Smart } from "@redlibs/smart";
 
 interface IState {
   loading: boolean;

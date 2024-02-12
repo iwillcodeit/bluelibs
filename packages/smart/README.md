@@ -23,11 +23,11 @@ Goodies:
 ## Install
 
 ```bash
-npm install --save @bluelibs/smart
+npm install --save @redlibs/smart
 ```
 
 ```tsx
-import { Smart, smart } from "@bluelibs/smart";
+import { Smart, smart } from "@redlibs/smart";
 
 // This is where you make api queries and this is where you set or update the state
 class Counter extends Smart {

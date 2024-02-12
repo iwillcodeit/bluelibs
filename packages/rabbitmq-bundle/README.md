@@ -14,7 +14,7 @@ This is the X-Framework of handling password authentication blended with GraphQL
 ## Install
 
 ```bash
-npm install --save @bluelibs/rabbitmq-bundle
+npm install --save @redlibs/rabbitmq-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

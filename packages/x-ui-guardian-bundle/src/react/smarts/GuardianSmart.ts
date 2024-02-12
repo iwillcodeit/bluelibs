@@ -1,6 +1,6 @@
 import { createContext } from "react";
-import { ApolloClient } from "@bluelibs/ui-apollo-bundle";
-import { EventManager, Inject } from "@bluelibs/core";
+import { ApolloClient } from "@redlibs/ui-apollo-bundle";
+import { EventManager, Inject } from "@redlibs/core";
 import { gql } from "graphql-tag";
 import {
   AuthenticationTokenUpdateEvent,
@@ -11,8 +11,8 @@ import {
   GUARDIAN_IS_MULTIPLEFACTOR_AUTH,
   LOCAL_STORAGE_TOKEN_KEY,
 } from "../../constants";
-import { Smart } from "@bluelibs/smart";
-import { ObjectId } from "@bluelibs/ejson";
+import { Smart } from "@redlibs/smart";
+import { ObjectId } from "@redlibs/ejson";
 import { GuardianUserRetrievedEvent } from "../events/GuardianUserRetrievedEvent";
 
 export type State<UserType = GuardianUserType> = {

@@ -1,7 +1,7 @@
-import { SecurityService, UserId } from "@bluelibs/security-bundle";
-import { PasswordService } from "@bluelibs/password-bundle";
-import { EmailService } from "@bluelibs/email-bundle";
-import { Service, Inject, ContainerInstance } from "@bluelibs/core";
+import { SecurityService, UserId } from "@redlibs/security-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
+import { EmailService } from "@redlibs/email-bundle";
+import { Service, Inject, ContainerInstance } from "@redlibs/core";
 import { InvalidPasswordException } from "../exceptions/InvalidPasswordException";
 import { IXPasswordService } from "./IXPasswordService";
 import { InvalidTokenException } from "../exceptions/InvalidTokenException";
@@ -11,15 +11,14 @@ import { LoginInput } from "../inputs/LoginInput";
 import { ResetPasswordInput } from "../inputs/ResetPasswordInput";
 import { ForgotPasswordInput } from "../inputs/ForgotPasswordInput";
 import { VerifyEmailInput } from "../inputs/VerifyEmailInput";
-import { Router, APP_ROUTER } from "@bluelibs/x-bundle";
+import { Router, APP_ROUTER } from "@redlibs/x-bundle";
 import { IXPasswordBundleConfig } from "../defs";
 import { X_PASSWORD_SETTINGS } from "../constants";
 import { InvalidUsernameException } from "../exceptions/InvalidUsernameException";
 import { UsernameAlreadyExistsException } from "../exceptions";
 
-const ALLOWED_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split(
-  ""
-);
+const ALLOWED_CHARS =
+  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

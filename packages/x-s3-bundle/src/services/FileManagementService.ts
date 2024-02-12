@@ -1,12 +1,12 @@
 import { S3 } from "@aws-sdk/client-s3";
 import { AWSS3Config } from "../defs";
 import { AppFile } from "../collections/appFiles/AppFile.model";
-import { Inject } from "@bluelibs/core";
+import { Inject } from "@redlibs/core";
 import { AppFileGroupsCollection } from "../collections/appFileGroups/AppFileGroups.collection";
 import { AppFilesCollection } from "../collections/appFiles/AppFiles.collection";
-import { ObjectID } from "@bluelibs/mongo-bundle";
+import { ObjectID } from "@redlibs/mongo-bundle";
 import { S3UploadService } from "./S3UploadService";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 import {
   APP_FILES_COLLECTION_TOKEN,
   APP_FILE_GROUPS_COLLECTION_TOKEN,

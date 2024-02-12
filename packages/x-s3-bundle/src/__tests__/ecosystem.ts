@@ -1,11 +1,11 @@
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { Bundle, Kernel } from "@bluelibs/core";
-import { GraphQLBundle, Loader } from "@bluelibs/graphql-bundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { Bundle, Kernel } from "@redlibs/core";
+import { GraphQLBundle, Loader } from "@redlibs/graphql-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 import { XS3Bundle } from "../XS3Bundle";
-import { XBundle } from "@bluelibs/x-bundle";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { SecurityBundle } from "@bluelibs/security-bundle";
+import { XBundle } from "@redlibs/x-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
 
 class MyBundle extends Bundle {
   async prepare() {

@@ -1,5 +1,5 @@
-import { Service } from "@bluelibs/core";
-import { QueryBodyType } from '@bluelibs/x-ui';
+import { Service } from "@redlibs/core";
+import { QueryBodyType } from '@redlibs/x-ui';
 import {
   {{ entityName }}
 } from "@bundles/{{ bundleName }}/collections";

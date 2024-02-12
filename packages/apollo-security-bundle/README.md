@@ -17,11 +17,11 @@ This bundle is to inject into the context the token read from the request and de
 ## Installation
 
 ```bash
-npm i -S @bluelibs/apollo-bundle @bluelibs/apollo-security-bundle
+npm i -S @redlibs/apollo-bundle @redlibs/apollo-security-bundle
 ```
 
 ```typescript
-import { ApolloSecurityBundle } from "@bluelibs/apollo-security-bundle";
+import { ApolloSecurityBundle } from "@redlibs/apollo-security-bundle";
 
 kernel.addBundle(
   new ApolloSecurityBundle({
@@ -53,7 +53,7 @@ export interface IApolloSecurityBundleConfig {
 Usage:
 
 ```js
-import { ISecurityContext } from "@bluelibs/apollo-security-bundle";
+import { ISecurityContext } from "@redlibs/apollo-security-bundle";
 
 load({
   resolvers: {

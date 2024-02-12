@@ -1,7 +1,7 @@
-import "@bluelibs/graphql-bundle";
-import { UserId } from "@bluelibs/security-bundle";
+import "@redlibs/graphql-bundle";
+import { UserId } from "@redlibs/security-bundle";
 
-declare module "@bluelibs/graphql-bundle" {
+declare module "@redlibs/graphql-bundle" {
   export interface IGraphQLContext {
     /**
      * The userId retrieved from the request. Also verified if the session is valid.

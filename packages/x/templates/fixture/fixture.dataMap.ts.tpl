@@ -1,8 +1,8 @@
-import { Service, Inject, ContainerInstance, Kernel } from "@bluelibs/core";
-import { DatabaseService } from "@bluelibs/mongo-bundle";
-import { EJSON } from "@bluelibs/ejson";
-import { PasswordService } from "@bluelibs/password-bundle";
-import { PermissionService, SecurityService } from "@bluelibs/security-bundle";
+import { Service, Inject, ContainerInstance, Kernel } from "@redlibs/core";
+import { DatabaseService } from "@redlibs/mongo-bundle";
+import { EJSON } from "@redlibs/ejson";
+import { PasswordService } from "@redlibs/password-bundle";
+import { PermissionService, SecurityService } from "@redlibs/security-bundle";
 
 import dataMap from "./{{ fixtureName }}.dataMap";
 
@@ -67,7 +67,7 @@ export class {{ fixtureClass }} {
     for (let i = 0; i < users.length; i++) {
       const user = users[i];
       const userId = user._id;
-      const email = user.email || `user-${i}@bluelibs.com`;
+      const email = user.email || `user-${i}@redlibs.com`;
 
       await this.passwordService.attach(userId, {
         email,

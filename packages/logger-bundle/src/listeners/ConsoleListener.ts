@@ -1,4 +1,4 @@
-import { Listener, Service } from "@bluelibs/core";
+import { Listener, Service } from "@redlibs/core";
 import { LogEvent } from "../events";
 import chalk from "chalk";
 import { LogLevel } from "../defs";

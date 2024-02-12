@@ -1,5 +1,5 @@
-import { ContainerInstance, Service } from "@bluelibs/core";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { ContainerInstance, Service } from "@redlibs/core";
+import { LoggerService } from "@redlibs/logger-bundle";
 import {
   IMigrationStatus,
   MigrationsCollection,

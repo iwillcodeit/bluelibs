@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import { ILog } from "./defs";
 
 export class LogEvent extends Event<{ log: ILog }> {}

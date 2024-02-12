@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Collection, use, useData } from "@bluelibs/x-ui";
+import { Collection, use, useData } from "@redlibs/x-ui";
 import { UploadProps, Upload, Button } from "antd";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 import { UploadOutlined } from "@ant-design/icons";
 import { XUploader, AppFile, AppFileGroup } from "../uploads/XUploader";
 import { useState, useEffect } from "react";

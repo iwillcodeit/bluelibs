@@ -1,4 +1,4 @@
-import { EventManager } from "@bluelibs/core";
+import { EventManager } from "@redlibs/core";
 import { ITimestampableBehaviorOptions, BehaviorType } from "../defs";
 import { BeforeInsertEvent, BeforeUpdateEvent } from "../events";
 import { Collection } from "../models/Collection";

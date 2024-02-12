@@ -1,5 +1,5 @@
 import { createEcosystem } from "./createEcosystem";
-import { ContainerInstance, Kernel } from "@bluelibs/core";
+import { ContainerInstance, Kernel } from "@redlibs/core";
 import { CACHE_SERVICE_TOKEN } from "./../..";
 import { CacheService } from "./../../cache/CacheService";
 import { CACHE_CONFIG } from "../../constants";

@@ -1,8 +1,8 @@
-import "@bluelibs/x-ui";
+import "@redlibs/x-ui";
 import * as Components from "./index";
-import { IComponents } from "@bluelibs/x-ui";
+import { IComponents } from "@redlibs/x-ui";
 
-declare module "@bluelibs/x-ui" {
+declare module "@redlibs/x-ui" {
   export interface IComponents {
     AdminTopHeader: React.ComponentType;
     AdminMenu: React.ComponentType;
@@ -15,12 +15,8 @@ declare module "@bluelibs/x-ui" {
     AdminLogo: React.ComponentType;
     AdminFilesUpload: React.ComponentType<Components.AdminFilesUploadProps>;
     AdminFileUpload: React.ComponentType<Components.AdminFileUploadProps>;
-    AdminFileGroupUpload: React.ComponentType<
-      Components.AdminFileGroupUploadProps
-    >;
-    AdminListItemRenderer: React.ComponentType<
-      Components.AdminListItemRendererProps
-    >;
+    AdminFileGroupUpload: React.ComponentType<Components.AdminFileGroupUploadProps>;
+    AdminListItemRenderer: React.ComponentType<Components.AdminListItemRendererProps>;
     DatePicker: React.ComponentType<Components.DatePickerProps>;
     RemoteSelect: React.ComponentType<Components.RemoteSelectProps>;
     RemoteSelectLazy: React.ComponentType<Components.RemoteSelectLazyProps>;

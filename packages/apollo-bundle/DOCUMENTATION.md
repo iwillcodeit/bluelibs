@@ -1,11 +1,11 @@
 ## Install
 
 ```bash
-npm i -S graphql @bluelibs/graphql-bundle apollo-server-express @bluelibs/apollo-bundle
+npm i -S graphql @redlibs/graphql-bundle apollo-server-express @redlibs/apollo-bundle
 ```
 
 ```ts
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 
 const kernel = new Kernel({
   bundles: [new GraphQLBundle(), new ApolloBundle()],
@@ -30,7 +30,7 @@ The `express` application and `ApolloServer` are created in the `KernelAfterInit
 ## Usage
 
 ```typescript
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 
 kernel.addBundle(
   new ApolloBundle({
@@ -77,8 +77,8 @@ kernel.addBundle(
 ## Loading API Definitions
 
 ```typescript
-import { Bundle } from "@bluelibs/core";
-import { Loader } from "@bluelibs/graphql-bundle";
+import { Bundle } from "@redlibs/core";
+import { Loader } from "@redlibs/graphql-bundle";
 
 class AppBundle extends Bundle {
   prepare() {
@@ -114,7 +114,7 @@ class AppBundle extends Bundle {
 ## Internals
 
 ```ts
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 
 class AppBundle extends Bundle {
   async prepare() {
@@ -161,7 +161,7 @@ Install the following dependencies:
 
 ```bash
 npm i -g serverless # In case you haven't installed it
-npm i -D @bluelibs/serverless-plugin-typescript serverless-offline
+npm i -D @redlibs/serverless-plugin-typescript serverless-offline
 ```
 
 You have to configure the following, in your handler:
@@ -169,7 +169,7 @@ You have to configure the following, in your handler:
 ```ts title="src/startup/serverless.ts"
 import "./bundles";
 import { kernel } from "./kernel";
-import { createServerlessHandler } from "@bluelibs/apollo-bundle";
+import { createServerlessHandler } from "@redlibs/apollo-bundle";
 
 export const graphqlHandler = createServerlessHandler(kernel);
 ```
@@ -180,7 +180,7 @@ Now let's configure `serverless.yml` file:
 # serverless.yml
 service: apollo-lambda
 plugins:
-  - "@bluelibs/serverless-plugin-typescript"
+  - "@redlibs/serverless-plugin-typescript"
   - serverless-offline
 
 provider:

@@ -17,7 +17,7 @@ A powerful and lightweight module composition strategy responsible for orchestra
 ## Install
 
 ```bash
-npm install --save @bluelibs/core
+npm install --save @redlibs/core
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

@@ -1,12 +1,12 @@
 import * as React from "react";
-import { I18NService } from "@bluelibs/x-ui-i18n-bundle";
-import { GuardianSmart } from "@bluelibs/x-ui-guardian-bundle";
+import { I18NService } from "@redlibs/x-ui-i18n-bundle";
+import { GuardianSmart } from "@redlibs/x-ui-guardian-bundle";
 import {
   useContainer,
   XUIProvider,
   XUIReactBundle,
   XUI_COMPONENTS_TOKEN,
-} from "@bluelibs/x-ui-react-bundle";
+} from "@redlibs/x-ui-react-bundle";
 import { container, kernel } from "./ecosystem";
 
 import * as TestRenderer from "react-test-renderer";

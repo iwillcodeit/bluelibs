@@ -1,6 +1,6 @@
-import "@bluelibs/x-ui-react-bundle";
+import "@redlibs/x-ui-react-bundle";
 
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import { GuardianSmart, ProtectProps } from ".";
 
 export type IXUIGuardianBundleConfigType = {
@@ -20,7 +20,7 @@ export type IXUIGuardianProviderProps = {
   loadingComponent?: React.ComponentType;
 };
 
-declare module "@bluelibs/x-ui-react-bundle" {
+declare module "@redlibs/x-ui-react-bundle" {
   export interface IComponents<Error = any, NOT_AUTHORIZED = any> {
     Error: React.ComponentType<Error>;
     ErrorBoundary: React.ComponentType;

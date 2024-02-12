@@ -1,5 +1,5 @@
-import { Kernel } from "@bluelibs/core";
-import { TerminalBundle } from "@bluelibs/terminal-bundle";
+import { Kernel } from "@redlibs/core";
+import { TerminalBundle } from "@redlibs/terminal-bundle";
 import * as Studio from "./models";
 import { XSession } from "../utils";
 import { StudioWriter } from "./StudioWriter";

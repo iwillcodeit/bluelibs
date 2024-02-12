@@ -1,11 +1,11 @@
-import { Bundle, EventManager, BundleAfterPrepareEvent } from "@bluelibs/core";
-import { Loader, ApolloBundle, IGraphQLContext } from "@bluelibs/apollo-bundle";
-import { SecurityService, SecurityBundle } from "@bluelibs/security-bundle";
+import { Bundle, EventManager, BundleAfterPrepareEvent } from "@redlibs/core";
+import { Loader, ApolloBundle, IGraphQLContext } from "@redlibs/apollo-bundle";
+import { SecurityService, SecurityBundle } from "@redlibs/security-bundle";
 import { ApolloInvalidTokenException } from "./exceptions";
 import { PassportService } from "./services/PassportService";
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 
-import "@bluelibs/apollo-bundle"; // To ensure the IGraphQLContext is extended
+import "@redlibs/apollo-bundle"; // To ensure the IGraphQLContext is extended
 
 export interface IApolloSecurityBundleConfig {
   support: {
@@ -85,9 +85,8 @@ export class ApolloSecurityBundle extends Bundle<IApolloSecurityBundleConfig> {
         }
 
         if (token) {
-          const securityService: SecurityService = container.get(
-            SecurityService
-          );
+          const securityService: SecurityService =
+            container.get(SecurityService);
           const session = await securityService.getSession(token);
           if (session) {
             // We check if the user still exists and is enabled

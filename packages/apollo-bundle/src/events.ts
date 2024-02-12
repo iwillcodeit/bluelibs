@@ -1,5 +1,5 @@
 import { ApolloServer } from "@apollo/server";
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import * as express from "express";
 import * as http from "http";
 

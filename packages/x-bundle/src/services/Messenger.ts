@@ -1,4 +1,4 @@
-import { Inject } from "@bluelibs/core";
+import { Inject } from "@redlibs/core";
 import Queue from "queue";
 import { IS_LIVE_DEBUG } from "../constants";
 import { IMessenger, MessageHandleType, ISubscriptionEvent } from "../defs";

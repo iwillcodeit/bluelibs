@@ -8,9 +8,9 @@ import {
   EditOutlined,
   EyeOutlined,
 } from "@ant-design/icons";
-import { AntTableSmart, Consumer } from "@bluelibs/x-ui-admin";
-import { QueryBodyType } from "@bluelibs/x-ui";
-import { Service } from "@bluelibs/core";
+import { AntTableSmart, Consumer } from "@redlibs/x-ui-admin";
+import { QueryBodyType } from "@redlibs/x-ui";
+import { Service } from "@redlibs/core";
 import * as Ant from "antd";
 import { features } from "../../config/features";
 import { {{ entityName }}List } from "../../config/{{ entityName }}List";

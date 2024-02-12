@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IReactEmailTemplate } from "@bluelibs/email-bundle";
+import { IReactEmailTemplate } from "@redlibs/email-bundle";
 
 export interface IResetPasswordConfirmationEmailProps {
   username: string;

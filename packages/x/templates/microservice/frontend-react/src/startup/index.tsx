@@ -1,6 +1,6 @@
 import "reflect-metadata";
 
-import { XUIProvider } from "@bluelibs/x-ui";
+import { XUIProvider } from "@redlibs/x-ui";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { kernel } from "./kernel";

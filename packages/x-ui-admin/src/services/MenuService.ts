@@ -1,4 +1,4 @@
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 import { IMenuItemConfig } from "../defs";
 import * as startCase from "lodash.startcase";
 

@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { I18N_CONFIG_TOKEN } from ".";
 import { IXUII18NBundleConfig } from "./defs";
 

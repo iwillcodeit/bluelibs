@@ -1,7 +1,7 @@
 export * from "./behaviors/defs";
 
-import { Constructor, ContainerInstance } from "@bluelibs/core";
-import { IAstToQueryOptions } from "@bluelibs/nova";
+import { Constructor, ContainerInstance } from "@redlibs/core";
+import { IAstToQueryOptions } from "@redlibs/nova";
 import { ClientOpts } from "redis";
 import { ICacheManagerConfig } from "./cache/defs";
 import { DocumentMutationType } from "./constants";
@@ -80,7 +80,7 @@ export interface ISubscriptionHandler<T> {
   stop(): Promise<void>;
 }
 
-declare module "@bluelibs/graphql-bundle" {
+declare module "@redlibs/graphql-bundle" {
   export interface IGraphQLContext {
     container: ContainerInstance;
   }

@@ -1,4 +1,4 @@
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import {
   TestContext,
   MixedSchema,

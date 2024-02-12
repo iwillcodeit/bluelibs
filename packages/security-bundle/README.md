@@ -17,7 +17,7 @@ This bundle aims to solve Authentication and Authorization (with included Permis
 ## Install
 
 ```bash
-npm install --save @bluelibs/security-bundle
+npm install --save @redlibs/security-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

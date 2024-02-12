@@ -1,6 +1,6 @@
 import { ApolloClient as BaseApolloClient } from "@apollo/client/core";
-import { EventManager, Service } from "@bluelibs/core";
-import { ContainerInstance } from "@bluelibs/core";
+import { EventManager, Service } from "@redlibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { SubscriptionClient } from "subscriptions-transport-ws";
 import { IUIApolloBundleConfig } from "../defs";
 import { createApolloLink } from "./utils/createApolloLink";

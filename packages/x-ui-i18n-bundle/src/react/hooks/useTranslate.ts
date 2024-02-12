@@ -1,4 +1,4 @@
-import { use } from "@bluelibs/x-ui-react-bundle";
+import { use } from "@redlibs/x-ui-react-bundle";
 import { I18NService } from "..";
 
 import Polyglot from "node-polyglot";

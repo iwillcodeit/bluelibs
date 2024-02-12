@@ -1,9 +1,4 @@
-import {
-  Service,
-  Inject,
-  ContainerInstance,
-  Constructor,
-} from "@bluelibs/core";
+import { Service, Inject, ContainerInstance, Constructor } from "@redlibs/core";
 import { jsonToGraphQLQuery, VariableType } from "json-to-graphql-query";
 import {
   gql,
@@ -11,12 +6,12 @@ import {
   MutationOptions,
   DocumentNode,
 } from "@apollo/client/core";
-import { EJSON, ObjectId } from "@bluelibs/ejson";
+import { EJSON, ObjectId } from "@redlibs/ejson";
 import { IQueryInput, ISubscriptionOptions, QueryBodyType } from "./defs";
 import { getSideBody } from "./utils/getSideBody";
 import { cleanTypename } from "./utils/cleanTypename";
 import { isEmptyObject, toQueryBody } from "./utils/toQueryBody";
-import { ApolloClient } from "@bluelibs/ui-apollo-bundle";
+import { ApolloClient } from "@redlibs/ui-apollo-bundle";
 import {
   OperationVariables,
   QueryOptions as ApolloQueryOptions,

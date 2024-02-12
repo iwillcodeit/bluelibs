@@ -1,6 +1,6 @@
-import { XRouter, XUIBundle } from "@bluelibs/x-ui";
+import { XRouter, XUIBundle } from "@redlibs/x-ui";
 import * as Routes from "./routes";
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { AppGuardian } from "./services/AppGuardian";
 import { i18n } from "./i18n";
 // import * as ComponentOverrides from "./overrides";

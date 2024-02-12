@@ -3,7 +3,7 @@ This bundle integrates BlueLibs's Core with [MikroORM](https://mikro-orm.io/docs
 ## Install
 
 ```bash
-npm i --save @bluelibs/mikro-orm-bundle @mikro-orm/core @mikro-orm/mysql
+npm i --save @redlibs/mikro-orm-bundle @mikro-orm/core @mikro-orm/mysql
 ```
 
 You can install @mikro-orm/postgresql or others.
@@ -15,7 +15,7 @@ You can install @mikro-orm/postgresql or others.
 ## Usage
 
 ```ts
-import { MikroORMBundle } from "@bluelibs/mikro-orm-bundle";
+import { MikroORMBundle } from "@redlibs/mikro-orm-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -32,7 +32,7 @@ const kernel = new Kernel({
 ## Usage
 
 ```ts
-import { ORM } from "@bluelibs/mikro-orm-bundle";
+import { ORM } from "@redlibs/mikro-orm-bundle";
 
 const orm = container.get(ORM); // ORM is a Token
 // use orm as you normally would
@@ -60,7 +60,7 @@ If you want to run mikro-orm cli commands follow the guide here: https://mikro-o
 The only difference is how the config file looks like. You will basically have to isolate your file kernel like this:
 
 ```ts
-import { ORM, MikroORMBundle } from "@bluelibs/mikroorm-bundle";
+import { ORM, MikroORMBundle } from "@redlibs/mikroorm-bundle";
 
 // A good idea at this stage would be to create a bundles/mikro-orm.ts which you import in your main kernel and the config file
 const kernel = new Kernel({

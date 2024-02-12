@@ -1,7 +1,7 @@
 import {
   BlueprintWriter,
   IBlueprintWriterSession,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import {
   MicroserviceModel,
   CreateBundleModel,

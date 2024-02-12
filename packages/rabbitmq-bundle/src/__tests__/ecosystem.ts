@@ -1,5 +1,5 @@
-import { Kernel } from "@bluelibs/core";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { Kernel } from "@redlibs/core";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 import { RabbitMQBundle } from "../RabbitMQBundle";
 
 export const createKernel = (): Kernel => {

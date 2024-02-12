@@ -3,7 +3,7 @@ import {
   Shortcuts,
   ExitInquiryException,
   IAutocompleteOption,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import { CreateBundleModel } from "../models";
 import { FSUtils } from "../utils/FSUtils";
 import { GenericModel } from "../models/GenericModel";

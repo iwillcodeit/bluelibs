@@ -1,11 +1,11 @@
-import { Listener, On } from "@bluelibs/core";
+import { Listener, On } from "@redlibs/core";
 {{# if collectionEvents }}
 {{ collectionImportLine }}
 import {
   {{# each collectionEventNames }}
     {{ this }},
   {{/ each }}
-} from "@bluelibs/mongo-bundle"
+} from "@redlibs/mongo-bundle"
 {{/ if }}
 
 export class {{ listenerClass }} extends Listener {

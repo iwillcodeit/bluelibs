@@ -17,7 +17,7 @@ Passwords is an authentication method implemented for the `SecurityBundle`. It d
 ## Install
 
 ```bash
-npm install --save @bluelibs/password-bundle
+npm install --save @redlibs/password-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

@@ -4,7 +4,7 @@
 
 import { GraphQLScalarType, ValueNode } from "graphql";
 import { Kind, print } from "graphql/language";
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 
 // function parseObject(typeName, ast, variables) {
 //   const value = Object.create(null);

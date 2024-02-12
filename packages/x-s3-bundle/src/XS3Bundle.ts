@@ -1,7 +1,7 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { XS3BundleConfigType } from "./defs";
 import { S3UploadService } from "./services/S3UploadService";
-import { GraphQLBundle, Loader } from "@bluelibs/graphql-bundle";
+import { GraphQLBundle, Loader } from "@redlibs/graphql-bundle";
 import GraphQLAppFile from "./graphql/entities/AppFile.graphql";
 import GraphQLAppFileResolvers from "./graphql/entities/AppFile.resolvers";
 import GraphQLAppFileGroup from "./graphql/entities/AppFileGroup.graphql";
@@ -11,7 +11,7 @@ import {
   X_S3_CONFIG_TOKEN as X_S3_CONFIG_TOKEN,
   APP_FILE_GROUPS_COLLECTION_TOKEN,
 } from "./constants";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 import { AppFilesCollection } from "./collections/appFiles/AppFiles.collection";
 import { AppFileGroupsCollection } from "./collections/appFileGroups/AppFileGroups.collection";
 
@@ -60,7 +60,7 @@ export class XS3Bundle extends Bundle<XS3BundleConfigType> {
     const loader = this.container.get(Loader);
     loader.load({
       typeDefs: [GraphQLAppFile, GraphQLAppFileGroup],
-      resolvers: [GraphQLAppFileResolvers]
+      resolvers: [GraphQLAppFileResolvers],
     });
 
     this.warmup([AppFileListener, S3UploadService]);

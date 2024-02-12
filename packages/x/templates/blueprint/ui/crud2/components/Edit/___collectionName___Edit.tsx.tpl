@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import * as Ant from "antd";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import { Routes } from "@bundles/{{ bundleName }}";
-import { useUIComponents, useRouter, use, useDataOne, useTranslate } from "@bluelibs/x-ui";
+import { useUIComponents, useRouter, use, useDataOne, useTranslate } from "@redlibs/x-ui";
 import { {{ entityName}}EditForm } from "../../config/{{ entityName }}EditForm";
 import { features } from "../../config/features";
 import {

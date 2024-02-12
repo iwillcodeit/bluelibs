@@ -1,6 +1,6 @@
-import { Collection, DocumentNotFoundException } from "@bluelibs/mongo-bundle";
-import { getResult, IGraphQLContext } from "@bluelibs/graphql-bundle";
-import { Constructor } from "@bluelibs/core";
+import { Collection, DocumentNotFoundException } from "@redlibs/mongo-bundle";
+import { getResult, IGraphQLContext } from "@redlibs/graphql-bundle";
+import { Constructor } from "@redlibs/core";
 import { Filter, UpdateFilter } from "mongodb";
 import { prepareForExecution } from "./utils/prepareForExecution";
 import { GraphQLToNovaOptionsResolverType } from "./utils/GraphQLToNovaOptionsResolverType";
@@ -8,7 +8,7 @@ import { NOVA_AST_TO_QUERY_OPTIONS } from "./security";
 import {
   IAstToQueryOptions,
   AnyifyFieldsWithIDs as Clean,
-} from "@bluelibs/nova";
+} from "@redlibs/nova";
 
 const defaultNovaOptionsResolver: GraphQLToNovaOptionsResolverType<
   any

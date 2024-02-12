@@ -1,4 +1,4 @@
-import { UserRolesType, useUIComponents } from "@bluelibs/x-ui-react-bundle";
+import { UserRolesType, useUIComponents } from "@redlibs/x-ui-react-bundle";
 import * as React from "react";
 import { useGuardian } from "../hooks";
 

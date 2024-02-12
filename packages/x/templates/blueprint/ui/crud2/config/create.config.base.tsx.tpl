@@ -1,10 +1,10 @@
 /** @overridable */
-import { XRouter, use, IComponents } from "@bluelibs/x-ui";
+import { XRouter, use, IComponents } from "@redlibs/x-ui";
 import { SmileOutlined } from '@ant-design/icons';
 import * as Ant from "antd";
-import { XFormElementType, XForm } from "@bluelibs/x-ui-admin";
+import { XFormElementType, XForm } from "@redlibs/x-ui-admin";
 import { Routes } from "@bundles/{{ bundleName }}";
-import { Service, Inject } from "@bluelibs/core";
+import { Service, Inject } from "@redlibs/core";
 import { features } from "./features";
 {{# if typesToImport.create }}
 import { {{ typesToImport.create }} } from "@root/api.types";

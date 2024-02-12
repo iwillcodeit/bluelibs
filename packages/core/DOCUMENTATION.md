@@ -3,7 +3,7 @@ This is the "glue" that sticks all of our modules together. It relies on certain
 ## Install
 
 ```bash
-npm install --save @bluelibs/core
+npm install --save @redlibs/core
 ```
 
 ## Purpose
@@ -46,7 +46,7 @@ An oversimplification of D.I. is that you don't depend on "real" implementations
 And let's say you want to insert something in the database and you store this logic somewhere, instead of getting the logic handler directly (by `new DatabaseService()`-ing it, or accessing the singleton `DatabaseService.doSomething()`), you use the container:
 
 ```ts
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 
 class DatabaseService {
   insert(collection: string, value: any) {
@@ -81,7 +81,7 @@ container.get(DatabaseService);
 Now let's say the `databaseService` needs some credentials and a host to connect to. So instead of using a string directly or reading directly from env, it reads it from container:
 
 ```ts
-import { ContainerInstance, Inject } from "@bluelibs/core";
+import { ContainerInstance, Inject } from "@redlibs/core";
 
 class DatabaseService {
   databaseUri: string;
@@ -112,7 +112,7 @@ If your application was an army, the services are your soldiers. They do: data m
 Let's regard them as units of logic stored in classes which can depend on things from the container.
 
 ```typescript
-import { Service, ContainerInstance } from "@bluelibs/core";
+import { Service, ContainerInstance } from "@redlibs/core";
 
 const container = new ContainerInstance();
 
@@ -229,7 +229,7 @@ a1 !== a2; // true, they are different instances
 It's never good to rely on strings as identifiers, because sometimes they can collide, and they don't infer types. `Token` comming to the rescue! It ensures no collisions can happen and also helps us with infering the type without as having to specify it.
 
 ```ts
-import { Service, Inject, Token } from "@bluelibs/core";
+import { Service, Inject, Token } from "@redlibs/core";
 
 @Service()
 class Emptyness {}
@@ -271,7 +271,7 @@ Let's explore how we define a type-safe event. Note that we can also have events
 Let's code a simple one:
 
 ```typescript
-import { EventManager, Event } from "@bluelibs/core";
+import { EventManager, Event } from "@redlibs/core";
 
 class UserCreatedEvent extends Event<{
   // This is what information you need to pass when creating the event
@@ -365,7 +365,7 @@ What are events without someone to listen to? They would get lost in the void.
 We can add listeners via `addListener` from the `EventManager` which we get from the `container`, but we also have a more elegant way.
 
 ```typescript
-import { Listener, On } from "@bluelibs/core";
+import { Listener, On } from "@redlibs/core";
 
 // The base Listener class has a init() function that registers the events accordingly
 class NotificationListener extends Listener {
@@ -427,7 +427,7 @@ Together they can form examples such as: `UserBeforeCreateEvent`, `OrderPaymentP
 The `Kernel` is nothing without its precious bundles. Bundles contain the logic.
 
 ```typescript
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 
 class AppBundle extends Bundle {
   async init() {
@@ -460,7 +460,7 @@ Ok, now that you've learned the basics of containers and async event management,
 Bundles can have a specific configuration to them and this is passed when instantiating them:
 
 ```ts
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 
 type SaaSConfigType = {
   subscriptionFee: number;
@@ -564,7 +564,7 @@ import {
   EventManager,
   Event,
   BundleAfterPrepareEvent,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 
 class MyBundle extends Bundle {
   async extend() {
@@ -590,7 +590,7 @@ import {
   EventManager,
   Event,
   BundleAfterPrepareEvent,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 
 class MyBundle extends Bundle {
   hook() {
@@ -616,7 +616,7 @@ class MyBundle extends Bundle {
 Let's say we have a bundle that needs an API key, for example, `MailBundle` needs some authentication parameters. The way we connect Bundle's config to the container is by setting some constants into the container which the services use in their instantiation.
 
 ```typescript
-import { Inject, Service, Token, Bundle } from "@bluelibs/core";
+import { Inject, Service, Token, Bundle } from "@redlibs/core";
 
 // {bundle}/constants.ts
 const Constants = {
@@ -671,7 +671,7 @@ class AppBundle extends Bundle {
 It's nice to never rely on string matching to see which exception was thrown, and it's nice to have typesafety as well. We recommend you always use this instead of the standard `Error`. The reason we changed the name to `Exception` instead of Error was to avoid confusion that these class would somehow extend the `Error` class.
 
 ```typescript
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 class UserNotAuthorizedException extends Exception<{
   userId: string;
@@ -743,9 +743,9 @@ class A {
 To benefit of autocompletion for your kernel parameters, extend the `IKernelParameters` interface:
 
 ```ts title="defs.ts"
-import "@bluelibs/core";
+import "@redlibs/core";
 
-declare module "@bluelibs/core" {
+declare module "@redlibs/core" {
   export interface IKernelParameters {
     applicationUrl: string;
   }

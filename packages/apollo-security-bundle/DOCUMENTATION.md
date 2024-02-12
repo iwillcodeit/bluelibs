@@ -1,11 +1,11 @@
 ## Install
 
 ```bash
-npm i -S @bluelibs/apollo-bundle @bluelibs/apollo-security-bundle passport
+npm i -S @redlibs/apollo-bundle @redlibs/apollo-security-bundle passport
 ```
 
 ```ts
-import { ApolloSecurityBundle } from "@bluelibs/apollo-security-bundle";
+import { ApolloSecurityBundle } from "@redlibs/apollo-security-bundle";
 
 const kernel = new Kernel({
   bundles: [new ApolloSecurityBundle()],
@@ -45,7 +45,7 @@ export interface IApolloSecurityBundleConfig {
 `IGraphQLContext` is properly extended by this package:
 
 ```js
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 
 load({
   resolvers: {
@@ -133,7 +133,7 @@ export class FacebookAuthenticator extends PassportAuthenticator {
 Note, if you are using `X-Framework`, you can inject the AppRouter which generates urls for the app:
 
 ```ts
-import { APP_ROUTER, Router } from "@bluelibs/x-bundle";
+import { APP_ROUTER, Router } from "@redlibs/x-bundle";
 
 class FacebookAuthenticator extends PassportAuthenticator {
   @Inject(APP_ROUTER)

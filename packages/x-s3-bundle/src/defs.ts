@@ -1,12 +1,12 @@
-import { Constructor } from "@bluelibs/core";
-import { Collection, ObjectID } from "@bluelibs/mongo-bundle";
+import { Constructor } from "@redlibs/core";
+import { Collection, ObjectID } from "@redlibs/mongo-bundle";
 import { ReadStream } from "fs";
 import { AppFilesCollection } from "./collections/appFiles/AppFiles.collection";
 import { AppFileGroupsCollection } from "./collections/appFileGroups/AppFileGroups.collection";
 import { ResizeOptions } from "sharp";
-import "@bluelibs/mongo-bundle";
+import "@redlibs/mongo-bundle";
 
-declare module "@bluelibs/mongo-bundle" {
+declare module "@redlibs/mongo-bundle" {
   interface IExecutionContext {
     /**
      * This should only be used when removing files, if true, the system won't automatically delete the files

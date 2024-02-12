@@ -5,13 +5,13 @@ Sometimes our applications are simpli `cli` interfaces, or we need `cli` tooling
 The cli tooling is beautifully embedded into the BlueLibs ecosystem allowing you to hook it on existing applications or just start new ones.
 
 ```bash
-npm i -S @bluelibs/terminal-bundle
+npm i -S @redlibs/terminal-bundle
 ```
 
 ```ts
 // file: src/cli.ts
 #!/usr/bin/env node
-import { TerminalBudle } from "@bluelibs/terminal-bundle";
+import { TerminalBudle } from "@redlibs/terminal-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -53,7 +53,7 @@ Not to be confused with a GraphQL Executor, which is completely independent from
 ## Creating a command
 
 ```typescript
-import { Service, Inject, ContainerInstance } from "@bluelibs/core";
+import { Service, Inject, ContainerInstance } from "@redlibs/core";
 
 type Model = {
   collectionName: string;
@@ -71,7 +71,7 @@ class DropCollectionCommand implements IExecutor<Model> {
 }
 
 // In init() phase of your bundle
-import { CommanderService } from "@bluelibs/terminal-bundle";
+import { CommanderService } from "@redlibs/terminal-bundle";
 
 CommanderService.registerCommand({
   id: "app:drop-collection"
@@ -131,7 +131,7 @@ And now in your `AppBundle` you do `container.get("%isCli%")` and you make it be
 Let's explore how we can use the inquirer to ask questions.
 
 ```typescript
-import { Shortcuts, Inquirer } from "@bluelibs/terminal-bundle";
+import { Shortcuts, Inquirer } from "@redlibs/terminal-bundle";
 
 class DropCollectionModel {
   collectionName: string;
@@ -197,7 +197,7 @@ This part is not required for you to learn, there's a small change you are plann
 Now, we could have used executor to write files, but the problem is that writing files requires additional logic this is why we introduce the "writer":
 
 ```typescript
-import { BlueprintWriter, IBlueprintWriterSession } from "@bluelibs/terminal-bundle";
+import { BlueprintWriter, IBlueprintWriterSession } from "@redlibs/terminal-bundle";
 import _ from 'lodash';
 
 class CollectionBlueprintWriter extends BlueprintWriter<DropCollectionModel> {

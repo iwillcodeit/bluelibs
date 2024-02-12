@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 
 export class GraphQLBundle extends Bundle {
   async init() {

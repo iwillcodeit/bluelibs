@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import * as MongoDB from "mongodb";
 import { IExecutionContext, IGetFieldsResponse } from "./defs";
 import { Collection } from "./models/Collection";

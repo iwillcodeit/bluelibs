@@ -26,7 +26,7 @@ export class CollectionModel {
   /**
    * This refers when the collection extends something else (We use it for Users to extend from SecurityMongoBundle)
    */
-  customCollectionImport: string; // "@bluelibs/security-mongo-bundle";
+  customCollectionImport: string; // "@redlibs/security-mongo-bundle";
   customCollectionName: string; // "UsersCollection"
 
   constructor() {}

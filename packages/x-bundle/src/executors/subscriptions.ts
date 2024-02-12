@@ -1,8 +1,8 @@
-import { Constructor } from "@bluelibs/core";
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Constructor } from "@redlibs/core";
+import { Collection } from "@redlibs/mongo-bundle";
 import { SubscriptionStore } from "../services/SubscriptionStore";
-import { IGraphQLContext } from "@bluelibs/graphql-bundle";
-import { QueryBodyType } from "@bluelibs/nova";
+import { IGraphQLContext } from "@redlibs/graphql-bundle";
+import { QueryBodyType } from "@redlibs/nova";
 import { Filter } from "mongodb";
 import { SubscriptionProcessorOptionsType } from "../models/SubscriptionProcessor";
 

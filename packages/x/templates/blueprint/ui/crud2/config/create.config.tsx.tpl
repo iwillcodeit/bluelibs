@@ -1,4 +1,4 @@
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 import { {{ entityName }}CreateForm as Base{{ entityName }}CreateForm } from "./{{ entityName }}CreateForm.base";
 
 @Service({ transient: true })

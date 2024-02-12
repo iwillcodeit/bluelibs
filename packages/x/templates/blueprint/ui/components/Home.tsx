@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useGuardian, useRouter } from "@bluelibs/x-ui";
+import { useGuardian, useRouter } from "@redlibs/x-ui";
 import { LockOutlined, DashboardFilled, ToolOutlined } from "@ant-design/icons";
 import { Routes } from "@bundles/UIAppBundle";
 import { Button, Space, Row, Col, Alert, Card } from "antd";

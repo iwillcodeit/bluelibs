@@ -1,4 +1,4 @@
-import { Constructor, Token } from "@bluelibs/core";
+import { Constructor, Token } from "@redlibs/core";
 import { GuardianSmart } from ".";
 
 export const LOCAL_STORAGE_TOKEN_KEY = "bluelibs-token";

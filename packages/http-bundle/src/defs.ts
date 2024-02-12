@@ -1,4 +1,4 @@
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import * as express from "express";
 
 export const RouteHandlerPreviousResultStore = Symbol(

@@ -1,4 +1,4 @@
-import { IBundleLinkCollectionOption } from "@bluelibs/mongo-bundle";
+import { IBundleLinkCollectionOption } from "@redlibs/mongo-bundle";
 
 // Export link names as constants with type of: IBundleLinkCollectionOption, sample:
 // export const myCustomLink: IBundleLinkCollectionOption = { ... }

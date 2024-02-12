@@ -1,5 +1,5 @@
 {
-  "name": "@bluelibs/template",
+  "name": "@redlibs/template",
   "version": "1.0.0",
   "description": "BlueLibs template",
   "main": "dist/index.js",

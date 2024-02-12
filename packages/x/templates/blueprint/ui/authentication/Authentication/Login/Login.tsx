@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useGuardian, useRouter, useTranslate } from "@bluelibs/x-ui";
+import { useGuardian, useRouter, useTranslate } from "@redlibs/x-ui";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Routes } from "@bundles/UIAppBundle";
 import { ApolloError } from "@apollo/client";

@@ -1,11 +1,11 @@
-import { Kernel, Bundle, ContainerInstance } from "@bluelibs/core";
+import { Kernel, Bundle, ContainerInstance } from "@redlibs/core";
 import { ApolloBundle } from "../ApolloBundle";
-import { Loader } from "@bluelibs/graphql-bundle";
+import { Loader } from "@redlibs/graphql-bundle";
 import createApolloClient from "./apolloClientCreator";
 import { gql } from "@apollo/client";
 import { assert } from "chai";
 import { PubSub } from "graphql-subscriptions";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 Object.assign(global, { WebSocket: require("ws") });
 let currentKernel;
 

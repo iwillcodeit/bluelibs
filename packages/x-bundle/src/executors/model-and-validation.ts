@@ -1,5 +1,5 @@
-import { toModel, ToModelOptions } from "@bluelibs/ejson";
-import { ValidatorService, IValidateOptions } from "@bluelibs/validator-bundle";
+import { toModel, ToModelOptions } from "@redlibs/ejson";
+import { ValidatorService, IValidateOptions } from "@redlibs/validator-bundle";
 
 export interface IToModelExecutorOptions {
   field?: string;

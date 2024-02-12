@@ -1,4 +1,4 @@
-import { Collection, Behaviors } from "@bluelibs/mongo-bundle";
+import { Collection, Behaviors } from "@redlibs/mongo-bundle";
 import * as reducers from "./AppFileGroups.reducers";
 import * as links from "./AppFileGroups.links";
 import { AppFileGroup } from "./AppFileGroup.model";

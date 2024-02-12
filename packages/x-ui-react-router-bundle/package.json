@@ -1,5 +1,5 @@
 {
-  "name": "@bluelibs/x-ui-react-router-bundle",
+  "name": "@redlibs/x-ui-react-router-bundle",
   "version": "1.1.0",
   "private": false,
   "description": "XUIReactRouterBundle",
@@ -34,10 +34,10 @@
     "react-router-dom": "^5.3.0"
   },
   "peerDependencies": {
-    "@bluelibs/core": "^1.0.0",
-    "@bluelibs/x-ui-guardian-bundle": "^1.0.0",
-    "@bluelibs/x-ui-react-bundle": "^1.0.0",
-    "@bluelibs/x-ui-router": "^1.0.0"
+    "@redlibs/core": "^1.0.0",
+    "@redlibs/x-ui-guardian-bundle": "^1.0.0",
+    "@redlibs/x-ui-react-bundle": "^1.0.0",
+    "@redlibs/x-ui-router": "^1.0.0"
   },
   "devDependencies": {
     "@types/history": "^4.7.9",

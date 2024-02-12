@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { TerminalBundle } from "./TerminalBundle";
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 
 const kernel = new Kernel({
   bundles: [

@@ -2,7 +2,7 @@ import {
   IFieldMap,
   FindAuthenticationStrategyResponse,
   UserId,
-} from "@bluelibs/security-bundle";
+} from "@redlibs/security-bundle";
 
 export interface IPasswordBundleConfig {
   failedAuthenticationAttempts?: {

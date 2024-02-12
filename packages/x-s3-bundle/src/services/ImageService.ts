@@ -1,7 +1,7 @@
 import * as os from "os";
 import * as sharp from "sharp";
 import { X_S3_CONFIG_TOKEN } from "../constants";
-import { Inject } from "@bluelibs/core";
+import { Inject } from "@redlibs/core";
 import { XS3BundleConfigType } from "../defs";
 
 const uploadDir = os.tmpdir();

@@ -2,7 +2,7 @@ import * as React from "react";
 import type { AppProps } from "next/app";
 import { useMemo } from "react";
 import { CreateAppProps } from "../defs";
-import { XUIProvider } from "@bluelibs/x-ui-react-bundle";
+import { XUIProvider } from "@redlibs/x-ui-react-bundle";
 
 export const createApp = (props: CreateAppProps) => {
   const { loadingComponent, kernel: baseKernel } = props;

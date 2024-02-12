@@ -1,7 +1,7 @@
 import { createKernel } from "./ecosystem";
 import { MikroORM, ORM } from "../";
 import { MikroORMBundle } from "../MikroORMBundle";
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { Comment } from "./entities/Comment";
 
 test("should instantiate it properly", async () => {

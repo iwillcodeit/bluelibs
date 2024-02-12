@@ -1,13 +1,13 @@
 ## Install
 
 ```bash
-npm i -S @bluelibs/security-bundle @bluelibs/security-mongo-bundle
+npm i -S @redlibs/security-bundle @redlibs/security-mongo-bundle
 ```
 
 ```js
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { SecurityMongoBundle } from "@bluelibs/security-mongo-bundle";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { SecurityMongoBundle } from "@redlibs/security-mongo-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
 
 kernel.addBundles([
   // Make sure you have both security and mongo bundle in your kernel
@@ -46,7 +46,7 @@ const kernel = new Kernel({
     }),
 
     // The collections need to be a constructor of: IUserPersistance, ISessionPersistance, IPermissionPersistance
-    // which we get from @bluelibs/security-bundle.
+    // which we get from @redlibs/security-bundle.
   ],
 });
 ```
@@ -63,7 +63,7 @@ import {
   UsersCollection,
   SessionsCollection,
   PermissionsCollection,
-} from "@bluelibs/security-mongo-bundle";
+} from "@redlibs/security-mongo-bundle";
 
 // Note that this works only if you haven't modified the collections
 const usersCollection = container.get(UsersCollection);
@@ -79,8 +79,8 @@ You have the option to make changes to your collection, for example if you user 
 import {
   UsersCollection as BaseUsersCollection,
   PermissionsCollection,
-} from "@bluelibs/security-mongo-bundle";
-import { IUser } from "@bluelibs/security-bundle";
+} from "@redlibs/security-mongo-bundle";
+import { IUser } from "@redlibs/security-bundle";
 
 class User extends IUser {
   _id: ObjectId;
@@ -122,7 +122,7 @@ import {
   USERS_COLLECTION_TOKEN,
   PERMISSIONS_COLLECTION_TOKEN,
   SESSIONS_COLLECTION_TOKEN,
-} from "@bluelibs/security-mongo-bundle";
+} from "@redlibs/security-mongo-bundle";
 
 // You have to check if it exists: container.has(USERS_COLLECTION_TOKEN)
 const usersCollection = container.get(USERS_COLLECTION_TOKEN);

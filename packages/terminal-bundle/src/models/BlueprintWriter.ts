@@ -1,5 +1,5 @@
 import { IBlueprintWriter, IBlueprintWriterSession } from "../defs";
-import { Constructor, ContainerInstance, Inject } from "@bluelibs/core";
+import { Constructor, ContainerInstance, Inject } from "@redlibs/core";
 
 export abstract class BlueprintWriter implements IBlueprintWriter {
   @Inject()

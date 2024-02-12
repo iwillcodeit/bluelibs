@@ -1,4 +1,4 @@
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 import { MikroORMBundle } from "../MikroORMBundle";
 
 export const createKernel = (): Kernel => {

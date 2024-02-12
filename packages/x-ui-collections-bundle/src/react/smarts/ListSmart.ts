@@ -1,5 +1,5 @@
-import { Constructor, ContainerInstance, Inject } from "@bluelibs/core";
-import { Smart } from "@bluelibs/smart";
+import { Constructor, ContainerInstance, Inject } from "@redlibs/core";
+import { Smart } from "@redlibs/smart";
 import {
   MongoFilterQuery,
   IQueryOptions,

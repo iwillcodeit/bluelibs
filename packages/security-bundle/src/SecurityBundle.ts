@@ -5,7 +5,7 @@ import {
   EventManager,
   KernelAfterInitEvent,
   Constructor,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 import {
   IUserPersistance,
   IPermissionPersistance,

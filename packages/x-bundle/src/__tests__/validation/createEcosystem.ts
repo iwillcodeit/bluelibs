@@ -1,11 +1,11 @@
 // Create a kernel with a bundle
 
-import { Kernel, ContainerInstance } from "@bluelibs/core";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { Kernel, ContainerInstance } from "@redlibs/core";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 import { XBundle } from "../../XBundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
-import { ValidatorBundle } from "@bluelibs/validator-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
+import { ValidatorBundle } from "@redlibs/validator-bundle";
 
 export function createKernel(): Kernel {
   return new Kernel({

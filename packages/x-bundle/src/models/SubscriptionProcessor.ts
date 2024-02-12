@@ -3,7 +3,7 @@
 // And emitting corresponding events to their handlers
 // When processor doesn't have a handle anymore, it should die.
 
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 import { IChangeSet, IDocumentBase, ISubscriptionEvent } from "../defs";
 import { DocumentStore } from "./DocumentStore";
 import { IMessenger } from "../defs";
@@ -12,7 +12,7 @@ import { extractIdsFromSelectors } from "../utils/extractIdsFromSelectors";
 import { Strategy, DocumentMutationType } from "../constants";
 import { hasSortFields } from "../utils/hasSortFields";
 import { SubscriptionStore } from "../services/SubscriptionStore";
-import { ICollectionQueryConfig, QueryBodyType } from "@bluelibs/nova";
+import { ICollectionQueryConfig, QueryBodyType } from "@redlibs/nova";
 import { getFieldsFromQueryBody, getAllowedFields } from "./utils/fields";
 import { getChangedSet } from "./utils/getChangedSet";
 

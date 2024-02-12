@@ -15,7 +15,7 @@ This package re-exports everything from those packages, meaning you can use it a
 ## Install
 
 ```bash
-npm i -S @bluelibs/core @bluelibs/x-ui
+npm i -S @redlibs/core @redlibs/x-ui
 ```
 
 This bundle automatically injects the other bundles into your dependency tree in the Kernel.

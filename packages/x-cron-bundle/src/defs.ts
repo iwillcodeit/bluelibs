@@ -1,6 +1,6 @@
 import { ParseStatic, ScheduleData } from "later";
-import { ContainerInstance } from "@bluelibs/core";
-import { ObjectID } from "@bluelibs/mongo-bundle";
+import { ContainerInstance } from "@redlibs/core";
+import { ObjectID } from "@redlibs/mongo-bundle";
 
 export interface ICronConfig {
   name: string;

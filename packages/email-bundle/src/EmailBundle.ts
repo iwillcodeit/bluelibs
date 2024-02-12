@@ -1,4 +1,4 @@
-import { Bundle, BundlePhase } from "@bluelibs/core";
+import { Bundle, BundlePhase } from "@redlibs/core";
 import { IEmailBundleConfig, ConfigTransporterType } from "./defs";
 import {
   NODEMAILER_INSTANCE,
@@ -6,7 +6,7 @@ import {
   EMAIL_DEFAULTS,
 } from "./constants";
 import * as nodemailer from "nodemailer";
-import { LoggerService, LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerService, LoggerBundle } from "@redlibs/logger-bundle";
 import { ConsoleTransporter } from "./services/ConsoleTransporter";
 
 export class EmailBundle extends Bundle<IEmailBundleConfig> {
@@ -15,7 +15,7 @@ export class EmailBundle extends Bundle<IEmailBundleConfig> {
   protected defaultConfig: IEmailBundleConfig = {
     transporter: "console",
     defaults: {
-      from: `"BlueLibs" <no-reply@bluelibs.org>`,
+      from: `"BlueLibs" <no-reply@redlibs.org>`,
       props: {},
     },
   };

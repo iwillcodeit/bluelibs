@@ -1,4 +1,4 @@
-import { Schema, Is, a } from "@bluelibs/validator-bundle";
+import { Schema, Is, a } from "@redlibs/validator-bundle";
 
 @Schema()
 export class ResetPasswordInput {

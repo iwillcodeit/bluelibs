@@ -1,4 +1,4 @@
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 import { Live } from "../../../behaviors/live.behavior";
 
 export class PostsCollection extends Collection {

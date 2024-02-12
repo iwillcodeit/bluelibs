@@ -1,11 +1,11 @@
 ## Install
 
 ```bash
-npm i -S yup @bluelibs/validator-bundle
+npm i -S yup @redlibs/validator-bundle
 ```
 
 ```ts
-import { ValidatorBundle } from "@bluelibs/validator-bundle";
+import { ValidatorBundle } from "@redlibs/validator-bundle";
 
 const kernel = new Kernel({
   bundles: [new ValidatorBundle()],
@@ -21,7 +21,7 @@ This package blends [yup validation package](https://github.com/jquense/yup) wit
 Let's create an input for registration in which we ask `email` and `age` but at the same time we link with another schema.
 
 ```typescript
-import { a, an, Is, Schema } from "@bluelibs/validator-bundle";
+import { a, an, Is, Schema } from "@redlibs/validator-bundle";
 
 // a, an === yup basically
 @Schema()
@@ -54,7 +54,7 @@ What `Schema()` does essentially it states that it will construct an `yup.object
 To perform validation, we make use of the `ValidatorService`:
 
 ```typescript
-import { ValidatorService } from "@bluelibs/validator-bundle";
+import { ValidatorService } from "@redlibs/validator-bundle";
 
 const validatorService = container.get(ValidatorService);
 
@@ -69,12 +69,12 @@ validatorService.validate(dataSet, {
 We are about to introduce customly designed validations that know about the `container` and can use it. For illustration purposes we're going to design something that checks whether a field is unique or not in the database.
 
 ```typescript
-import { Service, Inject } from "@bluelibs/core";
+import { Service, Inject } from "@redlibs/core";
 import {
   yup,
   IValidationMethod,
   TestContext,
-} from "@bluelibs/validator-bundle";
+} from "@redlibs/validator-bundle";
 
 export type UniqueFieldConfig = {
   message?: string;
@@ -171,9 +171,9 @@ class UserRegistrationInput {
 Let's say you receive from inputs a date, but not an object `Date`, a string, "2018-12-04" you want to make it a `Date` instance, so you would want to "cast" it. That's done via transformers:
 
 ```typescript
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 import * as moment from "moment";
-import { yup, IValidationTransformer } from "@bluelibs/validator-bundle";
+import { yup, IValidationTransformer } from "@redlibs/validator-bundle";
 
 type IDateTransformerConfig = string;
 

@@ -1,14 +1,8 @@
-import {
-  Schema,
-  Is,
-  a,
-  an,
-  ValidatorService,
-} from "@bluelibs/validator-bundle";
-import { ObjectId } from "@bluelibs/ejson";
+import { Schema, Is, a, an, ValidatorService } from "@redlibs/validator-bundle";
+import { ObjectId } from "@redlibs/ejson";
 import { createKernel } from "./createEcosystem";
-import { Collection } from "@bluelibs/mongo-bundle";
-import { Service } from "@bluelibs/core";
+import { Collection } from "@redlibs/mongo-bundle";
+import { Service } from "@redlibs/core";
 
 describe("validation", () => {
   test("it should work ok", async () => {

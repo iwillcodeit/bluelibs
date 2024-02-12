@@ -1,7 +1,7 @@
 import {
   BlueprintWriter,
   IBlueprintWriterSession,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import { FSUtils } from "../utils/FSUtils";
 import * as path from "path";
 import { FSOperator } from "../utils/FSOperator";

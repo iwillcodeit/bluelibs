@@ -4,7 +4,7 @@ import {
   Event,
   Inject,
   ExecutionContext,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 import { useEffect, useState } from "react";
 import { UI_SESSION_BUNDLE_CONFIG_TOKEN } from "../../constants";
 import { IXUISessionBundleConfigType, IXUISessionStore } from "../../defs";

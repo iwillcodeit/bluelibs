@@ -1,5 +1,5 @@
-import { SecurityService, PermissionService } from "@bluelibs/security-bundle";
-import { securityTestDefinitions } from "@bluelibs/security-bundle/dist/__tests__/reusable";
+import { SecurityService, PermissionService } from "@redlibs/security-bundle";
+import { securityTestDefinitions } from "@redlibs/security-bundle/dist/__tests__/reusable";
 import { ecosystem } from "../ecosystem";
 
 securityTestDefinitions.forEach(({ message, test: testFunction }) => {

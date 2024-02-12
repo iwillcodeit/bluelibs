@@ -1,8 +1,8 @@
-import { Inject, Service } from "@bluelibs/core";
+import { Inject, Service } from "@redlibs/core";
 import { CACHE_CONFIG } from "../constants";
 import { CacheOptions } from "./defs";
 import * as CacheManager from "cache-manager";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 import * as Hash from "node-object-hash";
 const Hasher = Hash({ sort: true, coerce: true });
 

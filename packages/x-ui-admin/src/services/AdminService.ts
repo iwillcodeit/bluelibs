@@ -1,4 +1,4 @@
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 
 @Service()
 export class AdminService {}

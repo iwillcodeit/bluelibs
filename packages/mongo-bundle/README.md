@@ -12,12 +12,12 @@
 <br />
 <br />
 
-The MongoBundle offers integration with MongoDB database by allowing you to hook into events, giving ability to work with model classes and add behaviors. As well it is integrated with `@bluelibs/nova` package which allows extremely rapid queries for relational data.
+The MongoBundle offers integration with MongoDB database by allowing you to hook into events, giving ability to work with model classes and add behaviors. As well it is integrated with `@redlibs/nova` package which allows extremely rapid queries for relational data.
 
 ## Install
 
 ```bash
-npm install --save @bluelibs/mongo-bundle @bluelibs/nova
+npm install --save @redlibs/mongo-bundle @redlibs/nova
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

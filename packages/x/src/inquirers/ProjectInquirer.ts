@@ -1,4 +1,4 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { ProjectModel } from "../models";
 
 export class ProjectInquirer extends Inquirer<ProjectModel> {

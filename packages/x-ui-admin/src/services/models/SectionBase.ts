@@ -1,5 +1,5 @@
-import { Inject, Service } from "@bluelibs/core";
-import { XRouter } from "@bluelibs/x-ui";
+import { Inject, Service } from "@redlibs/core";
+import { XRouter } from "@redlibs/x-ui";
 import { ReactElement } from "react";
 
 export interface IItemBase {

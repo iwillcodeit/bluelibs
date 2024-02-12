@@ -1,6 +1,6 @@
 import "./validators/declarations";
 
-export { EJSON } from "@bluelibs/ejson";
+export { EJSON } from "@redlibs/ejson";
 export * from "./executors";
 export * from "./constants";
 export * from "./behaviors";

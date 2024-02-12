@@ -1,12 +1,10 @@
-import { MongoBundle, DatabaseService } from "@bluelibs/mongo-bundle";
-import { ContainerInstance, Kernel, Bundle } from "@bluelibs/core";
+import { MongoBundle, DatabaseService } from "@redlibs/mongo-bundle";
+import { ContainerInstance, Kernel, Bundle } from "@redlibs/core";
 import { CronsCollection } from "../collections/Crons.collection";
 import { XCronBundle } from "../XCronBundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 
-export async function createEcosystem(
-  init?: any
-): Promise<{
+export async function createEcosystem(init?: any): Promise<{
   container: ContainerInstance;
   teardown: () => void;
   cleanup: () => Promise<void>;

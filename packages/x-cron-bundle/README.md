@@ -17,7 +17,7 @@ This tool allows you to run recurrent jobs in your X Framework ecosystem. The cr
 ## Install
 
 ```bash
-npm install --save @bluelibs/x-cron-bundle
+npm install --save @redlibs/x-cron-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

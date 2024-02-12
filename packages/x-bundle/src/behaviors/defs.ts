@@ -1,4 +1,4 @@
-import "@bluelibs/mongo-bundle";
+import "@redlibs/mongo-bundle";
 
 export type LiveOptionsType = {
   /**
@@ -11,7 +11,7 @@ export type LiveOptionsType = {
   channels?: string[];
 };
 
-declare module "@bluelibs/mongo-bundle" {
+declare module "@redlibs/mongo-bundle" {
   export interface IExecutionContext {
     live?: LiveOptionsType;
   }

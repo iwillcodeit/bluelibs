@@ -5,10 +5,10 @@
 PACKAGE="$1"
 ROOT="/Users/theodor/Projects/bluelibs/packages"
 
-rm -rf node_modules/\@bluelibs/$PACKAGE/dist
-rm -rf node_modules/\@bluelibs/$PACKAGE/src
-rm -rf node_modules/\@bluelibs/$PACKAGE/package.json
+rm -rf node_modules/\@redlibs/$PACKAGE/dist
+rm -rf node_modules/\@redlibs/$PACKAGE/src
+rm -rf node_modules/\@redlibs/$PACKAGE/package.json
 
-cp -r $ROOT/$PACKAGE/dist "./node_modules/@bluelibs/$PACKAGE/dist"
-cp -r $ROOT/$PACKAGE/src "./node_modules/@bluelibs/$PACKAGE/src"
-cp -r $ROOT/$PACKAGE/package.json "./node_modules/@bluelibs/$PACKAGE/package.json"
+cp -r $ROOT/$PACKAGE/dist "./node_modules/@redlibs/$PACKAGE/dist"
+cp -r $ROOT/$PACKAGE/src "./node_modules/@redlibs/$PACKAGE/src"
+cp -r $ROOT/$PACKAGE/package.json "./node_modules/@redlibs/$PACKAGE/package.json"

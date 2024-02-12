@@ -6,8 +6,8 @@ import {
   FindAuthenticationStrategyResponse,
   ISessionPersistance,
   UserId,
-} from "@bluelibs/security-bundle";
-import { Collection, ObjectID, Behaviors } from "@bluelibs/mongo-bundle";
+} from "@redlibs/security-bundle";
+import { Collection, ObjectID, Behaviors } from "@redlibs/mongo-bundle";
 export class SessionsCollection<T extends ISession>
   extends Collection<ISession>
   implements ISessionPersistance

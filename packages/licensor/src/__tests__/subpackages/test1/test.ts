@@ -1,3 +1,3 @@
-import { value LicenseManager } from "@bluelibs/licensor";
+import { value LicenseManager } from "@redlibs/licensor";
 
 console.log(LicenseManager);

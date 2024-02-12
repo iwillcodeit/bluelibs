@@ -1,9 +1,9 @@
 import { FacebookAuthenticator } from "./passport.facebook";
 import { createKernel } from "./ecosystem";
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { PassportService } from "../services/PassportService";
 import fetch from "node-fetch";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
 
 let kernel;
 describe("passport", () => {

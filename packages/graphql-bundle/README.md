@@ -17,7 +17,7 @@ This package is for loading your GraphQL API seamlessly from multiple places (fo
 ## Install
 
 ```bash
-npm install --save @bluelibs/graphql-bundle
+npm install --save @redlibs/graphql-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import { GuardianUserType } from "../smarts/GuardianSmart";
 
 export class GuardianUserRetrievedEvent<

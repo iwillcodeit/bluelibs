@@ -1,6 +1,6 @@
-import { Inject, Listener, On } from "@bluelibs/core";
-import { LoggerService } from "@bluelibs/logger-bundle";
-import { BeforeDeleteEvent } from "@bluelibs/mongo-bundle";
+import { Inject, Listener, On } from "@redlibs/core";
+import { LoggerService } from "@redlibs/logger-bundle";
+import { BeforeDeleteEvent } from "@redlibs/mongo-bundle";
 import { AppFileGroupsCollection } from "../collections/appFileGroups/AppFileGroups.collection";
 import { AppFilesCollection } from "../collections/appFiles/AppFiles.collection";
 import {

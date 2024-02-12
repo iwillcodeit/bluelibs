@@ -16,7 +16,7 @@ The incredible speed boost is possible thanks to the technology called Hypernova
 ## Install
 
 ```
-npm i -S mongodb @bluelibs/nova
+npm i -S mongodb @redlibs/nova
 ```
 
 ## Linking Collections
@@ -26,7 +26,7 @@ Collections are linked through `addLinks(collection, linkingInformation)`, colle
 Let us create a One-to-One relationship in which we have `Patients` and `MedicalProfiles` in two distinct collections.
 
 ```typescript
-import { addLinks } from "@bluelibs/nova";
+import { addLinks } from "@redlibs/nova";
 
 // Patients, MedicalProfiles are just two `mongodb.Collection`s
 
@@ -52,7 +52,7 @@ addLinks(Patients, {
 This would allow us to run the following query:
 
 ```typescript
-import { query } from "@bluelibs/nova";
+import { query } from "@redlibs/nova";
 
 const results = await query(Patients, {
   aField: 1,
@@ -86,7 +86,7 @@ addLinks(MedicalProfiles, {
 After we do this, we can easily do:
 
 ```typescript
-import { query } from "@bluelibs/nova";
+import { query } from "@redlibs/nova";
 
 const medicalProfile = await query(MedicalProfiles, {
   patient: {
@@ -170,7 +170,7 @@ addLinks(B, {
 ### Linking Shortcuts
 
 ```typescript
-import { oneToOne, oneToMany, manyToOne, manyToMany } from "@bluelibs/nova";
+import { oneToOne, oneToMany, manyToOne, manyToMany } from "@redlibs/nova";
 
 // The link is stored in the first mentioned collection
 manyToOne(Comments, Post, {
@@ -332,7 +332,7 @@ We showed a little bit of how we can query stuff, but we need to dive a little b
 We introduce a special `$` field that isn't really a field, it's more like a meta-ish way to describe the current node. Let's explore the `filters` and `options` parameters of this special "field".
 
 ```typescript
-import { query, oneToMany } from "@bluelibs/nova";
+import { query, oneToMany } from "@redlibs/nova";
 
 manyToOne(Comments, Posts, {
   linkName: "post",
@@ -383,7 +383,7 @@ While working with MongoDB, another pain-point was what we call `relational filt
 All of these problems are currently solved, and we belive the API is far superior than SQL in terms of clarity.
 
 ```typescript
-import { oneToMany, query, lookup } from "@bluelibs/nova";
+import { oneToMany, query, lookup } from "@redlibs/nova";
 
 manyToOne(Employees, Companies, {
   linkName: "company",
@@ -516,7 +516,7 @@ This comes with a performance cost. Because the filters depend on the parent, we
 Reducers are a way to expand the request query and compute the values. Imagine them as virtual, on-demand computed query fields:
 
 ```typescript
-import { addReducers } from "@bluelibs/nova";
+import { addReducers } from "@redlibs/nova";
 
 addReducers(Users, {
   fullName: {
@@ -607,9 +607,9 @@ query(
 Extend the `IQueryContext` interface to benefit of autocompletion:
 
 ```ts title="declarations.ts";
-import "@bluelibs/nova";
+import "@redlibs/nova";
 
-declare module "@bluelibs/nova" {
+declare module "@redlibs/nova" {
   export interface IQueryContext {
     language: string;
   }
@@ -640,7 +640,7 @@ Notes:
 Sometimes you might get the body of a request from the client. You want to ensure the client doesn't ask for extra fields and that it's at least decent in its request. This is how we can do this once we get that body:
 
 ```ts
-import { secureBody } from "@bluelibs/nova";
+import { secureBody } from "@redlibs/nova";
 
 const safeBody = secureBody(
   {
@@ -679,7 +679,7 @@ const result = query.securely(config, collection, body, context).fetch();
 The integration removes the necessity of writing custom resolvers to fetch related data. Everything is computed efficiently.
 
 ```typescript
-import { query } from "@bluelibs/nova";
+import { query } from "@redlibs/nova";
 
 // Define your query resolvers
 const Query = {
@@ -716,7 +716,7 @@ If you do however want your resolving to happen in GraphQL Resolvers not inside 
 Let's say you have a resolver at `User` level called `fullName` that uses `firstName` and `lastName`:
 
 ```js
-import { addExpanders } from "@bluelibs/nova";
+import { addExpanders } from "@redlibs/nova";
 
 addExpanders(Users, {
   // Full name will not appear in the result set
@@ -990,7 +990,7 @@ If you have a lot of nested fields, you also have the `$all: true` option at you
 We can also benefit from extremely rapid BSON decoding through JIT compilers as long as we know not only the fields, but their type too. This is done with the help of [@deepkit/bson](https://github.com/deepkit/deepkit-framework/tree/master/packages/bson) and [@deepkit/type](https://deepkit.io/documentation/type).
 
 ```ts
-import { t, query } from "@bluelibs/nova"; // t is from "deepkit/type" package
+import { t, query } from "@redlibs/nova"; // t is from "deepkit/type" package
 
 const postSchema = t.schema({
   text: t.string,
@@ -1015,7 +1015,7 @@ query(Posts, {
 We recommend using the `addSchema` directly to the collections itself, removing the necessity of having to specify `$schema`:
 
 ```ts
-import { t, addSchema } from "@bluelibs/nova"; // t is from "deepkit/type" package
+import { t, addSchema } from "@redlibs/nova"; // t is from "deepkit/type" package
 
 addSchema(
   Posts,

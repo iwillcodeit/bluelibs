@@ -1,6 +1,6 @@
 import * as path from "path";
 import { XSession, FSOperator, FSUtils } from "../";
-import { BlueprintWriter } from "@bluelibs/terminal-bundle";
+import { BlueprintWriter } from "@redlibs/terminal-bundle";
 import { CRUDFeatureType, UICRUDModel } from "../models/UICRUDModel";
 import * as _ from "lodash";
 

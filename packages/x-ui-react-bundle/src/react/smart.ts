@@ -1,5 +1,5 @@
-import { Service } from "@bluelibs/core";
-import { Smart as BaseSmart, smart, newSmart, useSmart } from "@bluelibs/smart";
+import { Service } from "@redlibs/core";
+import { Smart as BaseSmart, smart, newSmart, useSmart } from "@redlibs/smart";
 
 @Service({
   transient: true,

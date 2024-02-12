@@ -1,6 +1,6 @@
-import { Constructor } from "@bluelibs/core";
-import { IGraphQLContext } from "@bluelibs/graphql-bundle";
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Constructor } from "@redlibs/core";
+import { IGraphQLContext } from "@redlibs/graphql-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 import * as graphqlFields from "graphql-fields";
 import * as dot from "dot-object";
 import { intersectGraphQLBodies } from "./utils/intersectGraphQLBodies";
@@ -9,13 +9,13 @@ import {
   PERMISSION_DEFAULT_DOMAIN,
   UserNotAuthorizedException,
   PermissionService,
-} from "@bluelibs/security-bundle";
+} from "@redlibs/security-bundle";
 import {
   SecureGraphQLResolver,
   SecureRuleType,
   XGraphQLSecurityService,
 } from "../services/XGraphQLSecurityService";
-import { IAstToQueryOptions, QueryBodyType } from "@bluelibs/nova";
+import { IAstToQueryOptions, QueryBodyType } from "@redlibs/nova";
 
 export const NOVA_AST_TO_QUERY_OPTIONS = Symbol("NOVA_AST_TO_QUERY_OPTIONS");
 export const NOVA_INTERSECTION = Symbol("NOVA_INTERSECTION");

@@ -1,4 +1,4 @@
-import { addLinks } from "@bluelibs/nova";
+import { addLinks } from "@redlibs/nova";
 import { Collection, MongoClient } from "mongodb";
 import * as mongoose from "mongoose";
 

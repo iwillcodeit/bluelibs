@@ -1,4 +1,4 @@
-import { useGuardian, useRouter, useTranslate } from "@bluelibs/x-ui";
+import { useGuardian, useRouter, useTranslate } from "@redlibs/x-ui";
 import { useState } from "react";
 import { LockOutlined } from "@ant-design/icons";
 import { Routes } from "@bundles/UIAppBundle";

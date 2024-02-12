@@ -14,11 +14,11 @@ It provides developers the ability to code rapidly and skip through a lot of con
 ## Install
 
 ```
-npm i -S @bluelibs/x-bundle
+npm i -S @redlibs/x-bundle
 ```
 
 ```ts title="kernel.ts"
-import { XBundle } from "@bluelibs/x-bundle";
+import { XBundle } from "@redlibs/x-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -46,7 +46,7 @@ In order for you to have a smooth sailing down this road, you have to ensure tha
 All your `X-Framework` bundles most likely will extend `BaseBundle` from this package:
 
 ```ts
-import { BaseBundle } from "@bluelibs/x-bundle";
+import { BaseBundle } from "@redlibs/x-bundle";
 
 class AppBundle extends BaseBundle {
   async prepare() {
@@ -71,7 +71,7 @@ Because our [resolvers can be chains of functions](/docs/package-graphql#resolve
 We use MongoDB Nova for fetching relational data. The [Nova](/docs/package-nova) package has a way to transform a GraphQL request into a Nova request automatically fetching relations without any additional code.
 
 ```ts
-import * as X from "@bluelibs/x-bundle";
+import * as X from "@redlibs/x-bundle";
 
 
 export default {
@@ -97,7 +97,7 @@ export default {
 We can also pass an additional resolver function which [returns an object](/docs/package-nova#graphql-integration) containing optiosn for securing your request. More details can be [found here](/docs/package-nova#graphql-integration).
 
 ```ts
-import { IAstToQueryOptions } from "@bluelibs/nova";
+import { IAstToQueryOptions } from "@redlibs/nova";
 
 [
   X.ToNova(CollectionClass, async (_, args, ctx, info) => {
@@ -165,7 +165,7 @@ If we want to ensure that a certain document exists in the database before allow
   // By default _id from args is taken like below
   X.CheckDocumentExists(CollectionClass, (_, args, ctx, info) => args._id),
 
-  // If it does not exist in the database it will throw this exception: DocumentNotFoundException from @bluelibs/mongo-bundle
+  // If it does not exist in the database it will throw this exception: DocumentNotFoundException from @redlibs/mongo-bundle
 ];
 ```
 
@@ -322,7 +322,7 @@ If you are looking to something more advanced you can look at: [class-transforme
 And you could write your own executor:
 
 ```ts
-import { GraphQLResolverType } from "@bluelibs/graphql-bundle";
+import { GraphQLResolverType } from "@redlibs/graphql-bundle";
 
 const AppToModel: GraphQLResolverType = async (_, args, ctx) => {
   args.input = plainToClass(User, args.input);
@@ -495,7 +495,7 @@ As we know, our logic should be stored in the Service Layer instead of the resol
 ```
 
 ```ts
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 
 @Service()
 class ServiceClass {
@@ -515,7 +515,7 @@ We provide the following scalars
 
 ### ObjectId
 
-This will transform the ObjectId into a string and from a string to an ObjectId from bson, compatible with MongoDB. It uses `ObjectId` from `@bluelibs/ejson`.
+This will transform the ObjectId into a string and from a string to an ObjectId from bson, compatible with MongoDB. It uses `ObjectId` from `@redlibs/ejson`.
 
 ### EJSON
 
@@ -564,7 +564,7 @@ type Post {
 Your GraphQL scalar should take care of this already, but it's also good if we could re-use this logic in validation:
 
 ```ts
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 
 @Schema()
 class Post {
@@ -603,7 +603,7 @@ new XBundle({
 ```
 
 ```ts
-import { APP_ROUTER, ROOT_ROUTER } from "@bluelibs/x-bundle";
+import { APP_ROUTER, ROOT_ROUTER } from "@redlibs/x-bundle";
 
 const appRouter = container.get(APP_ROUTER);
 const rootRouter = container.get(ROOT_ROUTER);
@@ -616,7 +616,7 @@ rootRouter.path("/webhooks/stripe"); // http://localhost:4000/webhooks/stripe
 Create your own extra routers with ease. This we found very handy when dealing with paths and routes in a scalable fashion.
 
 ```ts
-import { Service, Inject } from "@bluelibs/core";
+import { Service, Inject } from "@redlibs/core";
 
 @Service()
 class MyRouter extends Router {
@@ -680,7 +680,7 @@ type Mutation {
 Below you have a complete CRUD that later you can easily adapt to have type-safety at GraphQL level. This is very useful when you are generating lots of them.
 
 ```ts
-import * as X from "@bluelibs/x-bundle";
+import * as X from "@redlibs/x-bundle";
 
 export default {
   Query: [
@@ -782,7 +782,7 @@ When a message is received, they translate these events through highly-performan
 Collections need to emit messages when a mutation (insert/update/remove) happens in the system. We do this by attaching a behavior to it.
 
 ```ts
-import { XBehaviors } from "@bluelibs/x-bundle";
+import { XBehaviors } from "@redlibs/x-bundle";
 
 class PostsCollection extends Collection {
   behaviors: [
@@ -878,7 +878,7 @@ const resolvers = {
 You can additionally hook into the resolve() function and apply additional changes or data clearences before it sends the data to the client.
 
 ```ts
-import { GraphQLSubscriptionEvent } from "@bluelibs/x-bundle";
+import { GraphQLSubscriptionEvent } from "@redlibs/x-bundle";
 
 const subscription = {
   async resolve({ event, document }, args, { container }) {
@@ -948,7 +948,7 @@ function subscribe(_, args, { db }) {
 To allow you to write less code, you can use the built-in executors:
 
 ```ts
-import * as X from "@bluelibs/x-bundle";
+import * as X from "@redlibs/x-bundle";
 
 export default {
   Subscription: {
@@ -962,7 +962,7 @@ export default {
       resolve: (payload) => payload,
       subscribe: [
         X.ToSubscription(collectionClass, (_, args) => {
-          // Here you can use intersectBody from @bluelibs/nova to perform smart operations
+          // Here you can use intersectBody from @redlibs/nova to perform smart operations
           // return intersectBody(args.body, allowedBody)
           return args.body;
         }),
@@ -1110,8 +1110,8 @@ If redis connection dies, once it gets reconnected all the "live queries" will b
 While Redis is nice, we also allow you to use your own custom messenger, which implements the exported interface `IMessenger`.
 
 ```ts
-import { Service } from "@bluelibs/core";
-import { IMessenger, XBundle, MessageHandleType } from "@bluelibs/x-bundle";
+import { Service } from "@redlibs/core";
+import { IMessenger, XBundle, MessageHandleType } from "@redlibs/x-bundle";
 
 @Service()
 class AppMessenger implements IMessenger {
@@ -1180,13 +1180,13 @@ The X-Framework Server is a powerhouse of insightful ways to use Foundation enha
 
 ### Boilerplates
 
-The X-CLI (`@bluelibs/x`) is the boilerplate generator, meaning that you get a boilerplate by following [Get Started](x-framework-introduction#get-started) from [Introduction](x-framework-introduction).
+The X-CLI (`@redlibs/x`) is the boilerplate generator, meaning that you get a boilerplate by following [Get Started](x-framework-introduction#get-started) from [Introduction](x-framework-introduction).
 
 In, short:
 
 ```bash
 # Ensure you have Node, MongoDB
-npm i -g @bluelibs/x
+npm i -g @redlibs/x
 x
 # pick x:project
 # follow instructions

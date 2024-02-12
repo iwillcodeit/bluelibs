@@ -1,5 +1,5 @@
 import { GraphQLRequest } from "@apollo/client/link/core";
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import { ConnectionParams } from "subscriptions-transport-ws";
 
 export class ApolloBeforeOperationEvent extends Event<{

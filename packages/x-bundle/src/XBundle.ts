@@ -1,8 +1,8 @@
-import { Bundle, Constructor, MissingParameterException } from "@bluelibs/core";
-import { ValidatorService } from "@bluelibs/validator-bundle";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
-import { Loader } from "@bluelibs/graphql-bundle";
+import { Bundle, Constructor, MissingParameterException } from "@redlibs/core";
+import { ValidatorService } from "@redlibs/validator-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
+import { Loader } from "@redlibs/graphql-bundle";
 
 import { UniqueFieldValidationMethod } from "./validators/UniqueFieldValidationMethod";
 import { DateTransformer } from "./validators/DateTransformer";

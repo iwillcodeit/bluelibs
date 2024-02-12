@@ -1,5 +1,5 @@
-import { Bundle } from "@bluelibs/core";
-import { UIApolloBundle } from "@bluelibs/ui-apollo-bundle";
+import { Bundle } from "@redlibs/core";
+import { UIApolloBundle } from "@redlibs/ui-apollo-bundle";
 import { IXUICollectionsBundleConfig } from "./defs";
 
 export class XUICollectionsBundle extends Bundle<IXUICollectionsBundleConfig> {

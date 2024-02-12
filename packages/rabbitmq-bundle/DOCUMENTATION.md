@@ -3,7 +3,7 @@ This bundle integrates with RabbitMQ to allow robust and failsafe queues designe
 ## Install
 
 ```bash
-npm i --save @bluelibs/rabbitmq-bundle
+npm i --save @redlibs/rabbitmq-bundle
 ```
 
 ```ts
@@ -22,8 +22,8 @@ const kernel = new Kernel({
 API can be found here: http://www.squaremobius.net/amqp.node/channel_api.html
 
 ```ts
-import { RabbitMQBundle } from "@bluelibs/rabbitmq-bundle";
-import { Service } from "@bluelibs/core";
+import { RabbitMQBundle } from "@redlibs/rabbitmq-bundle";
+import { Service } from "@redlibs/core";
 
 interface EmailMessage {
   to: string;

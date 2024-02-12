@@ -1,5 +1,5 @@
-import { Event } from "@bluelibs/core";
-import { IRoute } from "@bluelibs/x-ui-router";
+import { Event } from "@redlibs/core";
+import { IRoute } from "@redlibs/x-ui-router";
 
 export class RoutingPreparationEvent extends Event<{
   routes: IRoute[];

@@ -1,7 +1,7 @@
 import { i18n } from "@bundles/UIAppBundle/i18n";
 import AuthenticationMessages from "./Authentication.i18n.json";
 
-import { IRoute } from "@bluelibs/x-ui";
+import { IRoute } from "@redlibs/x-ui";
 import { Login } from "./Login/Login";
 import { Register } from "./Register/Register";
 import { VerifyEmail } from "./VerifyEmail/VerifyEmail";

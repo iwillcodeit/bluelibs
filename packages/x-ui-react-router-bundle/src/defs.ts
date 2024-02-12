@@ -1,4 +1,4 @@
-import { IRoute as IBaseRoute, IRouteParams } from "@bluelibs/x-ui-router";
+import { IRoute as IBaseRoute, IRouteParams } from "@redlibs/x-ui-router";
 
 import { RouteProps } from "react-router-dom";
 

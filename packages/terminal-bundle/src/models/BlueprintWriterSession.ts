@@ -4,12 +4,7 @@ import {
   IBlueprintWriterOperation,
   IBlueprintSessionCommitOptions,
 } from "../defs";
-import {
-  Service,
-  Constructor,
-  ContainerInstance,
-  Inject,
-} from "@bluelibs/core";
+import { Service, Constructor, ContainerInstance, Inject } from "@redlibs/core";
 import * as path from "path";
 import * as fs from "fs";
 import * as mkdirp from "mkdirp";

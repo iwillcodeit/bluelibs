@@ -1,4 +1,4 @@
-import { Bundle, EventManager } from "@bluelibs/core";
+import { Bundle, EventManager } from "@redlibs/core";
 import { createKernel } from "./ecosystem";
 import { LoggerService } from "../services/LoggerService";
 import { LogEvent } from "../events";

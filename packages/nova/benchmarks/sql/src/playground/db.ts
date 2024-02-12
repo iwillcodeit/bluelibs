@@ -1,4 +1,4 @@
-import { addLinks, addSchema, t } from "@bluelibs/nova";
+import { addLinks, addSchema, t } from "@redlibs/nova";
 import { Collection, MongoClient } from "mongodb";
 // Connection URI
 const DB = "playground";

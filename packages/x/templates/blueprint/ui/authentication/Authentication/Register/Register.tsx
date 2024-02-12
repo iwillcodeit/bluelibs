@@ -1,4 +1,4 @@
-import { useGuardian, useRouter, useTranslate } from "@bluelibs/x-ui";
+import { useGuardian, useRouter, useTranslate } from "@redlibs/x-ui";
 import React, { useState } from "react";
 import { Routes } from "@bundles/UIAppBundle";
 import {

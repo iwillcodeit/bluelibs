@@ -1,4 +1,4 @@
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 
 /**
  * Exports a list of top level fields that have been changed and returns only the set that needs to be sent

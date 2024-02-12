@@ -1,11 +1,11 @@
-import { DeepPartial, Service } from "@bluelibs/core";
-import { ObjectId } from "@bluelibs/ejson";
+import { DeepPartial, Service } from "@redlibs/core";
+import { ObjectId } from "@redlibs/ejson";
 import { Collection, MONGO_BUNDLE_COLLECTION } from "./Collection";
-import { Linker, LINK_STORAGE } from "@bluelibs/nova";
+import { Linker, LINK_STORAGE } from "@redlibs/nova";
 import * as MongoDB from "mongodb";
 
 /**
- * This represents ObjectId from @bluelibs/ejson or from "mongodb";
+ * This represents ObjectId from @redlibs/ejson or from "mongodb";
  */
 export type ID = ObjectId | MongoDB.ObjectId;
 

@@ -9,7 +9,7 @@ import {
   IValidationTransformer,
   Nested,
 } from "..";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { ValidationError, StringSchema, TestContext } from "yup";
 import { ITestStringSchema } from "./defs.test";
 

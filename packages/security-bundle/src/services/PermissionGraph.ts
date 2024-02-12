@@ -1,6 +1,6 @@
 import { IPermissionTree } from "../defs";
 import { DepGraph } from "dependency-graph";
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 
 @Service()
 export class PermissionGraph {

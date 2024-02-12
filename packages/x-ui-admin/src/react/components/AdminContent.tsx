@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Layout } from "antd";
 import { Content } from "antd/lib/layout/layout";
-import { useUIComponents } from "@bluelibs/x-ui";
+import { useUIComponents } from "@redlibs/x-ui";
 
 export type AdminContentProps = {
   children?: any;

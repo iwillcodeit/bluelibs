@@ -1,4 +1,4 @@
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 import { Callback, Context, Handler } from "aws-lambda";
 import { ApolloBundle } from "./ApolloBundle";
 

@@ -1,6 +1,6 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import * as _ from "lodash";
-import { ContainerInstance, Inject } from "@bluelibs/core";
+import { ContainerInstance, Inject } from "@redlibs/core";
 import { InquiryUtils } from "../utils/InquiryUtils";
 import { XElements, XElementType } from "../utils/XElements";
 import { GraphQLCRUDModel } from "../models/GraphQLCRUDModel";

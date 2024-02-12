@@ -1,10 +1,10 @@
-import { Components, I18NService, IRoute, use } from "@bluelibs/x-ui";
+import { Components, I18NService, IRoute, use } from "@redlibs/x-ui";
 import { Button, Tag, Tooltip } from "antd";
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { DownloadOutlined } from "@ant-design/icons";
 import * as startCase from "lodash.startcase";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 import * as _ from "lodash";
 
 const emptyValue = <>"N/A"</>;

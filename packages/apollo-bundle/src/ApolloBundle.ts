@@ -3,8 +3,8 @@ import {
   KernelAfterInitEvent,
   EventManager,
   Exception,
-} from "@bluelibs/core";
-import { Loader, ISchemaResult } from "@bluelibs/graphql-bundle";
+} from "@redlibs/core";
+import { Loader, ISchemaResult } from "@redlibs/graphql-bundle";
 import * as http from "http";
 import express from "express";
 import cookieParser from "cookie-parser";
@@ -24,7 +24,7 @@ import {
 } from "@as-integrations/aws-lambda";
 import { ApolloServerPluginDrainHttpServer } from "@apollo/server/plugin/drainHttpServer";
 import { IRouteType } from "./defs";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 import GraphQLUpload from "./graphql-upload/GraphQLUpload";
 import graphqlUploadExpress from "./graphql-upload/graphqlUploadExpress";
 import { GraphQLError } from "graphql";

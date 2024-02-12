@@ -1,11 +1,11 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import {
   ApolloBeforeOperationEvent,
   ApolloSubscriptionOnConnectionParamsSetEvent,
   ApolloClient,
   UIApolloBundle,
-} from "@bluelibs/ui-apollo-bundle";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+} from "@redlibs/ui-apollo-bundle";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 import { GuardianSmart } from "./react/smarts/GuardianSmart";
 import {
   GUARDIAN_IS_MULTIPLEFACTOR_AUTH,

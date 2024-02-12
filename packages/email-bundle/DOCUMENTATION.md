@@ -5,11 +5,11 @@ We want to send templated emails to our customers. So we decided to have a neat 
 ## Install
 
 ```bash
-npm install react react-dom @bluelibs/email-bundle @bluelibs/logger-bundle
+npm install react react-dom @redlibs/email-bundle @redlibs/logger-bundle
 ```
 
 ```ts
-import { EmailBundle } from "@bluelibs/email-bundle";
+import { EmailBundle } from "@redlibs/email-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -132,7 +132,7 @@ npm install mjml
 Let's hook into it right before sending so we can transform our html:
 
 ```typescript
-import { Listener, On } from "@bluelibs/core";
+import { Listener, On } from "@redlibs/core";
 import * as mjml2html from "mjml";
 
 class EmailListener extends Listener {
@@ -167,7 +167,7 @@ And you can have a sort of "master" interface for these global props:
 
 ```ts
 // Example. This will be accessible from all React email templates, as long with their defined properties.
-declare module "@bluelibs/email-bundle" {
+declare module "@redlibs/email-bundle" {
   export interface IGlobalEmailProps {
     appUrl: "https://abc.com";
   }
@@ -185,7 +185,7 @@ It is also a common use-case where you send emails through a provider which lets
 To do this, implement your custom email service:
 
 ```ts
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 
 @Service()
 export class AppEmailService {
@@ -205,7 +205,7 @@ new EmailBundle({
 ```
 
 ```ts
-import { EmailBeforeSendEvent } from "@bluelibs/core";
+import { EmailBeforeSendEvent } from "@redlibs/core";
 
 eventManager.addListener(EmailBeforeSendEvent, async (e) => {
   const {

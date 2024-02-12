@@ -7,7 +7,7 @@ import {
   useTranslate,
   useUIComponents,
   XRouter,
-} from "@bluelibs/x-ui";
+} from "@redlibs/x-ui";
 import { MenuService } from "../../services/MenuService";
 import { IMenuItemConfig } from "../../defs";
 

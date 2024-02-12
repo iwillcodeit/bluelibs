@@ -1,6 +1,6 @@
-import { Inject, Service } from "@bluelibs/core";
-import { Collection } from "@bluelibs/mongo-bundle";
-import { QueryBodyType } from "@bluelibs/nova";
+import { Inject, Service } from "@redlibs/core";
+import { Collection } from "@redlibs/mongo-bundle";
+import { QueryBodyType } from "@redlibs/nova";
 import { Filter } from "mongodb";
 import { PubSub } from "graphql-subscriptions";
 import { EventEmitter } from "events";

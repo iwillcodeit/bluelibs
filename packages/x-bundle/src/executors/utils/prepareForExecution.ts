@@ -1,9 +1,9 @@
-import { IAstToQueryOptions } from "@bluelibs/nova";
-import { Constructor, ContainerInstance } from "@bluelibs/core";
+import { IAstToQueryOptions } from "@redlibs/nova";
+import { Constructor, ContainerInstance } from "@redlibs/core";
 import { detectPipelineInSideBody } from "./detectPipelineInSideBody";
 import { performRelationalSorting } from "./performRelationalSorting";
-import { IGraphQLContext } from "@bluelibs/graphql-bundle";
-import { Collection } from "@bluelibs/mongo-bundle";
+import { IGraphQLContext } from "@redlibs/graphql-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 import * as merge from "lodash.merge";
 import { NOVA_AST_TO_QUERY_OPTIONS, NOVA_INTERSECTION } from "../security";
 

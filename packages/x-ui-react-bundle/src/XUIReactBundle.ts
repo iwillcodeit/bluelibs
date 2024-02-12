@@ -1,6 +1,6 @@
-import { Bundle, ContainerInstance, Kernel } from "@bluelibs/core";
-import { OrderedList } from "@bluelibs/ordered-lists";
-import { setDefaults } from "@bluelibs/smart";
+import { Bundle, ContainerInstance, Kernel } from "@redlibs/core";
+import { OrderedList } from "@redlibs/ordered-lists";
+import { setDefaults } from "@redlibs/smart";
 import {
   Components,
   IXUIReactBundleConfigType,

@@ -3,8 +3,8 @@ import {
   IComponents,
   XRouter,
   XUI_COMPONENTS_TOKEN,
-} from "@bluelibs/x-ui";
-import { Inject, Service } from "@bluelibs/core";
+} from "@redlibs/x-ui";
+import { Inject, Service } from "@redlibs/core";
 import { ColumnType } from "antd/lib/table";
 import { Consumer } from "../models";
 

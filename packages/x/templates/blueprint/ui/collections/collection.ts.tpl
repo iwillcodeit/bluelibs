@@ -1,14 +1,14 @@
-import { Collection, CollectionLinkConfig, CollectionTransformMap } from "@bluelibs/x-ui";
+import { Collection, CollectionLinkConfig, CollectionTransformMap } from "@redlibs/x-ui";
 import { {{ entityName }} } from "@root/api.types";
 {{# if hasFiles }}
-import { AppFilesCollection, AppFileGroupsCollection } from "@bluelibs/x-ui-admin";
+import { AppFilesCollection, AppFileGroupsCollection } from "@redlibs/x-ui-admin";
 {{/ if }}
 import {
   {{# each collectionClassNamesOfInterestExcludingMyself }}
     {{ this }},
   {{/ each }}
 } from "@bundles/{{ bundleName }}/collections";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 
 export type { {{ entityName }} };
 

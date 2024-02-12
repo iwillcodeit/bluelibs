@@ -1,5 +1,5 @@
-import { ContainerInstance } from "@bluelibs/core";
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import { ContainerInstance } from "@redlibs/core";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 import {
   AppFile,
   AppFileThumb,

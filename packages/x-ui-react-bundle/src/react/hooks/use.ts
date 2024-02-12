@@ -1,4 +1,4 @@
-import { Constructor, Token } from "@bluelibs/core";
+import { Constructor, Token } from "@redlibs/core";
 import { useMemo } from "react";
 import { useContainer } from "./index";
 

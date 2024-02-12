@@ -1,4 +1,4 @@
-import { Inject, ContainerInstance, Service } from "@bluelibs/core";
+import { Inject, ContainerInstance, Service } from "@redlibs/core";
 import {
   MongoClient,
   Db,
@@ -10,7 +10,7 @@ import {
 import { MONGO_CONNECTION_OPTIONS, MONGO_URL } from "../constants";
 import { Collection } from "../models/Collection";
 import { IGetFieldsResponse } from "../defs";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 
 @Service()
 export class DatabaseService {

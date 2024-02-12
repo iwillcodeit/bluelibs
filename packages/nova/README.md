@@ -34,7 +34,7 @@ The incredible speed boost is possible thanks to the technology called Hypernova
 ## Sample
 
 ```js
-import { query, manyToOne } from "@bluelibs/nova";
+import { query, manyToOne } from "@redlibs/nova";
 
 async function test() {
   const Post = await db.createCollection("Post");
@@ -63,7 +63,7 @@ async function test() {
 ## [GraphQL](./docs/index.md#graphql-integration)
 
 ```js
-import { query } from "@bluelibs/nova";
+import { query } from "@redlibs/nova";
 
 const Query = {
   // Automatically fetches everything in the minimum amount of queries

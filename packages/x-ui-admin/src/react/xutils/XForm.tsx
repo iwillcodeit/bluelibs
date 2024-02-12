@@ -10,8 +10,8 @@ import {
   use,
   XRouter,
   XUI_COMPONENTS_TOKEN,
-} from "@bluelibs/x-ui";
-import { Inject, Service } from "@bluelibs/core";
+} from "@redlibs/x-ui";
+import { Inject, Service } from "@redlibs/core";
 import { Rule } from "antd/lib/form";
 
 export type XFormElementBaseType = {

@@ -4,7 +4,7 @@ import {
   CollectionTransformMap,
   CollectionLinkConfig,
 } from "../graphql/Collection";
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 import { richResponse, richResponseBody } from "./samples/richResponse";
 import { cleanTypename } from "../graphql/utils/cleanTypename";
 

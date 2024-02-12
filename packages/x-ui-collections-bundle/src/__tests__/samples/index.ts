@@ -1,4 +1,4 @@
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 import { XUICollectionsBundle } from "../..";
 
 export function createSampleKernel() {

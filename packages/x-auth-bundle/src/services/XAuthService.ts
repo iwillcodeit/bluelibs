@@ -3,10 +3,10 @@ import {
   UserId,
   ICreateSessionOptions,
   ISession,
-} from "@bluelibs/security-bundle";
-import { PasswordService } from "@bluelibs/password-bundle";
-import { EmailService } from "@bluelibs/email-bundle";
-import { Service, Inject, ContainerInstance } from "@bluelibs/core";
+} from "@redlibs/security-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
+import { EmailService } from "@redlibs/email-bundle";
+import { Service, Inject, ContainerInstance } from "@redlibs/core";
 import { InvalidPasswordException } from "../exceptions/InvalidPasswordException";
 import { IXAuthService } from "./IXAuthService";
 import { InvalidTokenException } from "../exceptions/InvalidTokenException";
@@ -16,7 +16,7 @@ import { LoginInput } from "../inputs/LoginInput";
 import { ResetPasswordInput } from "../inputs/ResetPasswordInput";
 import { ForgotPasswordInput } from "../inputs/ForgotPasswordInput";
 import { VerifyEmailInput } from "../inputs/VerifyEmailInput";
-import { Router, APP_ROUTER } from "@bluelibs/x-bundle";
+import { Router, APP_ROUTER } from "@redlibs/x-bundle";
 import { IXAuthBundleConfig } from "../defs";
 import {
   AUTH_CODE_COLLECTION_TOKEN,
@@ -39,7 +39,7 @@ import { AuthenticationCodesCollection } from "../collections/AuthenticationCode
 import * as ms from "ms";
 import { AuthenticationCodes } from "../collections/AuthenticationCodes.model";
 import { CodeSubmissionExceededException } from "../exceptions/CodeSubmissionExceededException";
-import { ObjectId } from "@bluelibs/mongo-bundle";
+import { ObjectId } from "@redlibs/mongo-bundle";
 
 const ALLOWED_CHARS =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");

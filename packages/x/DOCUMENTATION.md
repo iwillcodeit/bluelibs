@@ -3,7 +3,7 @@ The X-Framework generator is a command-line utility which enables you to write c
 ## Install
 
 ```
-npm i -g @bluelibs/x
+npm i -g @redlibs/x
 x
 ```
 

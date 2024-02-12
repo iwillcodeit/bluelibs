@@ -1,19 +1,19 @@
-import { Bundle, KernelPhase } from "@bluelibs/core";
+import { Bundle, KernelPhase } from "@redlibs/core";
 import {
   GuardianSmart,
   XUIGuardianBundle,
-} from "@bluelibs/x-ui-guardian-bundle";
-import { IComponents, XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+} from "@redlibs/x-ui-guardian-bundle";
+import { IComponents, XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 import { XUINextBundleConfigType } from "./defs";
 
 import {
   ApolloClient,
   ApolloProvider,
   UIApolloBundle,
-} from "@bluelibs/ui-apollo-bundle";
-import { XUISessionBundle } from "@bluelibs/x-ui-session-bundle";
-import { XUII18NBundle } from "@bluelibs/x-ui-i18n-bundle";
-import { XUICollectionsBundle } from "@bluelibs/x-ui-collections-bundle";
+} from "@redlibs/ui-apollo-bundle";
+import { XUISessionBundle } from "@redlibs/x-ui-session-bundle";
+import { XUII18NBundle } from "@redlibs/x-ui-i18n-bundle";
+import { XUICollectionsBundle } from "@redlibs/x-ui-collections-bundle";
 
 export class XUINextBundle extends Bundle<XUINextBundleConfigType> {
   protected defaultConfig = {

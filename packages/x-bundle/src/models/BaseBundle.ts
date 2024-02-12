@@ -5,14 +5,14 @@ import {
   EventManager,
   KernelAfterInitEvent,
   Listener,
-} from "@bluelibs/core";
-import { ILoadOptions, Loader } from "@bluelibs/graphql-bundle";
-import { Collection, MongoBundle } from "@bluelibs/mongo-bundle";
+} from "@redlibs/core";
+import { ILoadOptions, Loader } from "@redlibs/graphql-bundle";
+import { Collection, MongoBundle } from "@redlibs/mongo-bundle";
 import {
   ValidatorService,
   ValidatorBundle,
   IValidationMethod,
-} from "@bluelibs/validator-bundle";
+} from "@redlibs/validator-bundle";
 
 export abstract class BaseBundle<T = any> extends CoreBundle<T> {
   async setupBundle(config: {

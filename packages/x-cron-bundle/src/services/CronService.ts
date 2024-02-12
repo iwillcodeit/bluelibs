@@ -1,8 +1,8 @@
-import { Service, Inject, ContainerInstance } from "@bluelibs/core";
+import { Service, Inject, ContainerInstance } from "@redlibs/core";
 import { ICronConfig, ICronEntry } from "../defs";
 import { CronsCollection } from "../collections/Crons.collection";
 import { parse, schedule, ScheduleData, date } from "later";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 
 type IntentFunction = (intendedAt: Date) => any;
 

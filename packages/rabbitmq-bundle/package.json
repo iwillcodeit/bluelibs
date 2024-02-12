@@ -1,5 +1,5 @@
 {
-  "name": "@bluelibs/rabbitmq-bundle",
+  "name": "@redlibs/rabbitmq-bundle",
   "version": "1.1.0",
   "description": "BlueLibs rabbitmq-bundle",
   "main": "dist/index.js",
@@ -48,8 +48,8 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@bluelibs/core": "^1.0.0",
-    "@bluelibs/ejson": "^1.0.0",
-    "@bluelibs/logger-bundle": "^1.0.0"
+    "@redlibs/core": "^1.0.0",
+    "@redlibs/ejson": "^1.0.0",
+    "@redlibs/logger-bundle": "^1.0.0"
   }
 }

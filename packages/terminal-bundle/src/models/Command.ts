@@ -1,4 +1,4 @@
-import { Inject, Service } from "@bluelibs/core";
+import { Inject, Service } from "@redlibs/core";
 import { PrompterService } from "../services/PrompterService";
 import { CommanderService } from "../services/CommanderService";
 import { IExecutor } from "../defs";

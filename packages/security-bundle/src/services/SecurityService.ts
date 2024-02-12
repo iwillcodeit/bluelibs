@@ -1,5 +1,5 @@
 import { UserBeforeCreateEvent } from "./../events";
-import { Service, Inject, EventManager } from "@bluelibs/core";
+import { Service, Inject, EventManager } from "@redlibs/core";
 import * as ms from "ms";
 import {
   ISecurityService,

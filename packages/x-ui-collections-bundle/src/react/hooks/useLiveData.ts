@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import { Collection } from "../../graphql/Collection";
 import {
   IQueryInput,
   ISubscriptionOptions,
   QueryBodyType,
 } from "../../graphql/defs";
-import { use } from "@bluelibs/x-ui-react-bundle";
-import { XSubscription } from "@bluelibs/ui-apollo-bundle";
+import { use } from "@redlibs/x-ui-react-bundle";
+import { XSubscription } from "@redlibs/ui-apollo-bundle";
 
 export type UseLiveDataStateType<T> = {
   data: T | null;

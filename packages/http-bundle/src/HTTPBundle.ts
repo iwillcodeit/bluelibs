@@ -1,4 +1,4 @@
-import { Bundle, KernelAfterInitEvent } from "@bluelibs/core";
+import { Bundle, KernelAfterInitEvent } from "@redlibs/core";
 import {
   HTTPBundleConfigType,
   RouteType,
@@ -6,7 +6,7 @@ import {
 } from "./defs";
 import * as express from "express";
 import * as http from "http";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 import * as cookieParser from "cookie-parser";
 import {
   HTTPServerBeforeInitialisationEvent,

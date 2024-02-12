@@ -1,4 +1,4 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { MicroserviceModel, MicroserviceTypeEnum } from "../models";
 import { FSUtils } from "../utils/FSUtils";
 import * as path from "path";

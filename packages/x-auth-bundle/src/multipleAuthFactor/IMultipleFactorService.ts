@@ -2,7 +2,7 @@ import {
   UserId,
   ICreateSessionOptions,
   ISession,
-} from "@bluelibs/security-bundle";
+} from "@redlibs/security-bundle";
 
 import { MultipleFactorRedirect } from "./defs";
 

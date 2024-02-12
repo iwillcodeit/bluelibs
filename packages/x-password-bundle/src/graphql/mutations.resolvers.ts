@@ -1,4 +1,4 @@
-import * as X from "@bluelibs/x-bundle";
+import * as X from "@redlibs/x-bundle";
 import { RegistrationInput } from "../inputs/RegistrationInput";
 import { LoginInput } from "../inputs/LoginInput";
 import { ResetPasswordInput } from "../inputs/ResetPasswordInput";

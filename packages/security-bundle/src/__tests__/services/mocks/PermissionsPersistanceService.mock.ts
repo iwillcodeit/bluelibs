@@ -1,4 +1,4 @@
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 import {
   IPermissionPersistance,
   IPermission,

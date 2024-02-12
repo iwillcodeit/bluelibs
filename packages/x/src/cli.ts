@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 // CLITS
-import { Kernel } from "@bluelibs/core";
-import { TerminalBundle } from "@bluelibs/terminal-bundle";
+import { Kernel } from "@redlibs/core";
+import { TerminalBundle } from "@redlibs/terminal-bundle";
 import { XGeneratorBundle } from "./XGeneratorBundle";
 
 const kernel = new Kernel({
@@ -15,5 +15,5 @@ const kernel = new Kernel({
 });
 
 kernel.init().then(() => {
-  // exec('npm view @bluelibs/x version').
+  // exec('npm view @redlibs/x version').
 });

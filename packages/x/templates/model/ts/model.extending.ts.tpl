@@ -3,7 +3,7 @@
   export * from "./{{ localBaseName }}";
 {{/ unless }}
 {{# if yupValidation }}
-  import { Schema, Is, a, an } from "@bluelibs/validator-bundle";
+  import { Schema, Is, a, an } from "@redlibs/validator-bundle";
 {{/ if }}
 import { {{ modelClass }} as Base{{ modelClass }} } from "./{{ localBaseName }}";
 {{# unless isInputMode }}

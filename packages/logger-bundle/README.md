@@ -17,7 +17,7 @@ This bundle allows you to log information that happens in your system. The logge
 ## Install
 
 ```bash
-npm install --save @bluelibs/logger-bundle
+npm install --save @redlibs/logger-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

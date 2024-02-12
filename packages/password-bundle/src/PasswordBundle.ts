@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { IPasswordBundleConfig } from "./defs";
 import { HASHER_SERVICE_TOKEN, BUNDLE_CONFIG_TOKEN } from "./constants";
 import { HasherService } from "./services/HasherService";

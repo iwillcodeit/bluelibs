@@ -1,6 +1,6 @@
 import * as path from "path";
 import { XSession, FSOperator, FSUtils } from "../";
-import { BlueprintWriter } from "@bluelibs/terminal-bundle";
+import { BlueprintWriter } from "@redlibs/terminal-bundle";
 import { UICollectionModel } from "../models/UICollectionModel";
 
 export class UICollectionWriter extends BlueprintWriter {

@@ -1,6 +1,6 @@
 import { ecosystem } from "./ecosystem";
 import { CronService } from "../services/CronService";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { ParseStatic } from "later";
 
 test("crons do run", async () => {

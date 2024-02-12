@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 export class UserNotFoundException extends Exception {
   static code = "USER_NOT_FOUND";

@@ -1,7 +1,7 @@
-import { Inquirer } from "@bluelibs/terminal-bundle";
+import { Inquirer } from "@redlibs/terminal-bundle";
 import { GenericModelInquirer } from "./GenericModelInquirer";
 import * as _ from "lodash";
-import { ContainerInstance, Inject } from "@bluelibs/core";
+import { ContainerInstance, Inject } from "@redlibs/core";
 import { InquiryUtils } from "../utils/InquiryUtils";
 import { GraphQLInputModel } from "../models/GraphQLInputModel";
 

@@ -1,12 +1,13 @@
-import { Service } from "@bluelibs/core";
-import { yup, IValidationTransformer } from "@bluelibs/validator-bundle";
+import { Service } from "@redlibs/core";
+import { yup, IValidationTransformer } from "@redlibs/validator-bundle";
 import { parse } from "date-fns";
 
 type IDateTransformerConfig = string;
 
 @Service()
 export class DateTransformer
-  implements IValidationTransformer<IDateTransformerConfig, Date> {
+  implements IValidationTransformer<IDateTransformerConfig, Date>
+{
   parent = yup.date;
   name = "format";
 

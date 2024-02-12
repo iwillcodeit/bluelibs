@@ -1,4 +1,4 @@
-import { Studio } from "@bluelibs/x";
+import { Studio } from "@redlibs/x";
 import * as faker from "faker";
 
 // Dummy file for easy importing of the things you need for your blueprint

@@ -3,7 +3,7 @@ Collections can be regarded as an interface to your remote database via `GraphQL
 ## Definition
 
 ```ts
-import { Collection } from "@bluelibs/x-ui-collections-bundle";
+import { Collection } from "@redlibs/x-ui-collections-bundle";
 import { Post } from "./Post.model";
 
 export class Post {
@@ -37,7 +37,7 @@ export class PostsCollection extends Collection<Post> {
 Below, we'll have a simple example how to use the posts collection to find data.
 
 ```tsx
-import { use } from "@bluelibs/x-ui-react-bundle";
+import { use } from "@redlibs/x-ui-react-bundle";
 
 function Component() {
   const postsCollection = use(PostsCollection);
@@ -171,7 +171,7 @@ This will transform the fetched result however you prefer, you can either instan
 What we normally recommend is do this for `_id` which are `ObjectId` and to transform numbers to `Date` for fields which are dates. Note it will only perform transformation if the response is not `undefined`.
 
 ```ts
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 
 class PostsCollection extends Collection<Post> {
   getTransformMap() {
@@ -278,7 +278,7 @@ import {
   useLiveData,
   useDataOne,
   useLiveDataOne,
-} from "@bluelibs/x-ui-collections-bundle";
+} from "@redlibs/x-ui-collections-bundle";
 
 function PostsList() {
   const {
@@ -324,7 +324,7 @@ If you want to refetch the data simply call the `refetch()` function from your e
 We have created a [Smart](/docs/package-smart) that allows you to easily work with lists:
 
 ```ts title="PostListSmart.ts"
-import { ListSmart } from "@bluelibs/x-ui-collections-bundle";
+import { ListSmart } from "@redlibs/x-ui-collections-bundle";
 import React from "react";
 import { Post, PostsCollection } from "../../collections";
 
@@ -430,7 +430,7 @@ function Component() {
 If you want to use the smart live data, just swap `useData()` with `useLiveData()` and it will magically work, your data will be listening to changes.
 
 ```ts
-import { useLiveData } from "@bluelibs/x-ui-collections-bundle";
+import { useLiveData } from "@redlibs/x-ui-collections-bundle";
 
 const LiveDataPage = () => {
   const {
@@ -557,7 +557,7 @@ Of course, you're free to specify your own refetch body instead, either by passi
 
 ```ts
 // You may either use `collection.toQueryBody` or import the standalone version
-import { toQueryBody } from "@bluelibs/x-ui-collections-bundle";
+import { toQueryBody } from "@redlibs/x-ui-collections-bundle";
 
 const input = {
   text: "My new Text",
@@ -578,7 +578,7 @@ For example, if you are submitting a form that contains a nullable `Address` obj
 
 ```ts
 // You may either use `collection.toQueryBody` or import the standalone version
-import { toQueryBody } from "@bluelibs/x-ui-collections-bundle";
+import { toQueryBody } from "@redlibs/x-ui-collections-bundle";
 
 const input = {
   text: "My new Text",

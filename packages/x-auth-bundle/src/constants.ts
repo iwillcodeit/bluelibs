@@ -1,4 +1,4 @@
-import { Token } from "@bluelibs/core";
+import { Token } from "@redlibs/core";
 
 export const X_AUTH_SETTINGS = new Token("x-auth-settings");
 export const SOCIAL_AUTH_SERVICE_TOKEN = new Token();

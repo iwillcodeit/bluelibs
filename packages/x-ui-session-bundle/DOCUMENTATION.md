@@ -3,13 +3,13 @@ Session is a way to store data that is re-used across your components. Its desig
 ## Install
 
 ```bash
-npm i -S @bluelibs/x-ui-session-bundle
+npm i -S @redlibs/x-ui-session-bundle
 ```
 
 ```ts
-import { Kernel } from "@bluelibs/core";
-import { XUII18NBundle } from "@bluelibs/x-ui-i18n-bundle";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+import { Kernel } from "@redlibs/core";
+import { XUII18NBundle } from "@redlibs/x-ui-i18n-bundle";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -30,9 +30,9 @@ We often need to store values somewhere that we later use it in our application,
 In order to modify the interface and benefit of autocompletion, you have to extend it:
 
 ```ts title="defs.ts";
-import "@bluelibs/x-ui-session-bundle";
+import "@redlibs/x-ui-session-bundle";
 
-declare module "@bluelibs/x-ui-session-bundle" {
+declare module "@redlibs/x-ui-session-bundle" {
   export interface IXUISessionStore {
     csrfToken: string;
   }
@@ -45,7 +45,7 @@ The hook provides the following methods:
 import {
   useUISession,
   UISessionStateChangeEvent,
-} from "@bluelibs/x-ui-session-bundle";
+} from "@redlibs/x-ui-session-bundle";
 
 function Component() {
   const session = useUISession();
@@ -70,7 +70,7 @@ import {
   useUISession,
   useGuardian,
   UISessionEventChangeHandler,
-} from "@bluelibs/x-ui-session-bundle";
+} from "@redlibs/x-ui-session-bundle";
 
 // We define the handler: what to do when a field changes?
 const authenticationDateHandler: UISessionEventChangeHandler = (event) => {

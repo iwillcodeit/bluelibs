@@ -1,7 +1,7 @@
 ## Install
 
 ```bash
-npm install @bluelibs/security-bundle
+npm install @redlibs/security-bundle
 ```
 
 ## Purpose
@@ -22,7 +22,7 @@ This module works with any database and you can have different `persistence laye
 By default it uses an in-memory database as persistence for users/permission/sessions, which means that on every server-restart everything will be forgotten. Either implement your own persistence layers or use some pre-existing solution such as: [Security Mongo Bundle](/docs/package-security-mongo)
 
 ```typescript
-import { SecurityBundle } from "@bluelibs/security-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
 
 new SecurityBundle({
   // The permission tree (more on it below), is how you configure the role hierarchy in your app
@@ -49,7 +49,7 @@ In our current bundle we refer to persistence layers, as the services which lets
 You can specify these permission layers in the bundle's config:
 
 ```ts
-import { SecurityBundle, IUserPersistance } from "@bluelibs/security-bundle";
+import { SecurityBundle, IUserPersistance } from "@redlibs/security-bundle";
 
 class MyUserPersistence implements IUserPersistance {
   // all the methods to satisfy the IUserPersistance interface
@@ -75,8 +75,8 @@ class AppBundle extends Bundle {
 We do have it implemented for mongodb via `MongoBundle`. This is done in a separate bundle: [Security Mongo Bundle](/docs/package-security-mongo).
 
 ```js
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { SecurityMongoBundle } from "@bluelibs/security-mongo-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { SecurityMongoBundle } from "@redlibs/security-mongo-bundle";
 
 kernel.addBundles([
   // order does not matter
@@ -125,9 +125,9 @@ Since we are database agnostic, we currently allow the `UserId` to be string, nu
 
 ```ts title="defs.ts"
 // Make sure this file gets imported
-import "@bluelibs/security-bundle";
+import "@redlibs/security-bundle";
 
-declare module "@bluelibs/security-bundle" {
+declare module "@redlibs/security-bundle" {
   export interface IUser {
     name: string;
   }
@@ -215,7 +215,7 @@ How can we authenticate users from an `end-to-end` perspective? We have password
 We introduce a new concept called `AuthenticationStrategy`, we are going to refer to it as `UAS`. What this means is that it allows you to work with the `UserPermissionPersistance` layer to store information associated to authenticating users. For example, when dealing with `password` authentication, we'll store a `hash` of that password. If we're dealing with `facebook` authentication, we'll store the `facebookProfileId` in the User somehow.
 
 ```typescript
-import { SecurityService } from "@bluelibs/security-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 
 const securityService = this.container.get(SecurityService);
 
@@ -258,7 +258,7 @@ export interface IPermission {
 ```
 
 :::note
-Each permission has a required `domain`, which you have to specify, by default we recommend you use the string "app", or the less-friendly-looking `PERMISSION_DEFAULT_DOMAIN` export from the `@bluelibs/security-bundle` package.
+Each permission has a required `domain`, which you have to specify, by default we recommend you use the string "app", or the less-friendly-looking `PERMISSION_DEFAULT_DOMAIN` export from the `@redlibs/security-bundle` package.
 :::
 
 ### Adding and Removing
@@ -266,7 +266,7 @@ Each permission has a required `domain`, which you have to specify, by default w
 A permission in which the domain is `PERMISSION_DEFAULT_DOMAIN` is regarded as a `role`. When you read about user roles, they are just `permissions` on the `app` domain.
 
 ```ts
-import { PermissionService } from "@bluelibs/security-bundle";
+import { PermissionService } from "@redlibs/security-bundle";
 
 const permissionService = container.get(PermissionService);
 
@@ -510,7 +510,7 @@ permissionService.findPermissions({
 We call "role" a permission which is on `app` domain and has no `domainIdentifier`. The roles are typically stored under an array of strings under `user: { roles: [] }` but it can also be stored under permission collection as they normally are. It's your choice: the system works with both options, but for consistency it's best to just stick to one that fits best.
 
 ```ts
-import { SecurityService } from "@bluelibs/security-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 
 const securityService = container.get(SecurityService);
 const roles = await securityService.getRoles(userId);
@@ -557,7 +557,7 @@ This means that if you want to switch and will be dealing with `roles` manipulat
 
 You can hook into multiple type of events, you can find them by exploring the API or just looking into `events.ts` file.
 
-Their names should be intuitive enough and you can import them directly from "@bluelibs/security-bundle" package:
+Their names should be intuitive enough and you can import them directly from "@redlibs/security-bundle" package:
 
 - UserBeforeCreateEvent
 - UserAfterCreateEvent

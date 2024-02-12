@@ -4,7 +4,7 @@ import { GuardianSmart } from "..";
 import { container, kernel } from "./ecosystem";
 import { XUIGuardianProvider } from "../react/provider";
 import * as TestRenderer from "react-test-renderer";
-import { XUIProvider } from "@bluelibs/x-ui-react-bundle";
+import { XUIProvider } from "@redlibs/x-ui-react-bundle";
 
 describe("XUIGuardianBundle", () => {
   test("Container Injection", async () => {

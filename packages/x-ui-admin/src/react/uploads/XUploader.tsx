@@ -1,6 +1,6 @@
-import { Service } from "@bluelibs/core";
-import { ApolloClient, Collection } from "@bluelibs/x-ui";
-import { ObjectId } from "@bluelibs/ejson";
+import { Service } from "@redlibs/core";
+import { ApolloClient, Collection } from "@redlibs/x-ui";
+import { ObjectId } from "@redlibs/ejson";
 import { UPLOAD_FILE, UPLOAD_FILE_TO_GROUP } from "./graphql";
 import { RcFile, UploadFile } from "antd/lib/upload/interface";
 

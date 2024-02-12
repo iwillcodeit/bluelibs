@@ -1,4 +1,4 @@
-import { IBundleLinkCollectionOption } from "@bluelibs/mongo-bundle";
+import { IBundleLinkCollectionOption } from "@redlibs/mongo-bundle";
 import { AppFilesCollection } from "../appFiles/AppFiles.collection";
 
 export const files: IBundleLinkCollectionOption = {

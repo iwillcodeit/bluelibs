@@ -3,7 +3,7 @@ This package from X-Framework gives you fully integrated passwords system, with 
 ## Install
 
 ```typescript
-import { XPasswordBundle } from "@bluelibs/x-password-bundle";
+import { XPasswordBundle } from "@redlibs/x-password-bundle";
 
 // For this to work you need the following: SecurityBundle, ApolloBundle, ApolloSecurityBundle, SecurityMongoBundle, XBundle
 
@@ -42,8 +42,8 @@ All these emails can be overriden like this:
 ### Customise
 
 ```tsx
-import { IReactEmailTemplate } from "@bluelibs/email-bundle";
-import { IWelcomeEmailProps } from "@bluelibs/x-password-bundle";
+import { IReactEmailTemplate } from "@redlibs/email-bundle";
+import { IWelcomeEmailProps } from "@redlibs/x-password-bundle";
 
 export const CustomWelcomeEmail: IReactEmailTemplate<IWelcomeEmailProps> = (
   props
@@ -164,8 +164,8 @@ type Mutation {
 ```
 
 ```ts
-import { IGraphQLContext, InputType } from "@bluelibs/graphql-bundle";
-import { RegisterInput, XPasswordService } from "@bluelibs/x-password-bundle";
+import { IGraphQLContext, InputType } from "@redlibs/graphql-bundle";
+import { RegisterInput, XPasswordService } from "@redlibs/x-password-bundle";
 
 class MyCustomInput extends RegisterInput {
   age: string;
@@ -195,7 +195,7 @@ function register(_, args: InputType<RegisterInput>, context: IGraphQLContext) {
 You can modify behavior of your mutation resolvers by creating your own `XPasswordService`:
 
 ```ts
-import { RegistrationInput, XPasswordService } from "@bluelibs/x-password-bundle";
+import { RegistrationInput, XPasswordService } from "@redlibs/x-password-bundle";
 
 class MyXPasswordService extends XPasswordService {
   register(input: RegistrationInput) {

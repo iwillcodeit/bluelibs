@@ -1,7 +1,7 @@
 import {
   BlueprintWriter,
   IBlueprintWriterSession,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import {
   MicroserviceModel,
   MicroserviceTypeEnum,
@@ -114,7 +114,7 @@ export class MicroserviceWriter extends BlueprintWriter {
     genericModel.ensureIdField();
     genericModel.name = "User";
 
-    collectionModel.customCollectionImport = "@bluelibs/security-mongo-bundle";
+    collectionModel.customCollectionImport = "@redlibs/security-mongo-bundle";
     collectionModel.customCollectionName = "UsersCollection";
     this.prepareUserModel(genericModel);
 
@@ -160,7 +160,7 @@ export class MicroserviceWriter extends BlueprintWriter {
         name: "IPasswordAuthenticationStrategy",
         storage: "outside",
         local: false,
-        absoluteImport: "@bluelibs/password-bundle",
+        absoluteImport: "@redlibs/password-bundle",
       },
     });
     if (!genericModel.hasField("isEnabled")) {

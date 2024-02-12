@@ -1,6 +1,6 @@
-import { Service } from "@bluelibs/core";
-import { IGraphQLContext } from "@bluelibs/graphql-bundle";
-import { PermissionService, SecurityService } from "@bluelibs/security-bundle";
+import { Service } from "@redlibs/core";
+import { IGraphQLContext } from "@redlibs/graphql-bundle";
+import { PermissionService, SecurityService } from "@redlibs/security-bundle";
 
 export type SecureGraphQLResolver<T> = (
   _,

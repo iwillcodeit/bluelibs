@@ -1,4 +1,4 @@
-import { Bundle, EventManager, KernelAfterInitEvent } from "@bluelibs/core";
+import { Bundle, EventManager, KernelAfterInitEvent } from "@redlibs/core";
 import { Command as CommanderCommand } from "commander";
 import { CommanderService } from "./services/CommanderService";
 import { ITerminalBundleConfig } from "./defs";
@@ -13,9 +13,8 @@ export class TerminalBundle extends Bundle<ITerminalBundleConfig> {
 
     eventManager.addListener(KernelAfterInitEvent, async () => {
       const program = new CommanderCommand();
-      const commanderService = this.container.get<CommanderService>(
-        CommanderService
-      );
+      const commanderService =
+        this.container.get<CommanderService>(CommanderService);
 
       // Interesting why I have to do "as", no time to debug, fix later
       commanderService.init(program as CommanderCommand);
@@ -27,9 +26,8 @@ export class TerminalBundle extends Bundle<ITerminalBundleConfig> {
     this.container.set(TERMINAL_BUNDLE_OPTIONS, this.config);
 
     if (commands) {
-      const commanderService = this.container.get<CommanderService>(
-        CommanderService
-      );
+      const commanderService =
+        this.container.get<CommanderService>(CommanderService);
 
       commands.forEach((command) => {
         commanderService.registerCommand(command);

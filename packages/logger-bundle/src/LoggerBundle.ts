@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { ILoggerBundleConfig } from "./defs";
 import { ConsoleListener } from "./listeners/ConsoleListener";
 import { LoggerService } from "./services/LoggerService";

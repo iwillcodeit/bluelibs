@@ -1,4 +1,4 @@
-import { ContainerInstance, Constructor, Service } from "@bluelibs/core";
+import { ContainerInstance, Constructor, Service } from "@redlibs/core";
 import { IValidationMethod, IValidateOptions } from "../defs";
 import { SchemaNotIdentifiedException } from "../exceptions";
 import {
@@ -73,9 +73,8 @@ export class ValidatorService {
   }
 
   addTransformer(transformerClass: { new (): IValidationTransformer }) {
-    const transformer = this.container.get<IValidationTransformer>(
-      transformerClass
-    );
+    const transformer =
+      this.container.get<IValidationTransformer>(transformerClass);
     let { parent, name } = transformer;
 
     if (!parent) {

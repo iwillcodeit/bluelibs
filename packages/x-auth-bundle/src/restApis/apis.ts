@@ -10,8 +10,8 @@ import {
   RequestLoginLinkInput,
   VerifyMagicLinkInput,
 } from "../inputs/RequestMagicLinkInput";
-import * as X from "@bluelibs/x-bundle";
-import { SecurityService } from "@bluelibs/security-bundle";
+import * as X from "@redlibs/x-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 
 export const REST_APIS: {
   name: string;

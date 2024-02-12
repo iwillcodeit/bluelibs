@@ -1,6 +1,6 @@
 import { Collection } from "../models/Collection";
 import { IValidateBehaviorOptions, IContextAware } from "../defs";
-import { ValidatorService } from "@bluelibs/validator-bundle";
+import { ValidatorService } from "@redlibs/validator-bundle";
 import {
   BeforeInsertEvent,
   BeforeUpdateEvent,

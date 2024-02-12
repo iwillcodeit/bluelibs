@@ -1,7 +1,7 @@
 import {
   BlueprintWriter,
   IBlueprintWriterSession,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import { MicroserviceModel, CreateBundleModel } from "../models";
 import { FSUtils } from "../utils/FSUtils";
 import * as path from "path";

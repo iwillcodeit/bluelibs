@@ -1,12 +1,12 @@
-import { PasswordService } from "@bluelibs/password-bundle";
-import { SecurityService } from "@bluelibs/security-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 import { XAuthService } from "../..";
 import { createEcosystem } from "../createEcosystem";
 import * as superagent from "superagent";
-import { HTTPBundle } from "@bluelibs/http-bundle";
+import { HTTPBundle } from "@redlibs/http-bundle";
 import userData from "../mocks/userData";
 import StrategyMock from "../mocks/mockStrategy";
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 
 describe("SocialLoginService.test ", () => {
   let securityService,

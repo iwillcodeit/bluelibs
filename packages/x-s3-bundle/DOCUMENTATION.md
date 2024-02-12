@@ -5,11 +5,11 @@ We are using [Apollo Upload scalar](https://www.apollographql.com/docs/apollo-se
 ## Setup
 
 ```bash
-npm i -S graphql-upload aws-sdk @bluelibs/x-s3-bundle
+npm i -S graphql-upload aws-sdk @redlibs/x-s3-bundle
 ```
 
 ```ts
-import { XS3Bundle } from "@bluelibs/x-s3-bundle";
+import { XS3Bundle } from "@redlibs/x-s3-bundle";
 
 kernel.addBundle(
   new XS3Bundle({
@@ -32,7 +32,7 @@ A good tutorial to show-case the full flow [can be found here](https://www.apoll
 The typical process is that from your client you have added the [Apollo Upload Link](https://github.com/jaydenseric/apollo-upload-client). This is by default included in `x-ui` package so you don't have to worry. What it does is that it transforms the HTTP request into a multi-part form to send the files (if there are any)
 
 ```ts
-import { S3UploadService, AppFilesCollection } from "@bluelibs/x-s3-bundle";
+import { S3UploadService, AppFilesCollection } from "@redlibs/x-s3-bundle";
 
 const types = `
   type Mutation {
@@ -59,7 +59,7 @@ Now, in most cases what interests you is that `downloadable url` so the user can
 Through `S3UploadService`:
 
 ```ts
-import { S3UploadService } from "@bluelibs/x-s3-bundle";
+import { S3UploadService } from "@redlibs/x-s3-bundle";
 
 const s3UploadService = ctx.container.get(S3UploadService);
 s3UploadService.getFileURL(appFile._id); // This will return a fully downloadable path
@@ -160,7 +160,7 @@ query me {
 When adding the avatar, after uploading it can look something like this:
 
 ```ts
-import { AppFilesCollection } from "@bluelibs/x-s3-bundle";
+import { AppFilesCollection } from "@redlibs/x-s3-bundle";
 
 // Sample of linking of files
 class UsersCollection extends Collection {

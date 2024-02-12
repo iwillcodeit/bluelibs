@@ -1,4 +1,4 @@
-import { Inject, Service, EventManager } from "@bluelibs/core";
+import { Inject, Service, EventManager } from "@redlibs/core";
 import { PermissionGraph } from "./PermissionGraph";
 import {
   UserBeforeRemovePermissionEvent,

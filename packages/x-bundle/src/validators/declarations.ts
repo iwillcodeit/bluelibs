@@ -1,4 +1,4 @@
-import "@bluelibs/validator-bundle";
+import "@redlibs/validator-bundle";
 import { IUniqueFieldValidationConfig } from "./UniqueFieldValidationMethod";
 import { ObjectIdSchema } from "./ObjectId.validator";
 import "./ObjectId.validator";

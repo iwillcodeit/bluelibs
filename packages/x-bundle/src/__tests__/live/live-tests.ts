@@ -1,9 +1,9 @@
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { ContainerInstance, Kernel } from "@bluelibs/core";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { ContainerInstance, Kernel } from "@redlibs/core";
 import { PostsCollection } from "./collections";
 import { createEcosystem } from "./createEcosystem";
 import { SubscriptionStore } from "../../services/SubscriptionStore";
-import { DatabaseService } from "@bluelibs/mongo-bundle";
+import { DatabaseService } from "@redlibs/mongo-bundle";
 
 let container: ContainerInstance;
 

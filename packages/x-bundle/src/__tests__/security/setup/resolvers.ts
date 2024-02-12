@@ -1,8 +1,8 @@
 import * as X from "../../../";
-import { IGraphQLContext, IResolverMap } from "@bluelibs/graphql-bundle";
+import { IGraphQLContext, IResolverMap } from "@redlibs/graphql-bundle";
 import { PostsCollection } from "./collections";
-import { PasswordService } from "@bluelibs/password-bundle";
-import { SecurityService } from "@bluelibs/security-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 
 export default {
   Query: [

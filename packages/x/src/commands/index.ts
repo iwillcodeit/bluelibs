@@ -1,4 +1,4 @@
-import { ICommand } from "@bluelibs/terminal-bundle";
+import { ICommand } from "@redlibs/terminal-bundle";
 import * as Inquirers from "../inquirers";
 import * as Writers from "../writers";
 import { XSession } from "../utils/XSession";

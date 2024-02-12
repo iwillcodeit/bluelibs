@@ -1,15 +1,15 @@
-import { Listener, On, Inject } from "@bluelibs/core";
-import { EmailService } from "@bluelibs/email-bundle";
+import { Listener, On, Inject } from "@redlibs/core";
+import { EmailService } from "@redlibs/email-bundle";
 import {
   PasswordResetRequestedEvent,
   PasswordService,
-} from "@bluelibs/password-bundle";
+} from "@redlibs/password-bundle";
 import { ForgotPasswordEmail } from "../emails/ForgotPasswordEmail";
 import { X_PASSWORD_SETTINGS } from "../constants";
 import { IXPasswordBundleConfig } from "../defs";
-import { Router } from "@bluelibs/x-bundle";
-import { SecurityService } from "@bluelibs/security-bundle";
-import "@bluelibs/password-bundle";
+import { Router } from "@redlibs/x-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
+import "@redlibs/password-bundle";
 
 export class EmailListener extends Listener {
   @Inject(() => Router)
@@ -50,9 +50,7 @@ export class EmailListener extends Listener {
     );
   }
 
-  protected async getUserData(
-    userId
-  ): Promise<{
+  protected async getUserData(userId): Promise<{
     name: string;
     email: string;
   }> {

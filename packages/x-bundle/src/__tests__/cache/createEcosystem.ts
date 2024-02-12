@@ -1,17 +1,17 @@
 // Create a kernel with a bundle
 
-import { Kernel, ContainerInstance } from "@bluelibs/core";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { ApolloSecurityBundle } from "@bluelibs/apollo-security-bundle";
+import { Kernel, ContainerInstance } from "@redlibs/core";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { ApolloSecurityBundle } from "@redlibs/apollo-security-bundle";
 import { XBundle } from "./../../XBundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { SecurityMongoBundle } from "@bluelibs/security-mongo-bundle";
-import { PasswordBundle } from "@bluelibs/password-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { SecurityMongoBundle } from "@redlibs/security-mongo-bundle";
+import { PasswordBundle } from "@redlibs/password-bundle";
 
-import { GraphQLBundle } from "@bluelibs/graphql-bundle";
+import { GraphQLBundle } from "@redlibs/graphql-bundle";
 export const PORT = 6400;
 
 export async function createEcosystem(): Promise<ContainerInstance> {

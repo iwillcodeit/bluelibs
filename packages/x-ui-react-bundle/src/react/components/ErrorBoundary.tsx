@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ContainerContext } from "../XUIProvider";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { Error } from "./Error";
 
 export type ErrorBoundaryProps = {

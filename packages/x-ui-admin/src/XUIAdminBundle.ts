@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Bundle, EventManager } from "@bluelibs/core";
-import { XRouter, RoutingPreparationEvent, XUIBundle } from "@bluelibs/x-ui";
+import { Bundle, EventManager } from "@redlibs/core";
+import { XRouter, RoutingPreparationEvent, XUIBundle } from "@redlibs/x-ui";
 import { IXUIAdminBundleConfig } from "./defs";
 import { MenuService } from "./services/MenuService";
 import { DefaultComponentsMap } from "./react/components/types";

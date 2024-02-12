@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 export class ApolloInvalidTokenException extends Exception<{ token: string }> {
   static code = "INVALID_TOKEN";

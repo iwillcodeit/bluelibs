@@ -1,6 +1,6 @@
 import * as React from "react";
 import { createElement } from "react";
-import { use, newSmart } from "@bluelibs/x-ui-react-bundle";
+import { use, newSmart } from "@redlibs/x-ui-react-bundle";
 import { GUARDIAN_SMART_TOKEN } from "../../constants";
 import { IXUIGuardianProviderProps } from "../../defs";
 

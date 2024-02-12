@@ -1,5 +1,5 @@
-import * as X from "@bluelibs/x-bundle";
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import * as X from "@redlibs/x-bundle";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 
 {{ collectionImportLine }}
 {{ inputImportLine  }}

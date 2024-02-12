@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-npm i -S @bluelibs/ui-session-bundle
+npm i -S @redlibs/ui-session-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

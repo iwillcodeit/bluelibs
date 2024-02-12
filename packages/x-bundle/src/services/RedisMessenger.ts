@@ -1,12 +1,12 @@
-import { Inject, Service, EventManager } from "@bluelibs/core";
+import { Inject, Service, EventManager } from "@redlibs/core";
 import { IS_LIVE_DEBUG, REDIS_OPTIONS } from "../constants";
 import { ClientOpts, createClient, RedisClient } from "redis";
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 import { IMessenger, ISubscriptionEvent, MessageHandleType } from "../defs";
 import { SubscriptionStore } from "./SubscriptionStore";
 import Queue from "queue";
 import { RedisConnectionResumedEvent } from "../events/RedisConnectionResumedEvent";
-import { LoggerService } from "@bluelibs/logger-bundle";
+import { LoggerService } from "@redlibs/logger-bundle";
 
 @Service()
 export class RedisMessenger implements IMessenger {

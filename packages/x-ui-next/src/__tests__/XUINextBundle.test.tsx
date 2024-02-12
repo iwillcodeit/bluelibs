@@ -3,7 +3,7 @@ import { kernel } from "./ecosystem";
 
 import * as TestRenderer from "react-test-renderer";
 import { useRouter } from "../react/hooks";
-import { XUIProvider } from "@bluelibs/x-ui-react-bundle";
+import { XUIProvider } from "@redlibs/x-ui-react-bundle";
 
 describe("XUIBundle", () => {
   test("Container Injection", async () => {

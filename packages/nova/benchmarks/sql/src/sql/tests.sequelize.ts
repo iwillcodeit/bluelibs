@@ -1,6 +1,6 @@
 import * as db from "./db";
 import { queryBuilder } from "./db";
-import { query } from "@bluelibs/nova";
+import { query } from "@redlibs/nova";
 import { ITestSuite } from "../common";
 import { GROUPS } from "../constants";
 

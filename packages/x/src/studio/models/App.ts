@@ -167,14 +167,14 @@ export class App extends BaseModel<App> {
     this.collections.push(
       collection({
         id: "AppFiles",
-        externalPackage: "@bluelibs/x-s3-bundle",
+        externalPackage: "@redlibs/x-s3-bundle",
         ui: false,
       })
     );
     this.collections.push(
       collection({
         id: "AppFileGroups",
-        externalPackage: "@bluelibs/x-s3-bundle",
+        externalPackage: "@redlibs/x-s3-bundle",
         ui: false,
       })
     );

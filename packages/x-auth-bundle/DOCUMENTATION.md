@@ -3,7 +3,7 @@ This package from X-Framework gives you fully integrated passwords system, with 
 ## Install
 
 ```typescript
-import { XAuthBundle } from "@bluelibs/x-auth-bundle";
+import { XAuthBundle } from "@redlibs/x-auth-bundle";
 
 // For this to work you need the following: SecurityBundle, ApolloBundle, ApolloSecurityBundle, SecurityMongoBundle, XBundle
 
@@ -42,8 +42,8 @@ All these emails can be overriden like this:
 ### Customise
 
 ```tsx
-import { IReactEmailTemplate } from "@bluelibs/email-bundle";
-import { IWelcomeEmailProps } from "@bluelibs/x-auth-bundle";
+import { IReactEmailTemplate } from "@redlibs/email-bundle";
+import { IWelcomeEmailProps } from "@redlibs/x-auth-bundle";
 
 export const CustomWelcomeEmail: IReactEmailTemplate<IWelcomeEmailProps> = (
   props
@@ -190,8 +190,8 @@ type Mutation {
 ```
 
 ```ts
-import { IGraphQLContext, InputType } from "@bluelibs/graphql-bundle";
-import { RegisterInput, XAuthService } from "@bluelibs/x-auth-bundle";
+import { IGraphQLContext, InputType } from "@redlibs/graphql-bundle";
+import { RegisterInput, XAuthService } from "@redlibs/x-auth-bundle";
 
 class MyCustomInput extends RegisterInput {
   age: string;
@@ -234,7 +234,7 @@ export interface IXAuthBundleConfig {
 You can modify behavior of your mutation resolvers by creating your own `XAuthService`:
 
 ```ts
-import { RegistrationInput, XAuthService } from "@bluelibs/x-auth-bundle";
+import { RegistrationInput, XAuthService } from "@redlibs/x-auth-bundle";
 
 class MyXAuthService extends XAuthService {
   register(input: RegistrationInput) {
@@ -256,7 +256,7 @@ new XAuthBundle({
 The multiple factor strategy, is configured based on an array of `factors` that the user with a specific condition need to authorize all of them before gaining access to the app :
 
 ```ts
-import { PASSWORD_STRATEGY, MAGIC_AUTH_STRATEGY } from "@bluelibs/x-auth-bundle";
+import { PASSWORD_STRATEGY, MAGIC_AUTH_STRATEGY } from "@redlibs/x-auth-bundle";
 
 // The configuration is:
 export interface IXAuthBundleConfig {

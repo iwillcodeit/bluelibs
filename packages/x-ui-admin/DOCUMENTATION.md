@@ -1,13 +1,13 @@
 ## Purpose
 
-This is the place where you configure your enterprise level applications Administration interface. This bundle makes use of `@bluelibs/x-ui`, so it is best if you familiarise yourself with it first.
+This is the place where you configure your enterprise level applications Administration interface. This bundle makes use of `@redlibs/x-ui`, so it is best if you familiarise yourself with it first.
 
 This bundle uses `Ant Design` to leverage its Admin interface. Allowing you to focus on creating Menu Routes that can be role-dependent. This enables `Wordpress-like` functionality where external bundles that you just add to your `Kernel` extend the menu nicely.
 
 ## Install
 
 ```bash
-npm i -S @bluelibs/x-ui-admin antd @ant-design/icons
+npm i -S @redlibs/x-ui-admin antd @ant-design/icons
 ```
 
 ```tsx
@@ -19,7 +19,7 @@ kernel.addBundles([new XUIBundle(), new XUIAdminBundle()]);
 Let's explore a bit about the structure, by creating our first layout:
 
 ```tsx title="components/Layout.tsx"
-import { useUIComponents } from "@bluelibs/x-ui";
+import { useUIComponents } from "@redlibs/x-ui";
 
 // This is to illustrate how you can have a custom layout:
 function Dashboard() {
@@ -36,7 +36,7 @@ function Dashboard() {
 Now we need to create a route, and because we don't rely on strings for routing, we should read them from a separate place, and register them in our bundle:
 
 ```tsx title="routes.ts"
-import { IRoute } from "@bluelibs/x-ui";
+import { IRoute } from "@redlibs/x-ui";
 
 export const DASHBOARD = {
   path: "/dashboard",
@@ -99,7 +99,7 @@ In order to have a mechanism of using forms in a nice descriptive manner, we cre
 The API is simple and straight forward:
 
 ```ts
-import { Consumer } from "@bluelibs/x-ui-admin";
+import { Consumer } from "@redlibs/x-ui-admin";
 
 const elements = [
   {
@@ -185,7 +185,7 @@ export class PostsAntTableSmart extends AntTableSmart<Post> {
 Using the smart is pretty straight-forward:
 
 ```tsx
-import { newSmart, useRouter, useUIComponents } from "@bluelibs/x-ui";
+import { newSmart, useRouter, useUIComponents } from "@redlibs/x-ui";
 import { useEffect, useState, useMemo } from "react";
 import { PlusOutlined, FilterOutlined } from "@ant-design/icons";
 import * as Ant from "antd";
@@ -235,8 +235,8 @@ You can easily override them, as their file name is exactly the name inside `UIC
 Since we rely on `ant` for our frontend, we also use `Form` components from `ant` which are really flexible and complex. Because our goal with our libs is to move as much as possible from the visual components we structure our forms in classes:
 
 ```tsx
-import { XForm } from "@bluelibs/x-ui-admin";
-import { Service, Inject } from "@bluelibs/core";
+import { XForm } from "@redlibs/x-ui-admin";
+import { Service, Inject } from "@redlibs/core";
 import * as Ant from "antd";
 import {
   UsersCollection,
@@ -290,7 +290,7 @@ export class CompanyEditForm extends XForm {
 In order to use this form we employ the `Consumer` pattern:
 
 ```tsx
-import { use } from "@bluelibs/x-ui";
+import { use } from "@redlibs/x-ui";
 
 function CompanyCreateForm() {
   // Transient means a new instance every time, do not omit this

@@ -4,8 +4,8 @@ import {
   X_AUTH_SETTINGS,
 } from "../constants";
 import { IXAuthBundleConfig } from "../defs";
-import { Inject, Service, ContainerInstance } from "@bluelibs/core";
-import { HTTPBundle } from "@bluelibs/http-bundle";
+import { Inject, Service, ContainerInstance } from "@redlibs/core";
+import { HTTPBundle } from "@redlibs/http-bundle";
 import * as passport from "passport";
 import * as bodyParser from "body-parser";
 import {
@@ -16,8 +16,8 @@ import {
   FIELD_FETCH_VALUES,
   PROFILE_OBJECT_PATH,
 } from "./socialServiceConstants";
-import { PasswordService } from "@bluelibs/password-bundle";
-import { SecurityService } from "@bluelibs/security-bundle";
+import { PasswordService } from "@redlibs/password-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 import {
   socialArrayPropsTypes,
   socialCustomConfigMapType,

@@ -7,7 +7,7 @@ import {
   SubscriptionClient,
 } from "subscriptions-transport-ws";
 import { setContext } from "apollo-link-context";
-import { EventManager } from "@bluelibs/core";
+import { EventManager } from "@redlibs/core";
 import {
   ApolloBeforeOperationEvent,
   ApolloSubscriptionOnConnectionParamsSetEvent,

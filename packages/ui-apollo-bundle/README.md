@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-npm i -S @bluelibs/ui-apollo-bundle
+npm i -S @redlibs/ui-apollo-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

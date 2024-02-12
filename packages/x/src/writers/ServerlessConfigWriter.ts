@@ -1,4 +1,4 @@
-import { BlueprintWriter } from "@bluelibs/terminal-bundle";
+import { BlueprintWriter } from "@redlibs/terminal-bundle";
 import { ServerlessConfigModel } from "../models";
 import { FSOperator, FSUtils, XSession } from "../utils";
 import * as path from "path";

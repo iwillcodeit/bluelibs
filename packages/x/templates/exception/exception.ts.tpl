@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 {{# if hasInterfaceDefined }}
 export interface {{ interfaceDefinition.name }} {

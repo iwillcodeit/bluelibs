@@ -2,7 +2,7 @@ import * as React from "react";
 import { Route, Router, Switch } from "react-router-dom";
 import * as queryString from "query-string";
 import { XRouter } from "./XRouter";
-import { useUIComponents } from "@bluelibs/x-ui-react-bundle";
+import { useUIComponents } from "@redlibs/x-ui-react-bundle";
 
 interface IProps {
   router: XRouter;

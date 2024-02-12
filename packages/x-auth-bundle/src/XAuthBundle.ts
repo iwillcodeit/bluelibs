@@ -1,8 +1,8 @@
-import { Bundle } from "@bluelibs/core";
-import { Loader } from "@bluelibs/graphql-bundle";
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { PasswordBundle } from "@bluelibs/password-bundle";
-import { HTTPBundle } from "@bluelibs/http-bundle";
+import { Bundle } from "@redlibs/core";
+import { Loader } from "@redlibs/graphql-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { PasswordBundle } from "@redlibs/password-bundle";
+import { HTTPBundle } from "@redlibs/http-bundle";
 
 import { IXAuthBundleConfig } from "./defs";
 import {

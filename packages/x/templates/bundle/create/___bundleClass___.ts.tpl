@@ -1,4 +1,4 @@
-import { BaseBundle } from "@bluelibs/x-bundle";
+import { BaseBundle } from "@redlibs/x-bundle";
 import * as listeners from "./listeners";
 import * as collections from "./collections";
 import * as validators from "./validators";
@@ -9,7 +9,7 @@ import * as fixtures from "./fixtures";
 {{/ if }}
 
 {{# if containsServerRoutes }}
-  import { ApolloBundle } from "@bluelibs/apollo-bundle";
+  import { ApolloBundle } from "@redlibs/apollo-bundle";
   import * as serverRoutes from "./server-routes";
 {{/ if }}
 

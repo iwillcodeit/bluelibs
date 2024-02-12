@@ -1,5 +1,5 @@
 import { db, mongooseModels } from "./db";
-import { query, lookup } from "@bluelibs/nova";
+import { query, lookup } from "@redlibs/nova";
 import * as Benchmark from "benchmark";
 import { ITestSuite } from "../common";
 import { GROUPS } from "../constants";

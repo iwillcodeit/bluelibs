@@ -10,7 +10,7 @@ import {
   BeforeUpdateEvent,
   AfterUpdateEvent,
 } from "../../events";
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 import { ObjectId } from "mongodb";
 
 describe("Collection", () => {

@@ -4,11 +4,11 @@ import { UISessionEventChangeHandler, IXUISessionStore } from "../";
 import { useUISession } from "../react/hooks";
 import { sessionsConfig } from "./ecosystem";
 import { UISessionService } from "../react";
-import { ContainerContext, useContainer } from "@bluelibs/x-ui-react-bundle";
+import { ContainerContext, useContainer } from "@redlibs/x-ui-react-bundle";
 import { UISessionStorage } from "../react/services/UISessionStorage";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { container } from "./ecosystem";
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 
 const containerContextProvider = ({ children }) => {
   return (

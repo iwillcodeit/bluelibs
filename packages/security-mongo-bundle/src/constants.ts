@@ -1,4 +1,4 @@
-import { Token } from "@bluelibs/core";
+import { Token } from "@redlibs/core";
 
 export const USERS_COLLECTION_TOKEN = new Token(
   "SECURITY_MONGO_BUNDLE::USERS_COLLECTION"

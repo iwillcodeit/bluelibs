@@ -1,5 +1,5 @@
-import { ObjectID } from "@bluelibs/mongo-bundle";
-import { IUser } from "@bluelibs/security-bundle";
+import { ObjectID } from "@redlibs/mongo-bundle";
+import { IUser } from "@redlibs/security-bundle";
 import { AppFileGroup } from "../appFileGroups/AppFileGroup.model";
 
 export class AppFile {

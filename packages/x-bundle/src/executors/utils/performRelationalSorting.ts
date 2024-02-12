@@ -1,6 +1,6 @@
-import { Collection } from "@bluelibs/mongo-bundle";
-import { lookup } from "@bluelibs/nova";
-import { Constructor, ContainerInstance } from "@bluelibs/core";
+import { Collection } from "@redlibs/mongo-bundle";
+import { lookup } from "@redlibs/nova";
+import { Constructor, ContainerInstance } from "@redlibs/core";
 
 export function performRelationalSorting(
   container: ContainerInstance,

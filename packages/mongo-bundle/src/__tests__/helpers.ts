@@ -1,5 +1,5 @@
-import { Kernel, Bundle, ContainerInstance } from "@bluelibs/core";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { Kernel, Bundle, ContainerInstance } from "@redlibs/core";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 import { MongoBundle } from "../MongoBundle";
 import { DatabaseService } from "../services/DatabaseService";
 import { MigrationService } from "../services/MigrationService";

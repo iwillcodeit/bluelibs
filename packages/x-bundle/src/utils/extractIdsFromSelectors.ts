@@ -1,4 +1,4 @@
-import { ObjectID } from "@bluelibs/mongo-bundle";
+import { ObjectID } from "@redlibs/mongo-bundle";
 
 export function extractIdsFromSelectors(selector): any[] {
   const filter = selector._id;

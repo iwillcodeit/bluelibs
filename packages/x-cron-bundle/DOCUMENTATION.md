@@ -5,11 +5,11 @@ Keep in mind that if you have multiple instances deployed, the cronjob will run 
 ## Setting up
 
 ```bash
-npm i -S @bluelibs/x-cron-bundle
+npm i -S @redlibs/x-cron-bundle
 ```
 
 ```ts
-import { XCronBundle } from "@bluelibs/x-cron-bundle";
+import { XCronBundle } from "@redlibs/x-cron-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -22,7 +22,7 @@ const kernel = new Kernel({
 ## Adding a Cronjob
 
 ```ts
-import { CronService } from "@bluelibs/x-cron-bundle";
+import { CronService } from "@redlibs/x-cron-bundle";
 
 class AppBundle extends Bundle {
   async init() {
@@ -49,7 +49,7 @@ class AppBundle extends Bundle {
 Consider storing your cronjobs in a separate file and just add them here:
 
 ```ts title="cronjobs.ts"
-import { ICronConfig } from "@bluelibs/x-cron-bundle";
+import { ICronConfig } from "@redlibs/x-cron-bundle";
 
 export const cronfigs: ICronConfig[] = [
   {

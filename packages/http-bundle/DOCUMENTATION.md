@@ -3,8 +3,8 @@ This is a bundle that integrates nicely with [express](http://expressjs.com/en/a
 ## Install
 
 ```ts
-import { Kernel } from "@bluelibs/core";
-import { HTTPBundle } from "@bluelibs/http-bundle";
+import { Kernel } from "@redlibs/core";
+import { HTTPBundle } from "@redlibs/http-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -53,7 +53,7 @@ class AppBundle extends Bundle {
 A good idea is to separate your routes:
 
 ```ts title="routes.ts"
-import { RouteType } from "@bluelibs/http-bundle";
+import { RouteType } from "@redlibs/http-bundle";
 
 export const routes: RouteType[] = [
   {
@@ -123,7 +123,7 @@ You have two specialized events at your disposal:
 import {
   HTTPServerBeforeInitialisationEvent,
   HTTPServerInitialisedEvent,
-} from "@bluelibs/http-bundle";
+} from "@redlibs/http-bundle";
 
 // HTTPServerBeforeInitialisationEvent : before starting to listen()
 // HTTPServerInitialisedEvent : after listen() has started successfully

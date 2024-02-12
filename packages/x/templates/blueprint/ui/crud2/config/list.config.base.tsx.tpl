@@ -1,10 +1,10 @@
 /** @overridable */
 import { notification } from "antd";
 import { SmileOutlined } from '@ant-design/icons';
-import { XFormElementType, XList, XForm } from "@bluelibs/x-ui-admin";
+import { XFormElementType, XList, XForm } from "@redlibs/x-ui-admin";
 import { Routes } from "@bundles/{{ bundleName }}";
-import { Service } from "@bluelibs/core";
-import { IComponents, XRouter, use, QueryBodyType } from "@bluelibs/x-ui";
+import { Service } from "@redlibs/core";
+import { IComponents, XRouter, use, QueryBodyType } from "@redlibs/x-ui";
 import * as Ant from "antd";
 import {
   {{ entityName }},

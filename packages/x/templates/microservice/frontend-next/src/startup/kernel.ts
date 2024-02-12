@@ -1,5 +1,5 @@
-import { Kernel } from "@bluelibs/core";
-import { XUINextBundle } from "@bluelibs/x-ui-next";
+import { Kernel } from "@redlibs/core";
+import { XUINextBundle } from "@redlibs/x-ui-next";
 import { UIAppBundle } from "../bundles/UIAppBundle/UIAppBundle";
 import env from "../env";
 

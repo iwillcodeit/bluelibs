@@ -1,5 +1,5 @@
 import { Routes } from "@bundles/{{ bundleName }}";
-import { useUIComponents, useRouter, use, useTranslate } from "@bluelibs/x-ui";
+import { useUIComponents, useRouter, use, useTranslate } from "@redlibs/x-ui";
 import * as Ant from "antd";
 import { {{ entityName}}CreateForm } from "../../config/{{ entityName }}CreateForm";
 import {

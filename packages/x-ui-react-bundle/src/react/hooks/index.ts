@@ -2,7 +2,7 @@ import {
   EventHandlerType,
   EventManager,
   IEventConstructor,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 import { useContext, useEffect } from "react";
 
 import { ContainerContext } from "../XUIProvider";

@@ -1,5 +1,5 @@
 /** @overridable */
-import { IRoute } from "@bluelibs/x-ui";
+import { IRoute } from "@redlibs/x-ui";
 import * as React from "react";
 {{# if (hasFeature "list") }}
 import { {{ generateComponentName "list" }} } from "../components/List/{{ collectionName }}List";

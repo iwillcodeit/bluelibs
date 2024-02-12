@@ -1,5 +1,5 @@
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { ContainerInstance, Kernel, Bundle } from "@bluelibs/core";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { ContainerInstance, Kernel, Bundle } from "@redlibs/core";
 import { PasswordBundle } from "../PasswordBundle";
 import { IPasswordBundleConfig } from "../defs";
 

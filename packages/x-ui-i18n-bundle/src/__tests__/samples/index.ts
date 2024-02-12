@@ -1,4 +1,4 @@
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 import { XUII18NBundle } from "../../XUII18NBundle";
 
 export function createSampleKernel() {

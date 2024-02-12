@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useGuardian, useRouter, useTranslate } from "@bluelibs/x-ui";
+import { useGuardian, useRouter, useTranslate } from "@redlibs/x-ui";
 import {
   PhoneOutlined,
   MailOutlined,

@@ -4,13 +4,13 @@ import {
   BundleBeforePrepareEvent,
   Constructor,
   BundleAfterInitEvent,
-} from "@bluelibs/core";
+} from "@redlibs/core";
 import {
   IPermissionPersistance,
   ISessionPersistance,
   IUserPersistance,
   SecurityBundle,
-} from "@bluelibs/security-bundle";
+} from "@redlibs/security-bundle";
 import { UsersCollection } from "./collections/Users.collection";
 import { PermissionsCollection } from "./collections/Permissions.collection";
 import { SessionsCollection } from "./collections/Sessions.collection";
@@ -19,7 +19,7 @@ import {
   PERMISSIONS_COLLECTION_TOKEN,
   SESSIONS_COLLECTION_TOKEN,
 } from "./constants";
-import { Collection, MongoBundle } from "@bluelibs/mongo-bundle";
+import { Collection, MongoBundle } from "@redlibs/mongo-bundle";
 
 export interface ISecurityMongoBundleConfig {
   usersCollection?: Constructor<IUserPersistance>;

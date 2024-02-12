@@ -1,5 +1,5 @@
-import { Bundle } from "@bluelibs/core";
-import { EJSON } from "@bluelibs/ejson";
+import { Bundle } from "@redlibs/core";
+import { EJSON } from "@redlibs/ejson";
 import { Channel, connect, Connection, Options } from "amqplib";
 import { RabbitMQBundleConfigType } from "./defs";
 

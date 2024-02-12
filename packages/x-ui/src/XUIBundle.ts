@@ -1,28 +1,28 @@
-import { Bundle, KernelPhase } from "@bluelibs/core";
-import { setDefaults } from "@bluelibs/smart";
+import { Bundle, KernelPhase } from "@redlibs/core";
+import { setDefaults } from "@redlibs/smart";
 import {
   ApolloClient,
   ApolloProvider,
   UIApolloBundle,
-} from "@bluelibs/ui-apollo-bundle";
+} from "@redlibs/ui-apollo-bundle";
 import {
   I18NConfig,
   I18NService,
   UII18NBundle,
-} from "@bluelibs/x-ui-i18n-bundle";
-import { XUISessionBundle } from "@bluelibs/x-ui-session-bundle";
+} from "@redlibs/x-ui-i18n-bundle";
+import { XUISessionBundle } from "@redlibs/x-ui-session-bundle";
 import {
   GuardianSmart,
   XUIGuardianBundle,
-} from "@bluelibs/x-ui-guardian-bundle";
-import { Components, XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+} from "@redlibs/x-ui-guardian-bundle";
+import { Components, XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 import { IComponents } from "./overrides";
 import {
   XBrowserRouter,
   XRouter,
   XUIReactRouterBundle,
-} from "@bluelibs/x-ui-react-router-bundle";
-import { XUICollectionsBundle } from "@bluelibs/x-ui-collections-bundle";
+} from "@redlibs/x-ui-react-router-bundle";
+import { XUICollectionsBundle } from "@redlibs/x-ui-collections-bundle";
 import { XUIBundleConfigType } from "./defs";
 
 export class XUIBundle extends Bundle<XUIBundleConfigType> {

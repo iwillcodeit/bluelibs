@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 export class InvalidTokenException extends Exception<{ context: string }> {
   getMessage() {
@@ -6,6 +6,6 @@ export class InvalidTokenException extends Exception<{ context: string }> {
   }
 
   getCode() {
-    return "INVALID_TOKEN"
+    return "INVALID_TOKEN";
   }
 }

@@ -1,4 +1,4 @@
-import { Event } from "@bluelibs/core";
+import { Event } from "@redlibs/core";
 import { IEmailSendingTemplateConfig } from "./defs";
 import { MailOptions } from "nodemailer/lib/smtp-transport";
 import { SentMessageInfo } from "nodemailer";

@@ -1,4 +1,4 @@
-import { BlueprintWriter } from "@bluelibs/terminal-bundle";
+import { BlueprintWriter } from "@redlibs/terminal-bundle";
 import { EmailTemplateModel } from "../models/EmailTemplateModel";
 import { FSOperator, FSUtils, XSession } from "../utils";
 import * as path from "path";

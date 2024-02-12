@@ -1,4 +1,4 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { CreateBundleModel, GenericModel } from "../models";
 import { FSUtils } from "../utils/FSUtils";
 import { CollectionModel } from "../models/CollectionModel";

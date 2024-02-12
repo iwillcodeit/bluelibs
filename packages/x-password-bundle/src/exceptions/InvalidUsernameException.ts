@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 export class InvalidUsernameException extends Exception<{ username: string }> {
   getMessage() {
@@ -6,6 +6,6 @@ export class InvalidUsernameException extends Exception<{ username: string }> {
   }
 
   getCode() {
-    return "INVALID_USERNAME"
+    return "INVALID_USERNAME";
   }
 }

@@ -1,4 +1,4 @@
-import { Exception } from "@bluelibs/core";
+import { Exception } from "@redlibs/core";
 
 export class UsernameAlreadyExistsException extends Exception {
   getMessage() {
@@ -6,6 +6,6 @@ export class UsernameAlreadyExistsException extends Exception {
   }
 
   getCode() {
-    return "USERNAME_ALREADY_EXISTS"
+    return "USERNAME_ALREADY_EXISTS";
   }
 }

@@ -3,12 +3,12 @@ A small package that brings `ApolloClient` into BlueLibs ecosystem. This is full
 ## Install
 
 ```bash
-npm i -S @bluelibs/ui-apollo-bundle
+npm i -S @redlibs/ui-apollo-bundle
 ```
 
 ```ts
-import { Kernel } from "@bluelibs/core";
-import { UIApolloBundle } from "@bluelibs/ui-apollo-bundle";
+import { Kernel } from "@redlibs/core";
+import { UIApolloBundle } from "@redlibs/ui-apollo-bundle";
 
 const kernel = new Kernel({
   bundles: [
@@ -28,7 +28,7 @@ const kernel = new Kernel({
 We use `@apollo/client` so in theory, all you have to do is just use it. You can [follow the official guideline here](https://www.apollographql.com/docs/react/api/react/hooks/), they will work outside the box without changing anything.
 
 ```tsx
-import { ApolloClient } from "@bluelibs/ui-apollo-bundle";
+import { ApolloClient } from "@redlibs/ui-apollo-bundle";
 
 function Component() {
   // Note, that we implement our own ApolloClient which extends the base one, so we can properly create the links and everything

@@ -10,7 +10,7 @@ import {
 import { mergeTypeDefs, mergeResolvers } from "@graphql-tools/merge";
 import { OneOrMore, SubscriptionResolver } from "./defs";
 import { group, execute, craftFunction } from "./executor";
-import { Service } from "@bluelibs/core";
+import { Service } from "@redlibs/core";
 
 @Service()
 export class Loader {
@@ -49,7 +49,7 @@ export class Loader {
         commentDescriptions: true,
         reverseDirectives: true,
       }),
-      resolvers: (mergeResolvers(resolvers) as unknown) as IFunctionMapSimple,
+      resolvers: mergeResolvers(resolvers) as unknown as IFunctionMapSimple,
       schemaDirectives: this.mergeSchemaDirectives(),
       contextReducers: this.contextReducers,
     };

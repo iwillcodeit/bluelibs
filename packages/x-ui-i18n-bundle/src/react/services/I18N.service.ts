@@ -1,4 +1,4 @@
-import { EventManager, Inject, Service } from "@bluelibs/core";
+import { EventManager, Inject, Service } from "@redlibs/core";
 
 import * as Polyglot from "node-polyglot";
 import { IXUII18NBundleConfig } from "../../defs";

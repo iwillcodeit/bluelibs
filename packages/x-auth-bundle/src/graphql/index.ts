@@ -1,4 +1,4 @@
-import { ILoadOptions } from "@bluelibs/graphql-bundle";
+import { ILoadOptions } from "@redlibs/graphql-bundle";
 import mutationsResolversCreator from "./mutations.resolvers";
 import mutationsTypeDefsCreator from "./mutations.graphql";
 import queriesResolversCreator from "./queries.resolvers";

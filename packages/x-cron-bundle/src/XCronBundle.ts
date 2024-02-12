@@ -1,4 +1,4 @@
-import { Bundle, KernelAfterInitEvent } from "@bluelibs/core";
+import { Bundle, KernelAfterInitEvent } from "@redlibs/core";
 import { XCronBundleConfigType, ICronConfig } from "./defs";
 import { CronService } from "./services/CronService";
 

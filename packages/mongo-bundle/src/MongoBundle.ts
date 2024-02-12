@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { MongoClientOptions } from "mongodb";
 import { MONGO_URL, MONGO_CONNECTION_OPTIONS } from "./constants";
 import { DatabaseService } from "./services/DatabaseService";

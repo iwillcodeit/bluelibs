@@ -1,5 +1,5 @@
-import { EventManager } from "@bluelibs/core";
-import { addExpanders, addLinks, addReducers } from "@bluelibs/nova";
+import { EventManager } from "@redlibs/core";
+import { addExpanders, addLinks, addReducers } from "@redlibs/nova";
 import {
   ITimestampableBehaviorOptions,
   BehaviorType,

@@ -4,7 +4,7 @@ import { LoginInput } from "../inputs/LoginInput";
 import { ResetPasswordInput } from "../inputs/ResetPasswordInput";
 import { ForgotPasswordInput } from "../inputs/ForgotPasswordInput";
 import { VerifyEmailInput } from "../inputs/VerifyEmailInput";
-import { UserId } from "@bluelibs/security-bundle";
+import { UserId } from "@redlibs/security-bundle";
 import {
   RequestLoginLinkInput,
   VerifyMagicLinkInput,

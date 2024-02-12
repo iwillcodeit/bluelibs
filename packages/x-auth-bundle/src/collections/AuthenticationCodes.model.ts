@@ -1,5 +1,5 @@
-import { ObjectID } from "@bluelibs/mongo-bundle";
-import { UserId } from "@bluelibs/security-bundle";
+import { ObjectID } from "@redlibs/mongo-bundle";
+import { UserId } from "@redlibs/security-bundle";
 
 export class AuthenticationCodes {
   code: string;

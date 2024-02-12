@@ -1,7 +1,7 @@
 import {
   BlueprintWriter,
   IBlueprintWriterSession,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import { execSync, spawnSync } from "child_process";
 import { ProjectModel } from "../models";
 import { FSOperator } from "../utils/FSOperator";

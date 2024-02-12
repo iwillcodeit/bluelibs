@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import Observable from "zen-observable";
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import { Collection } from "../../graphql/Collection";
 import { ISubscriptionOptions, QueryBodyType } from "../../graphql/defs";
-import { XSubscription } from "@bluelibs/ui-apollo-bundle";
-import { use } from "@bluelibs/x-ui-react-bundle";
+import { XSubscription } from "@redlibs/ui-apollo-bundle";
+import { use } from "@redlibs/x-ui-react-bundle";
 
 /**
  * Starts the subscription and inteligently re-uses it

@@ -1,4 +1,4 @@
-import { ObjectID } from "@bluelibs/mongo-bundle";
+import { ObjectID } from "@redlibs/mongo-bundle";
 import { AppFile } from "../appFiles/AppFile.model";
 
 export class AppFileGroup {

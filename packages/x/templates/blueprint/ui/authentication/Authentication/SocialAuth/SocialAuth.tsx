@@ -1,4 +1,4 @@
-import { useGuardian, useRouter } from "@bluelibs/x-ui";
+import { useGuardian, useRouter } from "@redlibs/x-ui";
 import { useEffect } from "react";
 import { notification } from "antd";
 import { Routes } from "@bundles/UIAppBundle";

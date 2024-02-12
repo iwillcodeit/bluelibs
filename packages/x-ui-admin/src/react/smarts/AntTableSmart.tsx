@@ -7,10 +7,10 @@ import {
   QueryBodyType,
   XRouter,
   XUI_COMPONENTS_TOKEN,
-} from "@bluelibs/x-ui";
+} from "@redlibs/x-ui";
 import { ColumnsType, TablePaginationConfig, TableProps } from "antd/lib/table";
 import { Button, Dropdown, Menu, Popconfirm } from "antd";
-import { Constructor, Inject } from "@bluelibs/core";
+import { Constructor, Inject } from "@redlibs/core";
 import * as moment from "moment";
 
 const AntTableContext = React.createContext(null);

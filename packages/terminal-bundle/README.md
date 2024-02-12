@@ -17,7 +17,7 @@ An utility bundle helping you to create and run commands from your terminal with
 ## Install
 
 ```bash
-npm install --save @bluelibs/terminal-bundle
+npm install --save @redlibs/terminal-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

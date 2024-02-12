@@ -1,10 +1,10 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { CreateBundleModel, GenericModel } from "../models";
 import { FSUtils } from "../utils/FSUtils";
 import { CollectionModel } from "../models/CollectionModel";
 import { GenericModelInquirer } from "./GenericModelInquirer";
 import * as _ from "lodash";
-import { ContainerInstance, Inject } from "@bluelibs/core";
+import { ContainerInstance, Inject } from "@redlibs/core";
 import { InquiryUtils } from "../utils/InquiryUtils";
 import { GraphQLInputModel } from "../models/GraphQLInputModel";
 import { ModelRaceEnum, GenericFieldTypeEnum } from "../models/defs";

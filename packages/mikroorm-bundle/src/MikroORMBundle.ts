@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { AnyEntity, EntitySchema, MikroORM } from "@mikro-orm/core";
 import { MikroORMBundleConfigType, ORM } from "./defs";
 import { EntityClass, EntityClassGroup } from "@mikro-orm/core/typings";

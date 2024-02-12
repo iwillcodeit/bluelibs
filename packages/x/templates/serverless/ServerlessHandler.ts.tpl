@@ -1,9 +1,9 @@
 import "./env";
 import { kernel } from "./kernel";
 import "./bundles";
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 import { Callback, Context, Handler } from "aws-lambda";
-import { generateHandler } from "@bluelibs/apollo-bundle";
+import { generateHandler } from "@redlibs/apollo-bundle";
 
 let isInitialised = false;
 async function generateApp(): Promise<Kernel> {

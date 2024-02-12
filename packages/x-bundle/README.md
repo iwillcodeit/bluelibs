@@ -17,7 +17,7 @@ The X-Framework is a set of tools that beautifully bridges the gap between your 
 ## Install
 
 ```bash
-npm install --save @bluelibs/x-bundle
+npm install --save @redlibs/x-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

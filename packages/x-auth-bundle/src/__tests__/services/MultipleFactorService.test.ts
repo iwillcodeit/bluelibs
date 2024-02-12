@@ -1,6 +1,6 @@
-import { Kernel } from "@bluelibs/core";
-import { PasswordService } from "@bluelibs/password-bundle";
-import { SecurityService } from "@bluelibs/security-bundle";
+import { Kernel } from "@redlibs/core";
+import { PasswordService } from "@redlibs/password-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 import {
   InvalidPasswordException,
   InvalidUsernameException,

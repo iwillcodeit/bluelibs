@@ -1,4 +1,4 @@
-import { Constructor, ContainerInstance } from "@bluelibs/core";
+import { Constructor, ContainerInstance } from "@redlibs/core";
 import { DistinctQuestion } from "inquirer";
 import { BlueprintWriterSession } from "./models";
 

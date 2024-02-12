@@ -1,15 +1,15 @@
-import { IUII18NBundleConfig } from "@bluelibs/x-ui-i18n-bundle";
-import { IXUISessionBundleConfigType } from "@bluelibs/x-ui-session-bundle";
+import { IUII18NBundleConfig } from "@redlibs/x-ui-i18n-bundle";
+import { IXUISessionBundleConfigType } from "@redlibs/x-ui-session-bundle";
 import {
   GuardianSmart,
   IXUIGuardianBundleConfigType,
-} from "@bluelibs/x-ui-guardian-bundle";
-import { IXUIReactBundleConfigType } from "@bluelibs/x-ui-react-bundle";
+} from "@redlibs/x-ui-guardian-bundle";
+import { IXUIReactBundleConfigType } from "@redlibs/x-ui-react-bundle";
 import {
   ApolloClientOptions,
   IUIApolloBundleConfig,
-} from "@bluelibs/ui-apollo-bundle";
-import { Constructor } from "@bluelibs/core";
+} from "@redlibs/ui-apollo-bundle";
+import { Constructor } from "@redlibs/core";
 
 export type XUIBundleConfigType = Partial<{
   /**

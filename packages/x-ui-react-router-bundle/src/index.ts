@@ -1,4 +1,4 @@
-export * from "@bluelibs/x-ui-router";
+export * from "@redlibs/x-ui-router";
 export * from "./XUIReactRouterBundle";
 export * from "./react";
 export * from "./defs";

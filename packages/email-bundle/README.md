@@ -17,7 +17,7 @@ This bundle helps you connect to your favourite transporter and render React tem
 ## Install
 
 ```bash
-npm install --save @bluelibs/email-bundle
+npm install --save @redlibs/email-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

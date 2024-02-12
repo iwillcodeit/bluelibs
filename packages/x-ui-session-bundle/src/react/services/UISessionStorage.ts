@@ -4,8 +4,8 @@ import {
   Event,
   Inject,
   ExecutionContext,
-} from "@bluelibs/core";
-import { EJSON } from "@bluelibs/ejson";
+} from "@redlibs/core";
+import { EJSON } from "@redlibs/ejson";
 
 /**
  * Execution context-adaptive ui session storage. Works on server and react client.

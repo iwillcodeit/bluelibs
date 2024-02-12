@@ -1,18 +1,18 @@
-import { Kernel } from "@bluelibs/core";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { SecurityBundle } from "@bluelibs/security-bundle";
-import { SecurityMongoBundle } from "@bluelibs/security-mongo-bundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
-import { XBundle } from "@bluelibs/x-bundle";
-import { ApolloSecurityBundle } from "@bluelibs/apollo-security-bundle";
-import { PasswordBundle } from "@bluelibs/password-bundle";
-import { XAuthBundle } from "@bluelibs/x-auth-bundle";
-import { GraphQLBundle } from "@bluelibs/graphql-bundle";
-import { EmailBundle } from "@bluelibs/email-bundle";
-import { ValidatorBundle } from "@bluelibs/validator-bundle";
+import { Kernel } from "@redlibs/core";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { SecurityBundle } from "@redlibs/security-bundle";
+import { SecurityMongoBundle } from "@redlibs/security-mongo-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
+import { XBundle } from "@redlibs/x-bundle";
+import { ApolloSecurityBundle } from "@redlibs/apollo-security-bundle";
+import { PasswordBundle } from "@redlibs/password-bundle";
+import { XAuthBundle } from "@redlibs/x-auth-bundle";
+import { GraphQLBundle } from "@redlibs/graphql-bundle";
+import { EmailBundle } from "@redlibs/email-bundle";
+import { ValidatorBundle } from "@redlibs/validator-bundle";
 {{# if hasUploads }}
-  import { XS3Bundle } from "@bluelibs/x-s3-bundle";
+  import { XS3Bundle } from "@redlibs/x-s3-bundle";
 {{/ if }}
 {{# if hasUsers }}
   import { UsersCollection } from "../bundles/AppBundle/collections";

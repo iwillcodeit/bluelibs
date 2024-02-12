@@ -3,11 +3,11 @@ EJSON is a great way to use JSON to pass binaries and serialize/deserialize any 
 ## Install
 
 ```bash
-npm install --save @bluelibs/ejson
+npm install --save @redlibs/ejson
 ```
 
 ```ts
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 
 const result = EJSON.stringify({ a: 1 }); // string: {"a": 1}
 const parsed = EJSON.parse(result); // object: {a: 1}
@@ -64,7 +64,7 @@ We use and export `ObjectId` from `bson-objectid` npm package (the only dependen
 Basically we encode and decode to `ObjectId` the following set:
 
 ```ts
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 
 const postEJSON = {
   _id: {
@@ -83,7 +83,7 @@ This is mostly used for `MongoDB` database; if you use other databases and don't
 An easy way to transform an object into a class instance.
 
 ```ts
-import { toModel } from "@bluelibs/ejson";
+import { toModel } from "@redlibs/ejson";
 
 class Person {
   firstname: string;

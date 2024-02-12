@@ -3,7 +3,7 @@ import { Comments, Comment } from "./dummy/comments";
 import { Posts, Post } from "./dummy/posts";
 import { Users, User } from "./dummy/users";
 import { DatabaseService } from "../../services/DatabaseService";
-import { DeepPartial } from "@bluelibs/core";
+import { DeepPartial } from "@redlibs/core";
 import { Tag, Tags } from "./dummy/tags";
 import { BeforeInsertEvent } from "../../events";
 

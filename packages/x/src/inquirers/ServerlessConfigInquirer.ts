@@ -1,4 +1,4 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { InquiryUtils } from "../utils";
 import { ServerlessConfigModel } from "../models/ServerlessConfigModel";
 

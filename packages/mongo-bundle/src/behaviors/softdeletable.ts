@@ -1,4 +1,4 @@
-import { IAstToQueryOptions, QueryBodyType } from "@bluelibs/nova";
+import { IAstToQueryOptions, QueryBodyType } from "@redlibs/nova";
 import * as MongoDB from "mongodb";
 import {
   BehaviorType,

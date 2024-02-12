@@ -16,7 +16,7 @@ This is EJSON copied and adapted to TypeScript from Meteor. It's a great way to 
 ## Install
 
 ```bash
-npm install --save @bluelibs/ejson
+npm install --save @redlibs/ejson
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

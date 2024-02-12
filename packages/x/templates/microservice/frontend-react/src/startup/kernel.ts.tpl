@@ -1,8 +1,8 @@
-import { Kernel } from "@bluelibs/core";
-import { XUIBundle } from "@bluelibs/x-ui";
+import { Kernel } from "@redlibs/core";
+import { XUIBundle } from "@redlibs/x-ui";
 import { UIAppBundle } from "../bundles/UIAppBundle/UIAppBundle";
 {{# if adminMode }}
-  import { XUIAdminBundle } from "@bluelibs/x-ui-admin";
+  import { XUIAdminBundle } from "@redlibs/x-ui-admin";
 {{/ if }}
 
 // All UI bundles need to be prefixed with UI

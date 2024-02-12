@@ -1,8 +1,8 @@
-import { SecurityService } from "@bluelibs/security-bundle";
+import { SecurityService } from "@redlibs/security-bundle";
 import { PasswordService } from "../../services/PasswordService";
 import { createEcosystem } from "../ecosystem";
 import { assert } from "chai";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { UsernameAlreadyExistsException } from "../../exceptions";
 
 describe("PasswordService", () => {

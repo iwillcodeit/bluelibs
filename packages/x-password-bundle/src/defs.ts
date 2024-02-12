@@ -1,15 +1,15 @@
-import { IReactEmailTemplate } from "@bluelibs/email-bundle";
+import { IReactEmailTemplate } from "@redlibs/email-bundle";
 import { IXPasswordService } from "./services/IXPasswordService";
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import { IForgotPasswordEmailProps } from "./emails/ForgotPasswordEmail";
 import { IWelcomeEmailProps } from "./emails/WelcomeEmail";
 import { IResetPasswordConfirmationEmailProps } from "./emails";
 import { IVerifyEmailProps } from "./emails/VerifyEmail";
-import "@bluelibs/security-bundle";
-import "@bluelibs/password-bundle";
-import { IPasswordAuthenticationStrategy } from "@bluelibs/password-bundle";
+import "@redlibs/security-bundle";
+import "@redlibs/password-bundle";
+import { IPasswordAuthenticationStrategy } from "@redlibs/password-bundle";
 
-declare module "@bluelibs/security-bundle" {
+declare module "@redlibs/security-bundle" {
   export interface IUser {
     password: IPasswordAuthenticationStrategy;
     profile: IUserProfile;

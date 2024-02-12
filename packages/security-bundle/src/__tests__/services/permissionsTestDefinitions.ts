@@ -1,9 +1,9 @@
 import { Permissions, PermissionTree } from "./mocks/permissionTree.mock";
 import { PermissionService, PermissionGraph, IPermissionService } from "../..";
 import { PermissionsPersistanceService } from "./mocks/PermissionsPersistanceService.mock";
-import { EventManager } from "@bluelibs/core";
+import { EventManager } from "@redlibs/core";
 import { SecurityService } from "../../services/SecurityService";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 
 const permission = new PermissionGraph(PermissionTree);
 const PERMISSION_DEFAULT_DOMAIN = "app";

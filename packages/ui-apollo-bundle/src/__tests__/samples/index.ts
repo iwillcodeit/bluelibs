@@ -1,4 +1,4 @@
-import { Kernel } from "@bluelibs/core";
+import { Kernel } from "@redlibs/core";
 import { UIApolloBundle } from "../../UIApolloBundle";
 
 export function createSampleKernel() {

@@ -1,6 +1,6 @@
 import { createEcosystem } from "./setup/createEcosystem";
 import { createClient, authStorage } from "./setup/client";
-import { ContainerInstance, Kernel } from "@bluelibs/core";
+import { ContainerInstance, Kernel } from "@redlibs/core";
 import { ApolloClient, gql } from "@apollo/client";
 
 describe("Security tests", () => {
@@ -38,7 +38,7 @@ describe("Security tests", () => {
   });
 
   test("Should allow me as an admin", async () => {
-    await login("admin@bluelibs.com", "12345");
+    await login("admin@redlibs.com", "12345");
 
     const result = await client.query({
       query: gql`
@@ -62,7 +62,7 @@ describe("Security tests", () => {
   });
 
   test("Should allow me as a project manger but not expose private docs", async () => {
-    await login("project-manager@bluelibs.com", "12345");
+    await login("project-manager@redlibs.com", "12345");
 
     const result = await client.query({
       query: gql`
@@ -85,7 +85,7 @@ describe("Security tests", () => {
   });
 
   test("Should throw error when requesting a non-allowed field", async () => {
-    await login("project-manager@bluelibs.com", "12345");
+    await login("project-manager@redlibs.com", "12345");
 
     const result = await client
       .query({
@@ -131,7 +131,7 @@ describe("Security tests", () => {
   });
 
   test("Should allow me as a project manager to update my projects only", async () => {
-    await login("project-manager@bluelibs.com", "12345");
+    await login("project-manager@redlibs.com", "12345");
 
     const mutationDefinition = (_id) => ({
       mutation: gql`

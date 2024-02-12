@@ -1,5 +1,5 @@
 {
-  "name": "@bluelibs/nova",
+  "name": "@redlibs/nova",
   "version": "1.7.0",
   "description": "Nova is a relational query layer over MongoDB Node Drivers",
   "main": "dist/index.js",

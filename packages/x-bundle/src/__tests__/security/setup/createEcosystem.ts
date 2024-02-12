@@ -1,11 +1,11 @@
 // Create a kernel with a bundle
 
-import { Kernel, ContainerInstance } from "@bluelibs/core";
-import { MongoBundle } from "@bluelibs/mongo-bundle";
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { ApolloSecurityBundle } from "@bluelibs/apollo-security-bundle";
+import { Kernel, ContainerInstance } from "@redlibs/core";
+import { MongoBundle } from "@redlibs/mongo-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { ApolloSecurityBundle } from "@redlibs/apollo-security-bundle";
 import { XBundle } from "../../../XBundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 import typeDefs from "./types.graphql";
 import resolvers from "./resolvers";
 import { BaseBundle } from "../../../models/BaseBundle";
@@ -13,16 +13,16 @@ import {
   SecurityBundle,
   SecurityService,
   UserId,
-} from "@bluelibs/security-bundle";
+} from "@redlibs/security-bundle";
 import {
   SecurityMongoBundle,
   UsersCollection,
-} from "@bluelibs/security-mongo-bundle";
-import { PasswordBundle, PasswordService } from "@bluelibs/password-bundle";
+} from "@redlibs/security-mongo-bundle";
+import { PasswordBundle, PasswordService } from "@redlibs/password-bundle";
 import { PostsCollection } from "./collections";
 
 import { ApolloProvider, useQuery, gql } from "@apollo/client";
-import { GraphQLBundle } from "@bluelibs/graphql-bundle";
+import { GraphQLBundle } from "@redlibs/graphql-bundle";
 
 class AppBundle extends BaseBundle {
   async prepare() {
@@ -53,19 +53,19 @@ class AppBundle extends BaseBundle {
     const userId = await securityService.createUser({});
 
     await passwordService.attach(adminId, {
-      email: "admin@bluelibs.com",
+      email: "admin@redlibs.com",
       password: "12345",
-      username: "admin@bluelibs.com",
+      username: "admin@redlibs.com",
     });
     await passwordService.attach(projectManagerId, {
-      email: "project-manager@bluelibs.com",
+      email: "project-manager@redlibs.com",
       password: "12345",
-      username: "project-manager@bluelibs.com",
+      username: "project-manager@redlibs.com",
     });
     await passwordService.attach(userId, {
-      email: "user@bluelibs.com",
+      email: "user@redlibs.com",
       password: "12345",
-      username: "user@bluelibs.com",
+      username: "user@redlibs.com",
     });
 
     await this.createPosts(projectManagerId);

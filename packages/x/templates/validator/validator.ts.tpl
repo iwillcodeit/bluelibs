@@ -1,6 +1,6 @@
-import { yup, IValidationMethod, TestContext } from "@bluelibs/validator-bundle";
-import { Collection } from "@bluelibs/mongo-bundle";
-import { ContainerInstance, Constructor } from "@bluelibs/core";
+import { yup, IValidationMethod, TestContext } from "@redlibs/validator-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
+import { ContainerInstance, Constructor } from "@redlibs/core";
 import "{{ validatorClassName }}.declarations";
 
 export type {{ validatorClassName }}Config = {

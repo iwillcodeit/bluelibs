@@ -1,8 +1,8 @@
 /** @overridable */
 import { notification } from "antd";
-import { XFormElementType, XList, XForm } from "@bluelibs/x-ui-admin";
-import { Service } from "@bluelibs/core";
-import { IComponents, XRouter, use } from "@bluelibs/x-ui";
+import { XFormElementType, XList, XForm } from "@redlibs/x-ui-admin";
+import { Service } from "@redlibs/core";
+import { IComponents, XRouter, use } from "@redlibs/x-ui";
 import * as Ant from "antd";
 import {
   {{ entityName }},

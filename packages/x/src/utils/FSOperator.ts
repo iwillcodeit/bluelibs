@@ -3,7 +3,7 @@ import * as path from "path";
 import * as fse from "fs-extra";
 import * as handlebars from "handlebars";
 import * as prettier from "prettier";
-import { IBlueprintWriterSession } from "@bluelibs/terminal-bundle";
+import { IBlueprintWriterSession } from "@redlibs/terminal-bundle";
 import { mergeTypeDefs, printTypeNode } from "@graphql-tools/merge";
 import { printWithComments } from "@graphql-tools/utils";
 import { XSession } from "./XSession";

@@ -1,6 +1,6 @@
-import { Constructor } from "@bluelibs/core";
-import { LoggerService, LogLevel } from "@bluelibs/logger-bundle";
-import { getResult } from "@bluelibs/graphql-bundle";
+import { Constructor } from "@redlibs/core";
+import { LoggerService, LogLevel } from "@redlibs/logger-bundle";
+import { getResult } from "@redlibs/graphql-bundle";
 
 /**
  * Logs information about the request: arguments, userId

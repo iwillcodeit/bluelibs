@@ -1,5 +1,5 @@
 import { config } from "dotenv";
-import { KernelContext } from "@bluelibs/core";
+import { KernelContext } from "@redlibs/core";
 import * as fs from "fs";
 
 const path = process.env.NODE_ENV === "test" ? ".env.test" : ".env";

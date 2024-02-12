@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Constructor } from "@bluelibs/core";
-import { Collection, use, useData } from "@bluelibs/x-ui";
+import { Constructor } from "@redlibs/core";
+import { Collection, use, useData } from "@redlibs/x-ui";
 import { Alert, Select, SelectProps, Spin } from "antd";
-import { ObjectId } from "@bluelibs/ejson";
+import { ObjectId } from "@redlibs/ejson";
 import * as debounce from "lodash.debounce";
 
 export interface DebounceSelectProps<ValueType = any>

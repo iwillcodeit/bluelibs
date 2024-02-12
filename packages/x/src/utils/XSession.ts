@@ -1,5 +1,5 @@
-import { Service } from "@bluelibs/core";
-import { BlueprintWriterSession } from "@bluelibs/terminal-bundle";
+import { Service } from "@redlibs/core";
+import { BlueprintWriterSession } from "@redlibs/terminal-bundle";
 import { FSUtils } from "./FSUtils";
 
 /**

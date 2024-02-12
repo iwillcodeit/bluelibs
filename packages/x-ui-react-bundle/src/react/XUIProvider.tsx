@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createContext, useContext } from "react";
 import { useEffect, useMemo, useState } from "react";
-import { Kernel, ContainerInstance } from "@bluelibs/core";
+import { Kernel, ContainerInstance } from "@redlibs/core";
 import { listen, useContainer } from "./hooks";
 import { useUIComponents } from "./hooks/useUIComponents";
 import { LocaleChangedEvent } from "./events/LocaleChangedEvent";

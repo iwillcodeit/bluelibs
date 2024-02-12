@@ -1,8 +1,8 @@
 import { IXAuthBundleConfig } from "../defs";
 import { REST_APIS } from "./apis";
 import { XAuthService } from "../services/XAuthService";
-import { HTTPBundle } from "@bluelibs/http-bundle";
-import * as X from "@bluelibs/x-bundle";
+import { HTTPBundle } from "@redlibs/http-bundle";
+import * as X from "@redlibs/x-bundle";
 
 const authPrefix = "/api/users";
 

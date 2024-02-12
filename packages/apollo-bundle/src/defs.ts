@@ -1,6 +1,6 @@
 import * as express from "express";
 import { ExecutionParams } from "subscriptions-transport-ws";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import { UploadOptions } from "graphql-upload/GraphQLUpload.mjs";
 import { RequestHandler } from "express";
 import { ApolloServerOptions } from "@apollo/server";

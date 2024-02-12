@@ -14,7 +14,7 @@ This is the X-Framework of handling password authentication blended with GraphQL
 ## Install
 
 ```bash
-npm install --save @bluelibs/x-ui-admin
+npm install --save @redlibs/x-ui-admin
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

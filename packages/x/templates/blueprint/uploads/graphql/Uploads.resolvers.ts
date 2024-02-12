@@ -1,11 +1,11 @@
-import * as X from "@bluelibs/x-bundle";
-import { IResolverMap } from "@bluelibs/graphql-bundle";
+import * as X from "@redlibs/x-bundle";
+import { IResolverMap } from "@redlibs/graphql-bundle";
 import {
   AppFilesCollection,
   AppFileGroupsCollection,
   S3UploadService,
   FileManagementService,
-} from "@bluelibs/x-s3-bundle";
+} from "@redlibs/x-s3-bundle";
 
 export default {
   Query: [

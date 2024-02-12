@@ -1,6 +1,6 @@
-import { Collection, Behaviors } from "@bluelibs/mongo-bundle";
+import { Collection, Behaviors } from "@redlibs/mongo-bundle";
 {{# if hasSubscriptions }}
-import { Behaviors as XBehaviors } from "@bluelibs/x-bundle";
+import { Behaviors as XBehaviors } from "@redlibs/x-bundle";
 {{/ if }}
 import * as links from './{{ collectionNameUpper }}.links';
 import * as reducers from './{{ collectionNameUpper }}.reducers';

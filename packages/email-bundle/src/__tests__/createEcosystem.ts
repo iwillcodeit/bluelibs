@@ -1,8 +1,8 @@
 // Create a kernel with a bundle
 
-import { Kernel, ContainerInstance } from "@bluelibs/core";
+import { Kernel, ContainerInstance } from "@redlibs/core";
 import { EmailBundle } from "../EmailBundle";
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 import { IEmailBundleConfig } from "../defs";
 
 export async function createEcosystem(

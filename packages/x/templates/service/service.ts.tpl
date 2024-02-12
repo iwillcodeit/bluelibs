@@ -1,4 +1,4 @@
-import { Service, Inject, EventManager, ContainerInstance } from "@bluelibs/core";
+import { Service, Inject, EventManager, ContainerInstance } from "@redlibs/core";
 
 @Service()
 export class {{ serviceClass }} {

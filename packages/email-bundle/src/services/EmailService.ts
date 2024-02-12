@@ -1,4 +1,4 @@
-import { Inject, EventManager, Service } from "@bluelibs/core";
+import { Inject, EventManager, Service } from "@redlibs/core";
 import {
   NODEMAILER_INSTANCE,
   NODEMAILER_TEST_MODE,

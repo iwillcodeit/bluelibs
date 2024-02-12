@@ -6,7 +6,7 @@ import {
 import * as Ant from "antd";
 import * as React from "react";
 import * as debounce from "lodash.debounce";
-import { use, useTranslate } from "@bluelibs/x-ui";
+import { use, useTranslate } from "@redlibs/x-ui";
 import { {{ entityName }}ListFiltersForm } from "../../config/{{ entityName }}ListFiltersForm";
 
 type {{ generateComponentName "listFilters" }}Props = {

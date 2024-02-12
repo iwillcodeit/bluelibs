@@ -5,8 +5,8 @@ With the React bundle we hook the [Foundation Core](/docs/package-core) into Rea
 We begin by defining our kernel, and our `UIAppBundle`:
 
 ```tsx title="kernel.ts"
-import { Kernel, Bundle } from "@bluelibs/core";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+import { Kernel, Bundle } from "@redlibs/core";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 
 // All UI bundles need to be prefixed with UI
 // All X-Framework bundles have the first prefix X
@@ -24,7 +24,7 @@ In order to render we'll use `XUIProvider` with the kernel as a property:
 
 ```tsx
 import { kernel } from "./kernel";
-import { XUIProvider } from "@bluelibs/x-ui-react-bundle";
+import { XUIProvider } from "@redlibs/x-ui-react-bundle";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -39,8 +39,8 @@ ReactDOM.render(
 We brough [Dependency Injection](/docs/package-core#dependency-injection) into React and it's great. While it feels a little bit of over-engineering at first, the advantages are immediately seen:
 
 ```ts
-import { Service, Inject } from "@bluelibs/core";
-import { ApolloClient, useContainer, useRouter, use } from "@bluelibs/x-ui";
+import { Service, Inject } from "@redlibs/core";
+import { ApolloClient, useContainer, useRouter, use } from "@redlibs/x-ui";
 
 @Service()
 class API {
@@ -87,8 +87,8 @@ function Component() {
 Overriding them can be done in the `init()` phase of your bundle:
 
 ```ts
-import { Bundle } from "@bluelibs/core";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
+import { Bundle } from "@redlibs/core";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
 
 class UIAppBundle extends Bundle {
   async init() {
@@ -120,9 +120,9 @@ const kernel = new Kernel({
 Creating new components is done in two steps, first we extend the interface, second we update the components as shown in the overriding phase:
 
 ```ts title="defs.ts"
-import "@bluelibs/x-ui-react-bundle";
+import "@redlibs/x-ui-react-bundle";
 
-declare module "@bluelibs/x-ui-react-bundle" {
+declare module "@redlibs/x-ui-react-bundle" {
   export interface IComponents {
     MyCustomOne: React.ComponentType<OptionalPropsType>;
   }
@@ -185,8 +185,8 @@ We use this strategy for example when we integrate `Apollo` as a separate bundle
 [Smart](/docs/package-smart) is a very small library which allows you to merge logic and state together in a separated class, integrated with the `container`.
 
 ```ts
-import { EventManager } from "@bluelibs/core";
-import { Smart, useSmart, newSmart } from "@bluelibs/x-ui-react-bundle";
+import { EventManager } from "@redlibs/core";
+import { Smart, useSmart, newSmart } from "@redlibs/x-ui-react-bundle";
 
 class MySmart extends Smart<any, any> {
   @Inject()
@@ -207,8 +207,8 @@ You can use the good ol' reliable `EventManager` to emit events, but if you want
 Let's emit dem' vents:
 
 ```tsx
-import { useListener, listen, useEventManager } from "@bluelibs/x-ui";
-import { Event } from "@bluelibs/core";
+import { useListener, listen, useEventManager } from "@redlibs/x-ui";
+import { Event } from "@redlibs/core";
 
 class SomethingInTheWorldJustHappenedEvent extends Event<{
   what: string;

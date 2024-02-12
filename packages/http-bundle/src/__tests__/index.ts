@@ -1,4 +1,4 @@
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { HTTPBundle } from "../HTTPBundle";
 import { createKernel } from "./ecosystem";
 import * as express from "express";

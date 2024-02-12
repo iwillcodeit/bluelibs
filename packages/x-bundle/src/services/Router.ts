@@ -1,4 +1,4 @@
-import { Inject } from "@bluelibs/core";
+import { Inject } from "@redlibs/core";
 
 /**
  * This router is mostly used by emails and others to properly link to your application url

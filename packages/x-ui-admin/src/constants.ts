@@ -1,1 +1,1 @@
-import { Token } from "@bluelibs/core";
+import { Token } from "@redlibs/core";

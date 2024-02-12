@@ -9,10 +9,10 @@ import {
 import * as moment from "moment";
 import { XS3BundleConfigType } from "../defs";
 import { AppFile, AppFileThumb } from "../collections/appFiles/AppFile.model";
-import { Inject, EventManager } from "@bluelibs/core";
+import { Inject, EventManager } from "@redlibs/core";
 import { AppFilesCollection } from "../collections/appFiles/AppFiles.collection";
 import { X_S3_CONFIG_TOKEN, APP_FILES_COLLECTION_TOKEN } from "../constants";
-import { ObjectID } from "@bluelibs/mongo-bundle";
+import { ObjectID } from "@redlibs/mongo-bundle";
 import { ImageService } from "./ImageService";
 import { BeforeFileUploadEvent, AfterFileUploadEvent } from "../events";
 

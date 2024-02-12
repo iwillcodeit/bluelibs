@@ -1,5 +1,5 @@
 import { InMemoryCache } from "@apollo/client/core";
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 import { ApolloClient } from ".";
 import { IUIApolloBundleConfig } from "./defs";
 

@@ -3,7 +3,7 @@ import {
   useRouter,
   useUIComponents,
   useTranslate,
-} from "@bluelibs/x-ui";
+} from "@redlibs/x-ui";
 import { useEffect, useState, useMemo } from "react";
 import { {{ collectionName }}AntTableSmart } from "./{{ collectionName }}TableSmart";
 import { PlusOutlined, FilterOutlined } from "@ant-design/icons";

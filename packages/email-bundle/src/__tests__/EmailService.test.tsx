@@ -1,6 +1,6 @@
 import * as React from "react";
 import { EmailService } from "../services/EmailService";
-import { EventManager } from "@bluelibs/core";
+import { EventManager } from "@redlibs/core";
 import { Transporter } from "nodemailer";
 import { ITransporter, IReactEmailTemplate } from "../defs";
 import { MailOptions } from "nodemailer/lib/smtp-transport";

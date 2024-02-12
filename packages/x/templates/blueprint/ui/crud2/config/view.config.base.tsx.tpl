@@ -1,8 +1,8 @@
 /** @overridable */
 import { {{ entityName }} } from '@root/api.types';
-import { Service } from "@bluelibs/core";
-import { QueryBodyType, XRouter, IComponents } from '@bluelibs/x-ui';
-import { XViewElementType, XViewer } from '@bluelibs/x-ui-admin';
+import { Service } from "@redlibs/core";
+import { QueryBodyType, XRouter, IComponents } from '@redlibs/x-ui';
+import { XViewElementType, XViewer } from '@redlibs/x-ui-admin';
 import * as Ant from "antd";
 import { Routes } from "@bundles/{{ bundleName }}";
 

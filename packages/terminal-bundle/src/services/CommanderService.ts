@@ -7,7 +7,7 @@ import {
   IBlueprintWriterSession,
   IExecutor,
 } from "../defs";
-import { ContainerInstance, Inject, EventManager } from "@bluelibs/core";
+import { ContainerInstance, Inject, EventManager } from "@redlibs/core";
 import { BlueprintWriterSession } from "../models/BlueprintWriterSession";
 import { PrompterService } from "./PrompterService";
 import { Command as CommanderCommand } from "commander";

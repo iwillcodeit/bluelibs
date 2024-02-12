@@ -1,9 +1,9 @@
-import { IXUII18NBundleConfig } from "@bluelibs/x-ui-i18n-bundle";
-import { IXUISessionBundleConfigType } from "@bluelibs/x-ui-session-bundle";
-import { IXUIGuardianBundleConfigType } from "@bluelibs/x-ui-guardian-bundle";
-import { IUIApolloBundleConfig } from "@bluelibs/ui-apollo-bundle";
-import { IXUIReactBundleConfigType } from "@bluelibs/x-ui-react-bundle";
-import { Kernel } from "@bluelibs/core";
+import { IXUII18NBundleConfig } from "@redlibs/x-ui-i18n-bundle";
+import { IXUISessionBundleConfigType } from "@redlibs/x-ui-session-bundle";
+import { IXUIGuardianBundleConfigType } from "@redlibs/x-ui-guardian-bundle";
+import { IUIApolloBundleConfig } from "@redlibs/ui-apollo-bundle";
+import { IXUIReactBundleConfigType } from "@redlibs/x-ui-react-bundle";
+import { Kernel } from "@redlibs/core";
 
 export type XUINextBundleConfigType = {
   apollo: IUIApolloBundleConfig;

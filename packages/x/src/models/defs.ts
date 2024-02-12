@@ -51,7 +51,7 @@ export interface IGenericFieldSubModel {
   /**
    * This is for when the import is done absolutely import { Model }
    * @example "@root/types"
-   * @example "@bluelibs/security-bundle"
+   * @example "@redlibs/security-bundle"
    */
   absoluteImport?: string;
   /**

@@ -1,7 +1,7 @@
 ## Install
 
 ```bash
-npm install --save @bluelibs/mongo-bundle @bluelibs/nova
+npm install --save @redlibs/mongo-bundle @redlibs/nova
 ```
 
 ## Prepare
@@ -21,7 +21,7 @@ The problem with relational data has been solved by [Nova](/docs/package-nova), 
 ## Basic Setup
 
 ```ts
-import { MongoBundle } from "@bluelibs/mongo-bundle";
+import { MongoBundle } from "@redlibs/mongo-bundle";
 
 kernel.addBundle(
   new MongoBundle({
@@ -41,7 +41,7 @@ Get started with our [MongoBundle Essential Boilerplate](https://stackblitz.com/
 A collection is in fact a service. Thus making it accessible via the `container`. We define our collections as extensions of `Collection` in which we can customise things such as: `collectionName`, `indexes`, `model`.
 
 ```typescript
-import { Collection } from "@bluelibs/mongo-bundle";
+import { Collection } from "@redlibs/mongo-bundle";
 
 // We can optionally create a type and have full typesafety
 type User = {
@@ -166,8 +166,8 @@ If you want to use the [Listener](/docs/package-core/#listeners) pattern it will
 
 ```ts
 import { PostsCollection, Post } from "./posts.collection";
-import { Listener, On } from "@bluelibs/core":
-import { BeforeInsertEvent } from "@bluelibs/mongo-bundle";
+import { Listener, On } from "@redlibs/core":
+import { BeforeInsertEvent } from "@redlibs/mongo-bundle";
 
 @Service()
 class DatabaseListener extends Listener {
@@ -187,9 +187,9 @@ class DatabaseListener extends Listener {
 Events also receive a `context` variable this is `IExecutionContext` and can be extended via:
 
 ```ts title="declarations.ts"
-import "@bluelibs/mongo-bundle";
+import "@redlibs/mongo-bundle";
 
-declare module "@bluelibs/mongo-bundle" {
+declare module "@redlibs/mongo-bundle" {
   export interface IExecutionContext {
     // Now the context can receive an optional `companyId`
     companyId?: ObjectId;
@@ -309,13 +309,13 @@ humansCollection.query({
 ```
 
 :::note
-Keep in mind that links are attached on `.collection` (the raw MongoDB Node collection) under the `Collection` class from `@bluelibs/mongo-bundle`, so if you want to use the methods of `query()` or `lookup()` from Nova, ensure that you use the proper collection otherwise you will get errors.
+Keep in mind that links are attached on `.collection` (the raw MongoDB Node collection) under the `Collection` class from `@redlibs/mongo-bundle`, so if you want to use the methods of `query()` or `lookup()` from Nova, ensure that you use the proper collection otherwise you will get errors.
 :::
 
 Using bare-bones `Nova`:
 
 ```ts
-import { lookup, query } from "@bluelibs/nova";
+import { lookup, query } from "@redlibs/nova";
 
 const postsCollection = container.get(PostsCollection);
 const results = query(
@@ -347,7 +347,7 @@ Example for a collection that contains only `name: string`:
 
 ```ts
 class PostsCollection extends Collection {
-  // optional for absolute performance, import { t } from "@bluelibs/nova"
+  // optional for absolute performance, import { t } from "@redlibs/nova"
   // Documentation is here: https://deepkit.io/documentation/type
   // This only applies to Nova query-ing
   static jitSchema = t.schema({
@@ -466,7 +466,7 @@ So ultimately, the behavior array is an array of functions.
 This would enter automatic `createdAt`, `updatedAt`, unless you explicitely provide the information yourself in the input (useful when migrating an existing dataset to a new one and conserving the actual value). You can also customise how the fields are named.
 
 ```typescript
-import { Behaviors, Collection } from "@bluelibs/nova";
+import { Behaviors, Collection } from "@redlibs/nova";
 
 class UsersCollection extends Collection {
   static behaviors = [
@@ -523,7 +523,7 @@ await usersCollection.insertOne(
 ```
 
 :::note
-When the document is created for the first time, we also store `updatedBy` to the same user as `createdBy`. Because in theory `creation` is also an `update`, we understand there can be mixed feelings about this. If you want to identify whether this document has had any changes, we recommend creating an `isTouched` boolean variable and update it after the `BeforeUpdateEvent` from `@bluelibs/mongo-bundle`. And inside the event you can do this for all collections or filter for the ones you need. Otherwise, you have the possibility to avoid this behavior by passing `keepInitialUpdateAsNull: true` as option in your collection file. If `keepInitialUpdateAsNull` is set to `true`, then the `updatedAt` field will be set to `null` and updated only on updates.The same goes for the `Timestampable` behavior with the `keepInitialUpdateAsNull: true` option.
+When the document is created for the first time, we also store `updatedBy` to the same user as `createdBy`. Because in theory `creation` is also an `update`, we understand there can be mixed feelings about this. If you want to identify whether this document has had any changes, we recommend creating an `isTouched` boolean variable and update it after the `BeforeUpdateEvent` from `@redlibs/mongo-bundle`. And inside the event you can do this for all collections or filter for the ones you need. Otherwise, you have the possibility to avoid this behavior by passing `keepInitialUpdateAsNull: true` as option in your collection file. If `keepInitialUpdateAsNull` is set to `true`, then the `updatedAt` field will be set to `null` and updated only on updates.The same goes for the `Timestampable` behavior with the `keepInitialUpdateAsNull: true` option.
 :::
 
 ### Validate
@@ -619,7 +619,7 @@ class UsersCollection extends Collection {
 If we need to have logicful models then it's easy.
 
 ```typescript
-import { Collection, ObjectId } from "@bluelibs/mongo-bundle";
+import { Collection, ObjectId } from "@redlibs/mongo-bundle";
 
 class User {
   _id: ObjectId;
@@ -960,7 +960,7 @@ export interface IMigrationStatus {
 We are storing i18n data in a separate field called `{fieldName}_i18n` which is an object containing the language as key and the value as the translation.
 
 ```ts
-import { I18NType } from "@bluelibs/mongo-bundle";
+import { I18NType } from "@redlibs/mongo-bundle";
 
 class Post {
   title: string;
@@ -1051,7 +1051,7 @@ How to configure `Translatable` behavior into your collection to enable this fun
 
 ```ts
 import Business from "../business.ts";
-import { Behaviors } from "@bluelibs/mongo-bundle";
+import { Behaviors } from "@redlibs/mongo-bundle";
 
 class PostsCollection extends Collection<Post> {
   static collectionName = "posts";

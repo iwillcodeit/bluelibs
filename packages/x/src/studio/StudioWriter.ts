@@ -1,7 +1,7 @@
 import {
   BlueprintWriter,
   IBlueprintWriterSession,
-} from "@bluelibs/terminal-bundle";
+} from "@redlibs/terminal-bundle";
 import { FSOperator, XElements, XSession, XElementType, FSUtils } from "..";
 import * as Studio from ".";
 import { Models, Writers } from "..";
@@ -16,14 +16,14 @@ import { Fixturizer } from "./bridge/Fixturizer";
 import { XElementClassSuffix } from "../utils/XElements";
 import { CollectionReducerWriter } from "../writers/CollectionReducerWriter";
 import { CollectionReducerModel } from "../models/CollectionReducerModel";
-import { chalk } from "@bluelibs/terminal-bundle";
+import { chalk } from "@redlibs/terminal-bundle";
 import {
   ALL_GENERATORS,
   GenerateProjectOptionsType,
   GeneratorKind,
   StudioWritersType,
 } from "./defs";
-import { ContainerInstance } from "@bluelibs/core";
+import { ContainerInstance } from "@redlibs/core";
 import {
   EnumConfigType,
   FrontendReactMicroserviceModel,
@@ -711,7 +711,7 @@ export class StudioWriter {
 
       if (collection.id === "Users") {
         collectionModel.customCollectionImport =
-          "@bluelibs/security-mongo-bundle";
+          "@redlibs/security-mongo-bundle";
         collectionModel.customCollectionName = "UsersCollection";
         this.prepareUserModel(genericModel);
       }
@@ -802,7 +802,7 @@ export class StudioWriter {
 
     // NPM
     const npmPackages = {
-      "@bluelibs/x-ui-admin": "^1.0.0",
+      "@redlibs/x-ui-admin": "^1.0.0",
       antd: "^4.12.3",
       "@ant-design/icons": "^4.5.0",
     };
@@ -854,7 +854,7 @@ export class StudioWriter {
     // NPM
     const npmPackages = {
       "aws-sdk": "^2.948.0",
-      "@bluelibs/x-s3-bundle": "^1.0.0",
+      "@redlibs/x-s3-bundle": "^1.0.0",
     };
 
     for (const pack in npmPackages) {

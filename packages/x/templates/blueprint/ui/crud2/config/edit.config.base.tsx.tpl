@@ -1,7 +1,7 @@
 /** @overridable */
-import { XRouter, use, IComponents, QueryBodyType } from "@bluelibs/x-ui";
-import { XForm } from "@bluelibs/x-ui-admin";
-import { Service, Inject } from "@bluelibs/core";
+import { XRouter, use, IComponents, QueryBodyType } from "@redlibs/x-ui";
+import { XForm } from "@redlibs/x-ui-admin";
+import { Service, Inject } from "@redlibs/core";
 import { SmileOutlined } from '@ant-design/icons';
 import { Routes } from "@bundles/{{ bundleName }}";
 import * as Ant from "antd";

@@ -1,4 +1,4 @@
-import { EJSON } from "@bluelibs/ejson";
+import { EJSON } from "@redlibs/ejson";
 import { cleanTypename } from "../../graphql/utils/cleanTypename";
 import { richResponse, richResponseBody } from "../samples/richResponse";
 

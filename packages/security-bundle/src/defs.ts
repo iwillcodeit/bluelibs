@@ -1,5 +1,5 @@
-import { Constructor } from "@bluelibs/core";
-import { ObjectId } from "@bluelibs/ejson";
+import { Constructor } from "@redlibs/core";
+import { ObjectId } from "@redlibs/ejson";
 
 export interface ISecurityBundleConfig {
   userPersistance?: Constructor<IUserPersistance>;

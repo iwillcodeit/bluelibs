@@ -1,4 +1,4 @@
-import * as X from "@bluelibs/x-bundle";
+import * as X from "@redlibs/x-bundle";
 import { RegistrationInput } from "../inputs/RegistrationInput";
 import { LoginInput } from "../inputs/LoginInput";
 import { ResetPasswordInput } from "../inputs/ResetPasswordInput";
@@ -7,12 +7,12 @@ import { VerifyEmailInput } from "../inputs/VerifyEmailInput";
 import { XPasswordService } from "../services/XPasswordService";
 import { ChangePasswordInput } from "../inputs/ChangePasswordInput";
 import { IXPasswordBundleConfig } from "../defs";
-import { IFunctionMap } from "@bluelibs/graphql-bundle";
-import { ContainerInstance } from "@bluelibs/core";
+import { IFunctionMap } from "@redlibs/graphql-bundle";
+import { ContainerInstance } from "@redlibs/core";
 import {
   UsersCollection,
   USERS_COLLECTION_TOKEN,
-} from "@bluelibs/security-mongo-bundle";
+} from "@redlibs/security-mongo-bundle";
 
 export default (config: IXPasswordBundleConfig) => {
   const {

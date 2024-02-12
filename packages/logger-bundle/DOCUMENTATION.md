@@ -1,11 +1,11 @@
 ## Install
 
 ```bash
-npm i -S yup @bluelibs/logger-bundle
+npm i -S yup @redlibs/logger-bundle
 ```
 
 ```ts
-import { LoggerBundle } from "@bluelibs/logger-bundle";
+import { LoggerBundle } from "@redlibs/logger-bundle";
 
 const kernel = new Kernel({
   bundles: [new LoggerBundle()],
@@ -44,8 +44,8 @@ export interface ILog {
 If you want to listen to event and email all the critical ones:
 
 ```typescript
-import { Listener, On } from "@bluelibs/core";
-import { LogEvent, LogLevel } from "@bluelibs/logger-bundle";
+import { Listener, On } from "@redlibs/core";
+import { LogEvent, LogLevel } from "@redlibs/logger-bundle";
 
 export class EmailCriticalLogs extends Listener {
   constructor(protected readonly emailService: EmailService) {}
@@ -77,7 +77,7 @@ class AppBundle extends Bundle {
 You can customise your `Log` model if you want for example specific contexts or other stuff:
 
 ```ts
-import { LoggerService, Log, LogLevel } from "@bluelibs/logger-bundle";
+import { LoggerService, Log, LogLevel } from "@redlibs/logger-bundle";
 
 class UserLog extends Log<{ userId: string }> {}
 

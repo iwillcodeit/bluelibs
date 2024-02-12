@@ -1,6 +1,6 @@
-import { ApolloBundle } from "@bluelibs/apollo-bundle";
-import { Kernel } from "@bluelibs/core";
-import { SecurityBundle } from "@bluelibs/security-bundle";
+import { ApolloBundle } from "@redlibs/apollo-bundle";
+import { Kernel } from "@redlibs/core";
+import { SecurityBundle } from "@redlibs/security-bundle";
 import { ApolloSecurityBundle } from "../ApolloSecurityBundle";
 
 export function createKernel() {

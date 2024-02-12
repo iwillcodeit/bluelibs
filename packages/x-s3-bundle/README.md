@@ -14,7 +14,7 @@ This represents the way of handling file uploads.
 ## Install
 
 ```bash
-npm install --save @bluelibs/x-s3-bundle
+npm install --save @redlibs/x-s3-bundle
 ```
 
 ## [Documentation](./DOCUMENTATION.md)

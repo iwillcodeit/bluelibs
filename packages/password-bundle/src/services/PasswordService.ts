@@ -1,5 +1,5 @@
 import { UserLockedAfterFailedAttemptsEvent } from "./../events";
-import { SecurityService, IFieldMap, UserId } from "@bluelibs/security-bundle";
+import { SecurityService, IFieldMap, UserId } from "@redlibs/security-bundle";
 import {
   IPasswordBundleConfig,
   IPasswordService,
@@ -9,7 +9,7 @@ import {
   IHasherService,
 } from "../defs";
 import * as ms from "ms";
-import { Inject, Service, EventManager } from "@bluelibs/core";
+import { Inject, Service, EventManager } from "@redlibs/core";
 import { BUNDLE_CONFIG_TOKEN, HASHER_SERVICE_TOKEN } from "../constants";
 import {
   PasswordInvalidEvent,

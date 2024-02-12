@@ -3,13 +3,13 @@ The purpose of this package is to enable type-safe routing that would allow othe
 ## Install
 
 ```bash
-npm i -S @bluelibs/x-ui-react-bundle @bluelibs/x-ui-react-router-bundle
+npm i -S @redlibs/x-ui-react-bundle @redlibs/x-ui-react-router-bundle
 ```
 
 ```ts
-import { Kernel } from "@bluelibs/core";
-import { XUIReactBundle } from "@bluelibs/x-ui-react-bundle";
-import { XUIReactRouterBundle } from "@bluelibs/x-ui-react-router-bundle";
+import { Kernel } from "@redlibs/core";
+import { XUIReactBundle } from "@redlibs/x-ui-react-bundle";
+import { XUIReactRouterBundle } from "@redlibs/x-ui-react-router-bundle";
 
 const kernel = new Kernel({
   bundles: [new XUIReactBundle(), new XUIReactRouterBundle()],
@@ -21,7 +21,7 @@ const kernel = new Kernel({
 We add routes through the `XRouter`. Routes are added programatically. Behind the scenes we use `react-router-dom`:
 
 ```tsx
-import { Bundle } from "@bluelibs/core";
+import { Bundle } from "@redlibs/core";
 
 export class UIAppBundle extends Bundle {
   async init() {
@@ -83,7 +83,7 @@ class UIAppBundle extends Bundle {
 Using the link and generating it:
 
 ```tsx
-import { useRouter } from "@bluelibs/x-ui-router-bundle";
+import { useRouter } from "@redlibs/x-ui-router-bundle";
 import * as Routes from "{path}/routes.ts";
 import { Link } from "react-router-dom";
 
@@ -108,7 +108,7 @@ function Component() {
 
 ## Events
 
-Events are very useful when you want to extend the `IRoute` from `@bluelibs/x-ui-router` and you can enhance it, adding things such as `roles` permissions and properly secure your routes, or anything else basically, the idea is that certain route properties can affect how the component is rendered.
+Events are very useful when you want to extend the `IRoute` from `@redlibs/x-ui-router` and you can enhance it, adding things such as `roles` permissions and properly secure your routes, or anything else basically, the idea is that certain route properties can affect how the component is rendered.
 
 ```tsx
 class UIAppBundle extends Bundle {

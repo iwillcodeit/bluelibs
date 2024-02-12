@@ -1,4 +1,4 @@
-import { Inquirer, Shortcuts } from "@bluelibs/terminal-bundle";
+import { Inquirer, Shortcuts } from "@redlibs/terminal-bundle";
 import { EmailTemplateModel } from "../models/EmailTemplateModel";
 import { InquiryUtils } from "../utils";
 import { BlueprintSharedModelModel } from "../models/BlueprintSharedModelModel";

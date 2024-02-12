@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useGuardian, useRouter } from "@bluelibs/x-ui";
+import { useGuardian, useRouter } from "@redlibs/x-ui";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Routes } from "@bundles/UIAppBundle";
 import {

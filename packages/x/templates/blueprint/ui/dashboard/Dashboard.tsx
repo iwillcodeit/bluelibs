@@ -1,7 +1,7 @@
-import { Collection, useUIComponents, use } from "@bluelibs/x-ui";
+import { Collection, useUIComponents, use } from "@redlibs/x-ui";
 import { useEffect, useState } from "react";
 import { Card, PageHeader, Row, Col } from "antd";
-import { Constructor } from "@bluelibs/core";
+import { Constructor } from "@redlibs/core";
 import { Collections } from "@bundles/UIAppBundle";
 
 export function Dashboard() {
