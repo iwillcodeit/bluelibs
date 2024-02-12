@@ -33,13 +33,13 @@ import {
   RequestLoginLinkInput,
   VerifyMagicLinkInput,
 } from "../inputs/RequestMagicLinkInput";
-import { ObjectId } from "mongodb";
 import { MultipleFactorRedirect } from "../multipleAuthFactor/defs";
 import { MultipleFactorService } from "../multipleAuthFactor/MultipleFactorService";
 import { AuthenticationCodesCollection } from "../collections/AuthenticationCodes.collection";
 import * as ms from "ms";
 import { AuthenticationCodes } from "../collections/AuthenticationCodes.model";
 import { CodeSubmissionExceededException } from "../exceptions/CodeSubmissionExceededException";
+import { ObjectId } from "@bluelibs/mongo-bundle";
 
 const ALLOWED_CHARS =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");

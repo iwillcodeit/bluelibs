@@ -425,14 +425,17 @@ export abstract class Collection<T extends MongoDB.Document = any> {
       })
     );
 
-    const result = await this.collection.findOneAndDelete(filters, options);
+    const result = await this.collection.findOneAndDelete(filters, {
+      ...options,
+      includeResultMetadata: true,
+    });
 
     await this.emit(
       new AfterDeleteEvent({
         context: options?.context || {},
         filter: filters,
         isMany: false,
-        result: result as MongoDB.ModifyResult<T>,
+        result: result,
         options,
       })
     );
@@ -465,11 +468,10 @@ export abstract class Collection<T extends MongoDB.Document = any> {
       })
     );
 
-    const result = await this.collection.findOneAndUpdate(
-      filters,
-      update,
-      options
-    );
+    const result = await this.collection.findOneAndUpdate(filters, update, {
+      ...options,
+      includeResultMetadata: true,
+    });
 
     await this.emit(
       new AfterUpdateEvent({

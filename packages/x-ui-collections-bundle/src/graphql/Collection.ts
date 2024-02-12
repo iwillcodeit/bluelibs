@@ -684,7 +684,6 @@ export abstract class Collection<T = null> {
 
     const result = baseUseQuery<T[], any>(QUERY, {
       ...options,
-      query: QUERY,
       variables: {
         query: queryInput,
       },
@@ -730,7 +729,6 @@ export abstract class Collection<T = null> {
 
     const lazyQueryTuple = baseUseLazyQuery<T[], any>(QUERY, {
       ...options,
-      query: QUERY,
       variables: {
         query: queryInput,
       },
@@ -764,7 +762,6 @@ export abstract class Collection<T = null> {
 
     const result = baseUseQuery<T, any>(QUERY, {
       ...options,
-      query: QUERY,
       variables: {
         query: queryInput,
       },
@@ -810,7 +807,6 @@ export abstract class Collection<T = null> {
 
     const lazyQueryTuple = baseUseLazyQuery<T[], any>(QUERY, {
       ...options,
-      query: QUERY,
       variables: {
         query: queryInput,
       },

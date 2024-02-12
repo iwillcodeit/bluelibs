@@ -5,8 +5,8 @@ import { EntityClass, EntityClassGroup } from "@mikro-orm/core/typings";
 
 export type EntityInfoType =
   | string
-  | EntityClass<AnyEntity>
-  | EntityClassGroup<AnyEntity>
+  | EntityClass<AnyEntity<Record<string, any>>>
+  | EntityClassGroup<AnyEntity<Record<string, any>>>
   | EntitySchema<any>;
 
 export class MikroORMBundle extends Bundle<MikroORMBundleConfigType> {

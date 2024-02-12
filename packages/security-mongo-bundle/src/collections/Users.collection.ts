@@ -5,7 +5,7 @@ import {
   FindAuthenticationStrategyResponse,
   UserId,
 } from "@bluelibs/security-bundle";
-import { Collection, Behaviors } from "@bluelibs/mongo-bundle";
+import { Collection, Behaviors, ObjectId } from "@bluelibs/mongo-bundle";
 import { Filter } from "mongodb";
 
 export class UsersCollection<K extends IUser>
@@ -19,7 +19,7 @@ export class UsersCollection<K extends IUser>
   async insertUser(data: object): Promise<UserId> {
     const result = await this.insertOne(data);
 
-    return result.insertedId;
+    return new ObjectId(result.insertedId.toHexString());
   }
 
   async updateUser(userId: UserId, data: any): Promise<void> {

@@ -27,6 +27,7 @@
     "@bluelibs/email-bundle": "^1.0.0",
     "@bluelibs/graphql-bundle": "^2.0.0",
     "@bluelibs/http-bundle": "^1.0.2",
+    "@bluelibs/logger-bundle": "^1.0.2",
     "@bluelibs/mongo-bundle": "^1.0.0",
     "@bluelibs/password-bundle": "^1.0.0",
     "@bluelibs/security-bundle": "^1.0.0",
@@ -39,6 +40,7 @@
     "@bluelibs/email-bundle": "^1.0.0",
     "@bluelibs/graphql-bundle": "^2.0.0",
     "@bluelibs/http-bundle": "^1.0.2",
+    "@bluelibs/logger-bundle": "^1.0.2",
     "@bluelibs/mongo-bundle": "^1.0.0",
     "@bluelibs/nova": "^1.0.0",
     "@bluelibs/password-bundle": "^1.0.0",
@@ -58,14 +60,14 @@
     "eslint": "^6.6.0",
     "eslint-config-prettier": "6.3.0",
     "eslint-plugin-prettier": "3.1.1",
-    "jest": "^27.3.1",
+    "jest": "^29.0.0",
     "jest-junit": "^10.0.0",
     "prettier": "^2.0.5",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.1 || ^18.0.0",
     "source-map-support": "^0.5.13",
-    "ts-jest": "^27.0.3",
-    "typescript": "4.4.4"
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.3.3"
   },
   "typings": "dist/index.d.ts",
   "typescript": {
