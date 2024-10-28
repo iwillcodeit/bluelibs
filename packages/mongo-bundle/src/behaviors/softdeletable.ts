@@ -55,7 +55,8 @@ export default function softdeletable(
     const oldAggregate = collection.aggregate;
     collection.aggregate = (
       pipeline: any[],
-      options?: MongoDB.AggregateOptions
+      options?: MongoDB.AggregateOptions,
+      ...args
     ) => {
       // Search for pipeline a $match containing the isDeleted field
       let containsIsDeleted = false;
@@ -74,41 +75,49 @@ export default function softdeletable(
         ];
       }
 
-      return oldAggregate.call(collection, pipeline, options);
+      return oldAggregate.call(collection, pipeline, options, ...args);
     };
 
     const oldQuery = collection.query;
-    collection.query = (request: QueryBodyType<any>): Promise<any[]> => {
+    collection.query = (
+      request: QueryBodyType<any>,
+      ...args
+    ): Promise<any[]> => {
       prepareQueryOptions(request, options);
 
-      return oldQuery.call(collection, request);
+      return oldQuery.call(collection, request, ...args);
     };
 
     const oldQueryOne = collection.queryOne;
-    collection.queryOne = (request: QueryBodyType<any>): Promise<any> => {
+    collection.queryOne = (
+      request: QueryBodyType<any>,
+      ...args
+    ): Promise<any> => {
       prepareQueryOptions(request, options);
 
-      return oldQueryOne.call(collection, request);
+      return oldQueryOne.call(collection, request, ...args);
     };
 
     const oldQueryGraphQL = collection.queryGraphQL;
     collection.queryGraphQL = (
       ast: any,
-      config?: IAstToQueryOptions
+      config?: IAstToQueryOptions,
+      ...args
     ): Promise<any[]> => {
       config = prepareQueryGraphQLOptions(config || {}, options);
 
-      return oldQueryGraphQL.call(collection, ast, config);
+      return oldQueryGraphQL.call(collection, ast, config, ...args);
     };
 
     const oldQueryOneGraphQL = collection.queryOneGraphQL;
     collection.queryOneGraphQL = <T = null>(
       ast: any,
-      config?: IAstToQueryOptions
+      config?: IAstToQueryOptions,
+      ...args
     ): Promise<Partial<T>> => {
       config = prepareQueryGraphQLOptions(config || {}, options);
 
-      return oldQueryOneGraphQL.call(collection, ast, config);
+      return oldQueryOneGraphQL.call(collection, ast, config, ...args);
     };
   };
 }
