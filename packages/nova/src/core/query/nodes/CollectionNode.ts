@@ -1,31 +1,37 @@
-import * as _ from "lodash";
-import { ClientSession } from "mongodb";
 import * as dot from "dot-object";
+import * as _ from "lodash";
+import { AggregateOptions, ClientSession } from "mongodb";
 
 import {
-  SPECIAL_PARAM_FIELD,
   ALIAS_FIELD,
   CONTEXT_FIELD,
+  SPECIAL_PARAM_FIELD,
 } from "../../constants";
 import {
-  QueryBodyType,
-  IReducerOption,
-  QuerySubBodyType,
   IQueryContext,
+  IReducerOption,
+  QueryBodyType,
+  QuerySubBodyType,
 } from "../../defs";
 
+import { Collection } from "mongodb";
 import {
+  getExpanderConfig,
   getLinker,
   getReducerConfig,
-  getExpanderConfig,
   hasLinker,
 } from "../../api";
-import Linker from "../Linker";
-import { INode } from "./INode";
-import FieldNode from "./FieldNode";
-import ReducerNode from "./ReducerNode";
-import { Collection, ObjectId } from "mongodb";
 import { ALL_FIELDS } from "../../constants";
+import Linker from "../Linker";
+import FieldNode from "./FieldNode";
+import { INode } from "./INode";
+import ReducerNode from "./ReducerNode";
+
+export interface CollectionNodeAggregationOptions
+  extends Omit<
+    AggregateOptions,
+    "raw" | "allowDiskUse" | "session" | "batchSize"
+  > {}
 
 export interface CollectionNodeOptions {
   collection: Collection<any>;
@@ -34,6 +40,7 @@ export interface CollectionNodeOptions {
   name?: string;
   parent?: CollectionNode;
   linker?: Linker;
+  options?: CollectionNodeAggregationOptions;
 }
 
 export enum NodeLinkType {
@@ -77,6 +84,8 @@ export default class CollectionNode implements INode {
    */
   public readonly explain: boolean;
 
+  public readonly options?: CollectionNodeAggregationOptions;
+
   /**
    * The linker represents how the parent collection node links to the child collection
    */
@@ -91,8 +100,16 @@ export default class CollectionNode implements INode {
    */
   protected processedExpanders: string[] = [];
 
-  constructor(options: CollectionNodeOptions, context: IQueryContext = {}) {
-    const { collection, body, name, parent, linker, explain = false } = options;
+  constructor(nodeOptions: CollectionNodeOptions, context: IQueryContext = {}) {
+    const {
+      collection,
+      body,
+      name,
+      parent,
+      linker,
+      explain = false,
+      options,
+    } = nodeOptions;
 
     if (collection && !_.isObject(body)) {
       throw new Error(
@@ -117,6 +134,7 @@ export default class CollectionNode implements INode {
     delete this.body[ALL_FIELDS];
 
     this.explain = explain;
+    this.options = options;
     this.name = name;
     this.collection = collection;
     this.parent = parent;
@@ -331,8 +349,9 @@ export default class CollectionNode implements INode {
 
     return this.collection
       .aggregate(pipeline, {
-        allowDiskUse: true,
         batchSize: 1_000_000,
+        ...this.options,
+        allowDiskUse: true,
         session: this.session,
       })
       .toArray();

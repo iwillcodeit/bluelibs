@@ -1,14 +1,20 @@
 import * as _ from "lodash";
-import { QueryBodyType, IQueryContext } from "../defs";
-import CollectionNode from "./nodes/CollectionNode";
-import hypernova from "./hypernova/hypernova";
 import { Collection } from "mongodb";
+import { IQueryContext, QueryBodyType } from "../defs";
+import hypernova from "./hypernova/hypernova";
+import CollectionNode, {
+  CollectionNodeAggregationOptions,
+} from "./nodes/CollectionNode";
+
+export interface QueryOptions extends CollectionNodeAggregationOptions {}
 
 export default class Query<T = any> {
   public collection: Collection<T>;
   private graph: CollectionNode;
   public readonly body: any;
   public queryName: string;
+
+  public readonly options?: QueryOptions;
 
   /**
    * Everythig starts with a query. We build the graph based on the body.
@@ -19,16 +25,19 @@ export default class Query<T = any> {
   constructor(
     collection: Collection<T>,
     body: QueryBodyType,
-    context?: IQueryContext
+    context?: IQueryContext,
+    options?: QueryOptions
   ) {
     this.collection = collection;
     this.queryName = collection.collectionName;
     this.body = body;
+    this.options = options;
     this.graph = new CollectionNode(
       {
         collection,
         body,
         name: "root",
+        options,
       },
       context || {}
     );

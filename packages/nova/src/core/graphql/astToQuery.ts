@@ -1,17 +1,17 @@
 // import intersectDeep from "../../core/query/lib/intersectDeep";
-import * as _ from "lodash";
 import * as graphqlFields from "graphql-fields";
+import * as _ from "lodash";
+import { Collection } from "mongodb";
 import { SPECIAL_PARAM_FIELD } from "../constants";
-import Query from "../query/Query";
-import intersectBody from "./intersectBody";
 import {
-  QueryBodyType,
   IAstToQueryOptions,
   IQueryContext,
   ISecureOptions,
+  QueryBodyType,
 } from "../defs";
+import Query, { QueryOptions } from "../query/Query";
+import intersectBody from "./intersectBody";
 import { mergeDeep } from "./mergeDeep";
-import { Collection } from "mongodb";
 
 export const ArgumentStore = Symbol("GraphQLArgumentStore");
 
@@ -57,7 +57,8 @@ export default function astToQuery<T = any>(
   collection: Collection<T>,
   ast,
   config: IAstToQueryOptions = {},
-  context?: IQueryContext
+  context?: IQueryContext,
+  options?: QueryOptions
 ) {
   // get the body
   let body = astToBody(ast);
@@ -69,7 +70,7 @@ export default function astToQuery<T = any>(
   }
 
   // we return the query
-  return new Query(collection, body, context);
+  return new Query(collection, body, context, options);
 }
 
 /**

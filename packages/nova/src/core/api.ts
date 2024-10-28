@@ -1,54 +1,54 @@
 import {
   IExpanderOptions,
   ILinkOptions,
-  QueryBodyType,
+  IQueryContext,
   IReducerOption,
   IReducerOptions,
-  IAstToQueryOptions,
-  IQueryContext,
+  QueryBodyType,
 } from "./defs";
 
+import * as _ from "lodash";
+import { Collection } from "mongodb";
 import {
   EXPANDER_STORAGE,
+  LINK_COLLECTION_OPTIONS_DEFAULTS,
   LINK_STORAGE,
   REDUCER_STORAGE,
-  LINK_COLLECTION_OPTIONS_DEFAULTS,
 } from "./constants";
-import * as _ from "lodash";
-import Linker from "./query/Linker";
-import Query from "./query/Query";
-import astToQuery, { secureBody } from "./graphql/astToQuery";
-import { IGetLookupOperatorOptions } from "./query/Linker";
-import { Collection } from "mongodb";
-import CollectionNode from "./query/nodes/CollectionNode";
 import { ISecureOptions } from "./defs";
+import astToQuery, { secureBody } from "./graphql/astToQuery";
+import Linker, { IGetLookupOperatorOptions } from "./query/Linker";
+import Query, { QueryOptions } from "./query/Query";
 
-export { secureBody, Linker };
+export { Linker, secureBody };
 
 export function query<T>(
   collection: Collection<T>,
   body: QueryBodyType,
-  context?: IQueryContext
+  context?: IQueryContext,
+  options?: QueryOptions
 ) {
-  return new Query(collection, body, context);
+  return new Query(collection, body, context, options);
 }
 
 query.securely = function securely<T = any>(
   config: ISecureOptions,
   collection: Collection<T>,
   body: QueryBodyType,
-  context?: IQueryContext
+  context?: IQueryContext,
+  options?: QueryOptions
 ) {
-  return query(collection, secureBody(body, config), context);
+  return query(collection, secureBody(body, config), context, options);
 };
 
 query.graphql = function graphql<T = any>(
   collection: Collection<T>,
   ast: any,
-  options: ISecureOptions,
-  context?: IQueryContext
+  config: ISecureOptions,
+  context?: IQueryContext,
+  options?: QueryOptions
 ) {
-  return astToQuery(collection, ast, options, context);
+  return astToQuery(collection, ast, config, context, options);
 };
 
 export function clear(collection: Collection<any>) {

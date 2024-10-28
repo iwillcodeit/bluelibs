@@ -1,57 +1,49 @@
+import {
+  ContainerInstance,
+  DeepPartial,
+  EventHandlerType,
+  EventManager,
+  IEventConstructor,
+  Inject,
+  Service,
+} from "@bluelibs/core";
+import { toModel } from "@bluelibs/ejson";
+import {
+  addExpanders,
+  addLinks,
+  addReducers,
+  AnyifyFieldsWithIDs as Clean,
+  IAstToQueryOptions,
+  IExpanderOptions,
+  ILinkOptions,
+  IQueryContext,
+  IReducerOptions,
+  QueryBodyType,
+  query as queryNova,
+  QueryOptions,
+} from "@bluelibs/nova";
 import * as MongoDB from "mongodb";
 import {
-  Inject,
-  EventManager,
-  Event,
-  ContainerInstance,
-  Service,
-  IEventConstructor,
-  Constructor,
-  EventHandlerType,
-  DeepPartial,
-} from "@bluelibs/core";
-import { DatabaseService } from "../services/DatabaseService";
-import {
-  BeforeInsertEvent,
-  AfterInsertEvent,
-  BeforeDeleteEvent,
-  AfterDeleteEvent,
-  BeforeUpdateEvent,
-  AfterUpdateEvent,
-  CollectionEvent,
-} from "../events";
-import {
   BehaviorType,
-  IContextAware,
   IBundleLinkOptions,
+  IContextAware,
   IExecutionContext,
 } from "../defs";
-import { ObjectId, toModel } from "@bluelibs/ejson";
+import {
+  AfterDeleteEvent,
+  AfterInsertEvent,
+  AfterUpdateEvent,
+  BeforeDeleteEvent,
+  BeforeInsertEvent,
+  BeforeUpdateEvent,
+  CollectionEvent,
+} from "../events";
+import { DatabaseService } from "../services/DatabaseService";
 import {
   DeepSyncDocumentNode,
   DeepSyncOptionsType,
 } from "../services/deep-sync/DeepSyncDocumentNode";
-import {
-  query as queryNova,
-  ILinkOptions,
-  QueryBodyType,
-  IReducerOptions,
-  IExpanderOptions,
-  addReducers,
-  addExpanders,
-  addLinks,
-  IAstToQueryOptions,
-  AnyifyFieldsWithIDs as Clean,
-  LINK_STORAGE,
-  Linker,
-  IQueryContext,
-} from "@bluelibs/nova";
-import {
-  DocumentWithID,
-  ID,
-  LinkOperatorModel,
-  Unpacked,
-} from "./LinkOperator";
+import { DocumentWithID, LinkOperatorModel, Unpacked } from "./LinkOperator";
 
 /**
  * This symbol allows us to access this collection from the MongoCollection
@@ -437,12 +429,10 @@ export abstract class Collection<T extends MongoDB.Document = any> {
       })
     );
 
-    const result = await this.collection.findOneAndDelete(filters, 
-      {
-        ...options,
-        includeResultMetadata: true,
-      }
-    );
+    const result = await this.collection.findOneAndDelete(filters, {
+      ...options,
+      includeResultMetadata: true,
+    });
 
     await this.emit(
       new AfterDeleteEvent({
@@ -482,14 +472,10 @@ export abstract class Collection<T extends MongoDB.Document = any> {
       })
     );
 
-    const result = await this.collection.findOneAndUpdate(
-      filters,
-      update,
-      {
-        ...options,
-        includeResultMetadata: true,
-      }
-    );
+    const result = await this.collection.findOneAndUpdate(filters, update, {
+      ...options,
+      includeResultMetadata: true,
+    });
 
     await this.emit(
       new AfterUpdateEvent({
@@ -526,13 +512,19 @@ export abstract class Collection<T extends MongoDB.Document = any> {
   async query(
     request: QueryBodyType<T>,
     session?: MongoDB.ClientSession,
-    context?: Partial<IQueryContext>
+    context?: Partial<IQueryContext>,
+    options?: QueryOptions
   ): Promise<Array<Partial<T>>> {
-    const results = await queryNova(this.collection, request, {
-      ...context,
-      container: this.container,
-      session,
-    }).fetch();
+    const results = await queryNova(
+      this.collection,
+      request,
+      {
+        ...context,
+        container: this.container,
+        session,
+      },
+      options
+    ).fetch();
 
     return this.toModel(results);
   }
@@ -545,13 +537,19 @@ export abstract class Collection<T extends MongoDB.Document = any> {
   async queryOne(
     request: QueryBodyType<T>,
     session?: MongoDB.ClientSession,
-    context?: Partial<IQueryContext>
+    context?: Partial<IQueryContext>,
+    options?: QueryOptions
   ): Promise<Partial<T>> {
-    const result = await queryNova(this.collection, request, {
-      ...context,
-      session,
-      container: this.container,
-    }).fetchOne();
+    const result = await queryNova(
+      this.collection,
+      request,
+      {
+        ...context,
+        session,
+        container: this.container,
+      },
+      options
+    ).fetchOne();
 
     return this.toModel(result);
   }
@@ -650,14 +648,21 @@ export abstract class Collection<T extends MongoDB.Document = any> {
     ast: any,
     config?: IAstToQueryOptions<T>,
     session?: MongoDB.ClientSession,
-    context?: Partial<IQueryContext>
+    context?: Partial<IQueryContext>,
+    options?: QueryOptions
   ): Promise<Array<Partial<T>>> {
     const result = await queryNova
-      .graphql(this.collection, ast, config, {
-        ...context,
-        container: this.container,
-        session,
-      })
+      .graphql(
+        this.collection,
+        ast,
+        config,
+        {
+          ...context,
+          container: this.container,
+          session,
+        },
+        options
+      )
       .fetch();
 
     return this.toModel(result);
@@ -672,14 +677,21 @@ export abstract class Collection<T extends MongoDB.Document = any> {
     ast,
     config?: IAstToQueryOptions<T>,
     session?: MongoDB.ClientSession,
-    context?: Partial<IQueryContext>
+    context?: Partial<IQueryContext>,
+    options?: QueryOptions
   ): Promise<Partial<T>> {
     const result = await queryNova
-      .graphql(this.collection, ast, config, {
-        ...context,
-        container: this.container,
-        session,
-      })
+      .graphql(
+        this.collection,
+        ast,
+        config,
+        {
+          ...context,
+          container: this.container,
+          session,
+        },
+        options
+      )
       .fetchOne();
 
     return this.toModel(result);
