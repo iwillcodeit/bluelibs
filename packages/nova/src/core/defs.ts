@@ -1,5 +1,4 @@
-import { ClientSession, Collection } from "mongodb";
-import { Filter as FilterQuery } from "mongodb";
+import { ClientSession, Collection, Filter as FilterQuery } from "mongodb";
 
 export interface IToArrayable {
   toArray(): Promise<any[]>;
@@ -76,9 +75,17 @@ export interface IReducerOption<
   ParamsType = AnyObject,
   ParentType = any
 > {
-  dependency: DeepOmit<QueryBodyType, "$">;
-  pipeline?: any[];
-  projection?: any;
+  dependency:
+    | DeepOmit<QueryBodyType<ParentType>, "$">
+    | ((
+        params?: { context: IQueryContext } & ParamsType
+      ) => DeepOmit<QueryBodyType<ParentType>, "$">);
+  pipeline?:
+    | any[]
+    | ((params?: { context: IQueryContext } & ParamsType) => any[]);
+  projection?:
+    | any
+    | ((params?: { context: IQueryContext } & ParamsType) => any);
   reduce?: (
     object: ParentType,
     params?: { context: IQueryContext } & ParamsType

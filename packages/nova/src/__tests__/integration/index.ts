@@ -1,21 +1,20 @@
-import { assert, expect } from "chai";
-import * as _ from "lodash";
-import { getRandomCollection, log } from "./helpers";
-import {
-  addLinks,
-  query,
-  clear,
-  addExpanders,
-  addReducers,
-} from "../../core/api";
-import { client } from "../connection";
+import { assert } from "chai";
 import { Collection } from "mongodb";
+import {
+  addExpanders,
+  addLinks,
+  addReducers,
+  clear,
+  query,
+} from "../../core/api";
 import {
   manyToMany,
   manyToOne,
-  oneToOne,
   oneToMany,
+  oneToOne,
 } from "../../core/quickLinkers";
+import { client } from "../connection";
+import { getRandomCollection } from "./helpers";
 
 // Read: https://mongodb.github.io/node-mongodb-native/3.3/api/
 declare module "../../core/defs" {
@@ -1042,6 +1041,44 @@ describe("Main tests", function () {
     }).fetchOne();
 
     assert.equal(`John Smith`, result.fullName);
+  });
+
+  it("[Reducers] Should work with pipeline context", async () => {
+    addReducers(A, {
+      context: {
+        dependency: {},
+        pipeline({ context }) {
+          return [
+            {
+              $addFields: {
+                context: context.test,
+              },
+            },
+          ];
+        },
+      },
+    });
+
+    const a1 = await A.insertOne({
+      profile: {
+        firstName: "John",
+        lastName: "b",
+        number: 500,
+      },
+    });
+
+    const result = await query(
+      A,
+      {
+        _id: 1,
+        context: 1,
+      },
+      {
+        test: true,
+      }
+    ).fetchOne();
+
+    assert.equal(result.context, true);
   });
 
   it("[Reducers] Should not clash with fields and other reducers", async () => {

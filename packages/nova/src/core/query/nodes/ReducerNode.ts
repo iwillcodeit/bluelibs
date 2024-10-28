@@ -1,5 +1,5 @@
-import { QueryBodyType, IReducerOption, IQueryContext } from "../../defs";
 import { SPECIAL_PARAM_FIELD } from "../../constants";
+import { IQueryContext, IReducerOption, QueryBodyType } from "../../defs";
 import { INode } from "./INode";
 
 interface ReducerNodeOptions extends IReducerOption {
@@ -30,9 +30,23 @@ export default class ReducerNode implements INode {
   ) {
     this.name = name;
     this.reduceFunction = options.reduce;
-    this.dependency = options.dependency;
-    this.pipeline = options.pipeline || [];
-    this.projection = options.projection || {};
+    if (typeof options.dependency === "function") {
+      this.dependency = options.dependency.call(this, this.params);
+    } else {
+      this.dependency = options.dependency;
+    }
+
+    if (typeof options.pipeline === "function") {
+      this.pipeline = options.pipeline.call(this, this.params);
+    } else {
+      this.pipeline = options.pipeline || [];
+    }
+
+    if (typeof options.projection === "function") {
+      this.projection = options.projection.call(this, this.params);
+    } else {
+      this.projection = options.projection || {};
+    }
 
     if (!options.projection && !this.reduceFunction) {
       // Projection will be the reducer name
@@ -40,6 +54,13 @@ export default class ReducerNode implements INode {
     }
 
     this.props = options.body[SPECIAL_PARAM_FIELD] || {};
+  }
+
+  get params() {
+    return {
+      ...this.props,
+      context: this.context,
+    };
   }
 
   /**
@@ -53,10 +74,7 @@ export default class ReducerNode implements INode {
       return;
     }
 
-    object[this.name] = await this.reduce.call(this, object, {
-      ...this.props,
-      context: this.context,
-    });
+    object[this.name] = await this.reduce.call(this, object, this.params);
   }
 
   /**
